@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/CrashReport.java
++++ b/net/minecraft/server/CrashReport.java
+@@ -37,7 +37,7 @@
+     private void h() {
+         this.d.a("Minecraft Version", new Callable() {
+             public String a() {
+-                return "1.8.8";
++                return "1.9";
+             }
+ 
+             public Object call() throws Exception {
+@@ -135,7 +135,7 @@
+     }
+ 
+     public void a(StringBuilder stringbuilder) {
+-        if ((this.h == null || this.h.length <= 0) && this.e.size() > 0) {
++        if ((this.h == null || this.h.length <= 0) && !this.e.isEmpty()) {
+             this.h = (StackTraceElement[]) ArrayUtils.subarray(((CrashReportSystemDetails) this.e.get(0)).a(), 0, 1);
+         }
+ 

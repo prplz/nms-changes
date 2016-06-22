@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/PacketPlayOutScoreboardScore.java
++++ b/net/minecraft/server/PacketPlayOutScoreboardScore.java
+@@ -37,7 +37,7 @@
+         this.d = (PacketPlayOutScoreboardScore.EnumScoreboardAction) packetdataserializer.a(PacketPlayOutScoreboardScore.EnumScoreboardAction.class);
+         this.b = packetdataserializer.c(16);
+         if (this.d != PacketPlayOutScoreboardScore.EnumScoreboardAction.REMOVE) {
+-            this.c = packetdataserializer.e();
++            this.c = packetdataserializer.g();
+         }
+ 
+     }
+@@ -56,10 +56,6 @@
+         packetlistenerplayout.a(this);
+     }
+ 
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+-
+     public static enum EnumScoreboardAction {
+ 
+         CHANGE, REMOVE;

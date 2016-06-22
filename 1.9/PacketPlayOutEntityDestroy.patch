@@ -1,0 +1,24 @@
+--- a/net/minecraft/server/PacketPlayOutEntityDestroy.java
++++ b/net/minecraft/server/PacketPlayOutEntityDestroy.java
+@@ -13,10 +13,10 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = new int[packetdataserializer.e()];
++        this.a = new int[packetdataserializer.g()];
+ 
+         for (int i = 0; i < this.a.length; ++i) {
+-            this.a[i] = packetdataserializer.e();
++            this.a[i] = packetdataserializer.g();
+         }
+ 
+     }
+@@ -33,8 +33,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

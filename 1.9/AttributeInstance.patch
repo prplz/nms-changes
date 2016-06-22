@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/AttributeInstance.java
++++ b/net/minecraft/server/AttributeInstance.java
+@@ -23,5 +23,7 @@
+ 
+     void c(AttributeModifier attributemodifier);
+ 
++    void b(UUID uuid);
++
+     double getValue();
+ }

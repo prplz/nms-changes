@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/ItemCompass.java
++++ b/net/minecraft/server/ItemCompass.java
+@@ -0,0 +1,9 @@
++package net.minecraft.server;
++
++public class ItemCompass extends Item {
++
++    public ItemCompass() {
++        this.a(new MinecraftKey("angle"), new IDynamicTexture() {
++        });
++    }
++}

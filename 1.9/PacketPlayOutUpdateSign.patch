@@ -1,0 +1,25 @@
+--- a/net/minecraft/server/PacketPlayOutUpdateSign.java
++++ b/net/minecraft/server/PacketPlayOutUpdateSign.java
+@@ -17,11 +17,11 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.b = packetdataserializer.c();
++        this.b = packetdataserializer.e();
+         this.c = new IChatBaseComponent[4];
+ 
+         for (int i = 0; i < 4; ++i) {
+-            this.c[i] = packetdataserializer.d();
++            this.c[i] = packetdataserializer.f();
+         }
+ 
+     }
+@@ -38,8 +38,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

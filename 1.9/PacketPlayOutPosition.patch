@@ -1,0 +1,54 @@
+--- a/net/minecraft/server/PacketPlayOutPosition.java
++++ b/net/minecraft/server/PacketPlayOutPosition.java
+@@ -13,16 +13,18 @@
+     private float d;
+     private float e;
+     private Set<PacketPlayOutPosition.EnumPlayerTeleportFlags> f;
++    private int g;
+ 
+     public PacketPlayOutPosition() {}
+ 
+-    public PacketPlayOutPosition(double d0, double d1, double d2, float f, float f1, Set<PacketPlayOutPosition.EnumPlayerTeleportFlags> set) {
++    public PacketPlayOutPosition(double d0, double d1, double d2, float f, float f1, Set<PacketPlayOutPosition.EnumPlayerTeleportFlags> set, int i) {
+         this.a = d0;
+         this.b = d1;
+         this.c = d2;
+         this.d = f;
+         this.e = f1;
+         this.f = set;
++        this.g = i;
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+@@ -32,6 +34,7 @@
+         this.d = packetdataserializer.readFloat();
+         this.e = packetdataserializer.readFloat();
+         this.f = PacketPlayOutPosition.EnumPlayerTeleportFlags.a(packetdataserializer.readUnsignedByte());
++        this.g = packetdataserializer.g();
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+@@ -41,21 +44,18 @@
+         packetdataserializer.writeFloat(this.d);
+         packetdataserializer.writeFloat(this.e);
+         packetdataserializer.writeByte(PacketPlayOutPosition.EnumPlayerTeleportFlags.a(this.f));
++        packetdataserializer.b(this.g);
+     }
+ 
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+ 
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+-
+     public static enum EnumPlayerTeleportFlags {
+ 
+         X(0), Y(1), Z(2), Y_ROT(3), X_ROT(4);
+ 
+-        private int f;
++        private final int f;
+ 
+         private EnumPlayerTeleportFlags(int i) {
+             this.f = i;

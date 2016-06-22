@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/IUpdatePlayerListBox.java
++++ b/net/minecraft/server/IUpdatePlayerListBox.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-public interface IUpdatePlayerListBox {
+-
+-    void c();
+-}

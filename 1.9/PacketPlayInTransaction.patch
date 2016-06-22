@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInTransaction.java
++++ b/net/minecraft/server/PacketPlayInTransaction.java
+@@ -33,8 +33,4 @@
+     public short b() {
+         return this.b;
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayIn) packetlistener);
+-    }
+ }

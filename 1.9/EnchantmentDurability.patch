@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/EnchantmentDurability.java
++++ b/net/minecraft/server/EnchantmentDurability.java
+@@ -4,8 +4,8 @@
+ 
+ public class EnchantmentDurability extends Enchantment {
+ 
+-    protected EnchantmentDurability(int i, MinecraftKey minecraftkey, int j) {
+-        super(i, minecraftkey, j, EnchantmentSlotType.BREAKABLE);
++    protected EnchantmentDurability(Enchantment.Rarity enchantment_rarity, EnumItemSlot... aenumitemslot) {
++        super(enchantment_rarity, EnchantmentSlotType.BREAKABLE, aenumitemslot);
+         this.c("durability");
+     }
+ 

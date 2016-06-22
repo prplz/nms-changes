@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PacketPlayOutKickDisconnect.java
++++ b/net/minecraft/server/PacketPlayOutKickDisconnect.java
+@@ -13,7 +13,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.d();
++        this.a = packetdataserializer.f();
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+@@ -23,8 +23,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

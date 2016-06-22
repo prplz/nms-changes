@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PacketPlayOutWindowItems.java
++++ b/net/minecraft/server/PacketPlayOutWindowItems.java
+@@ -29,7 +29,7 @@
+         this.b = new ItemStack[short0];
+ 
+         for (int i = 0; i < short0; ++i) {
+-            this.b[i] = packetdataserializer.i();
++            this.b[i] = packetdataserializer.k();
+         }
+ 
+     }
+@@ -51,8 +51,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

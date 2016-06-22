@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/IDataManager.java
++++ b/net/minecraft/server/IDataManager.java
+@@ -22,5 +22,5 @@
+ 
+     File getDataFile(String s);
+ 
+-    String g();
++    DefinedStructureManager h();
+ }

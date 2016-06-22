@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/PacketPlayOutTitle.java
++++ b/net/minecraft/server/PacketPlayOutTitle.java
+@@ -31,7 +31,7 @@
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = (PacketPlayOutTitle.EnumTitleAction) packetdataserializer.a(PacketPlayOutTitle.EnumTitleAction.class);
+         if (this.a == PacketPlayOutTitle.EnumTitleAction.TITLE || this.a == PacketPlayOutTitle.EnumTitleAction.SUBTITLE) {
+-            this.b = packetdataserializer.d();
++            this.b = packetdataserializer.f();
+         }
+ 
+         if (this.a == PacketPlayOutTitle.EnumTitleAction.TIMES) {
+@@ -60,10 +60,6 @@
+         packetlistenerplayout.a(this);
+     }
+ 
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+-
+     public static enum EnumTitleAction {
+ 
+         TITLE, SUBTITLE, TIMES, CLEAR, RESET;

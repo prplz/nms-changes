@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/BiomeRiver.java
++++ b/net/minecraft/server/BiomeRiver.java
+@@ -2,8 +2,8 @@
+ 
+ public class BiomeRiver extends BiomeBase {
+ 
+-    public BiomeRiver(int i) {
+-        super(i);
+-        this.au.clear();
++    public BiomeRiver(BiomeBase.a biomebase_a) {
++        super(biomebase_a);
++        this.v.clear();
+     }
+ }

@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/ITileInventory.java
++++ b/net/minecraft/server/ITileInventory.java
+@@ -2,9 +2,9 @@
+ 
+ public interface ITileInventory extends IInventory, ITileEntityContainer {
+ 
+-    boolean r_();
++    boolean x_();
+ 
+     void a(ChestLock chestlock);
+ 
+-    ChestLock i();
++    ChestLock y_();
+ }

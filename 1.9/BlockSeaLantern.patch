@@ -1,0 +1,16 @@
+--- a/net/minecraft/server/BlockSeaLantern.java
++++ b/net/minecraft/server/BlockSeaLantern.java
+@@ -21,11 +21,11 @@
+         return Items.PRISMARINE_CRYSTALS;
+     }
+ 
+-    public MaterialMapColor g(IBlockData iblockdata) {
++    public MaterialMapColor r(IBlockData iblockdata) {
+         return MaterialMapColor.p;
+     }
+ 
+-    protected boolean I() {
++    protected boolean o() {
+         return true;
+     }
+ }

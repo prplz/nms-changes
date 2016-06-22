@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockLightStone.java
++++ b/net/minecraft/server/BlockLightStone.java
+@@ -21,7 +21,7 @@
+         return Items.GLOWSTONE_DUST;
+     }
+ 
+-    public MaterialMapColor g(IBlockData iblockdata) {
++    public MaterialMapColor r(IBlockData iblockdata) {
+         return MaterialMapColor.d;
+     }
+ }

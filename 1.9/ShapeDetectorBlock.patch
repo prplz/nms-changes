@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/ShapeDetectorBlock.java
++++ b/net/minecraft/server/ShapeDetectorBlock.java
+@@ -49,4 +49,16 @@
+             }
+         };
+     }
++
++    public static Predicate<ShapeDetectorBlock> a(final IBlockData iblockdata) {
++        return new Predicate() {
++            public boolean a(ShapeDetectorBlock shapedetectorblock) {
++                return shapedetectorblock != null && shapedetectorblock.a().equals(iblockdata);
++            }
++
++            public boolean apply(Object object) {
++                return this.a((ShapeDetectorBlock) object);
++            }
++        };
++    }
+ }

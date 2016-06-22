@@ -1,0 +1,92 @@
+--- a/net/minecraft/server/PacketPlayInFlying.java
++++ b/net/minecraft/server/PacketPlayInFlying.java
+@@ -27,46 +27,30 @@
+         packetdataserializer.writeByte(this.f ? 1 : 0);
+     }
+ 
+-    public double a() {
+-        return this.x;
++    public double a(double d0) {
++        return this.hasPos ? this.x : d0;
+     }
+ 
+-    public double b() {
+-        return this.y;
++    public double b(double d0) {
++        return this.hasPos ? this.y : d0;
+     }
+ 
+-    public double c() {
+-        return this.z;
++    public double c(double d0) {
++        return this.hasPos ? this.z : d0;
+     }
+ 
+-    public float d() {
+-        return this.yaw;
++    public float a(float f) {
++        return this.hasLook ? this.yaw : f;
+     }
+ 
+-    public float e() {
+-        return this.pitch;
++    public float b(float f) {
++        return this.hasLook ? this.pitch : f;
+     }
+ 
+-    public boolean f() {
++    public boolean a() {
+         return this.f;
+     }
+ 
+-    public boolean g() {
+-        return this.hasPos;
+-    }
+-
+-    public boolean h() {
+-        return this.hasLook;
+-    }
+-
+-    public void a(boolean flag) {
+-        this.hasPos = flag;
+-    }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayIn) packetlistener);
+-    }
+-
+     public static class PacketPlayInLook extends PacketPlayInFlying {
+ 
+         public PacketPlayInLook() {
+@@ -84,10 +68,6 @@
+             packetdataserializer.writeFloat(this.pitch);
+             super.b(packetdataserializer);
+         }
+-
+-        public void a(PacketListener packetlistener) {
+-            super.a((PacketListenerPlayIn) packetlistener);
+-        }
+     }
+ 
+     public static class PacketPlayInPosition extends PacketPlayInFlying {
+@@ -109,10 +89,6 @@
+             packetdataserializer.writeDouble(this.z);
+             super.b(packetdataserializer);
+         }
+-
+-        public void a(PacketListener packetlistener) {
+-            super.a((PacketListenerPlayIn) packetlistener);
+-        }
+     }
+ 
+     public static class PacketPlayInPositionLook extends PacketPlayInFlying {
+@@ -139,9 +115,5 @@
+             packetdataserializer.writeFloat(this.pitch);
+             super.b(packetdataserializer);
+         }
+-
+-        public void a(PacketListener packetlistener) {
+-            super.a((PacketListenerPlayIn) packetlistener);
+-        }
+     }
+ }

@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/RunnableSaveScoreboard.java
++++ b/net/minecraft/server/RunnableSaveScoreboard.java
+@@ -0,0 +1,14 @@
++package net.minecraft.server;
++
++public class RunnableSaveScoreboard implements Runnable {
++
++    private final PersistentBase a;
++
++    public RunnableSaveScoreboard(PersistentBase persistentbase) {
++        this.a = persistentbase;
++    }
++
++    public void run() {
++        this.a.c();
++    }
++}

@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PacketStatusOutServerInfo.java
++++ b/net/minecraft/server/PacketStatusOutServerInfo.java
+@@ -16,7 +16,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.b = (ServerPing) PacketStatusOutServerInfo.a.fromJson(packetdataserializer.c(32767), ServerPing.class);
++        this.b = (ServerPing) ChatDeserializer.a(PacketStatusOutServerInfo.a, packetdataserializer.c(32767), ServerPing.class);
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+@@ -26,8 +26,4 @@
+     public void a(PacketStatusOutListener packetstatusoutlistener) {
+         packetstatusoutlistener.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketStatusOutListener) packetlistener);
+-    }
+ }

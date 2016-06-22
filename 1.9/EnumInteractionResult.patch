@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumInteractionResult.java
++++ b/net/minecraft/server/EnumInteractionResult.java
+@@ -0,0 +1,8 @@
++package net.minecraft.server;
++
++public enum EnumInteractionResult {
++
++    SUCCESS, PASS, FAIL;
++
++    private EnumInteractionResult() {}
++}

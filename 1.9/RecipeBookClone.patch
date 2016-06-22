@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/RecipeBookClone.java
++++ b/net/minecraft/server/RecipeBookClone.java
+@@ -85,7 +85,8 @@
+             ItemStack itemstack = inventorycrafting.getItem(i);
+ 
+             if (itemstack != null && itemstack.getItem() instanceof ItemWrittenBook) {
+-                aitemstack[i] = itemstack;
++                aitemstack[i] = itemstack.cloneItemStack();
++                aitemstack[i].count = 1;
+                 break;
+             }
+         }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutHeldItemSlot.java
++++ b/net/minecraft/server/PacketPlayOutHeldItemSlot.java
+@@ -23,8 +23,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/BiomeOcean.java
++++ b/net/minecraft/server/BiomeOcean.java
+@@ -4,12 +4,12 @@
+ 
+ public class BiomeOcean extends BiomeBase {
+ 
+-    public BiomeOcean(int i) {
+-        super(i);
+-        this.au.clear();
++    public BiomeOcean(BiomeBase.a biomebase_a) {
++        super(biomebase_a);
++        this.v.clear();
+     }
+ 
+-    public BiomeBase.EnumTemperature m() {
++    public BiomeBase.EnumTemperature h() {
+         return BiomeBase.EnumTemperature.OCEAN;
+     }
+ 

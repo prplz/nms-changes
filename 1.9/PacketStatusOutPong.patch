@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketStatusOutPong.java
++++ b/net/minecraft/server/PacketStatusOutPong.java
+@@ -23,8 +23,4 @@
+     public void a(PacketStatusOutListener packetstatusoutlistener) {
+         packetstatusoutlistener.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketStatusOutListener) packetlistener);
+-    }
+ }

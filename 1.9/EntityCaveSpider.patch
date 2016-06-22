@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/EntityCaveSpider.java
++++ b/net/minecraft/server/EntityCaveSpider.java
+@@ -12,8 +12,8 @@
+         this.getAttributeInstance(GenericAttributes.maxHealth).setValue(12.0D);
+     }
+ 
+-    public boolean r(Entity entity) {
+-        if (super.r(entity)) {
++    public boolean B(Entity entity) {
++        if (super.B(entity)) {
+             if (entity instanceof EntityLiving) {
+                 byte b0 = 0;
+ 
+@@ -24,7 +24,7 @@
+                 }
+ 
+                 if (b0 > 0) {
+-                    ((EntityLiving) entity).addEffect(new MobEffect(MobEffectList.POISON.id, b0 * 20, 0));
++                    ((EntityLiving) entity).addEffect(new MobEffect(MobEffects.POISON, b0 * 20, 0));
+                 }
+             }
+ 
+@@ -41,4 +41,8 @@
+     public float getHeadHeight() {
+         return 0.45F;
+     }
++
++    protected MinecraftKey J() {
++        return LootTables.r;
++    }
+ }

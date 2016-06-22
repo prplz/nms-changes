@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/ScoreboardStatisticCriteria.java
++++ b/net/minecraft/server/ScoreboardStatisticCriteria.java
+@@ -2,10 +2,10 @@
+ 
+ public class ScoreboardStatisticCriteria extends ScoreboardBaseCriteria {
+ 
+-    private final Statistic j;
++    private final Statistic o;
+ 
+     public ScoreboardStatisticCriteria(Statistic statistic) {
+         super(statistic.name);
+-        this.j = statistic;
++        this.o = statistic;
+     }
+ }

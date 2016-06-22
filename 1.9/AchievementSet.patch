@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/AchievementSet.java
++++ b/net/minecraft/server/AchievementSet.java
+@@ -5,7 +5,6 @@
+ import com.google.gson.JsonArray;
+ import com.google.gson.JsonElement;
+ import com.google.gson.JsonPrimitive;
+-import java.util.Collection;
+ import java.util.Iterator;
+ import java.util.Set;
+ 
+@@ -44,12 +43,4 @@
+     protected Set<String> delegate() {
+         return this.a;
+     }
+-
+-    protected Collection delegate() {
+-        return this.delegate();
+-    }
+-
+-    protected Object delegate() {
+-        return this.delegate();
+-    }
+ }

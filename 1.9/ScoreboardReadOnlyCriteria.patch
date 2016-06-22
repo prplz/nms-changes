@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/ScoreboardReadOnlyCriteria.java
++++ b/net/minecraft/server/ScoreboardReadOnlyCriteria.java
+@@ -0,0 +1,12 @@
++package net.minecraft.server;
++
++public class ScoreboardReadOnlyCriteria extends ScoreboardBaseCriteria {
++
++    public ScoreboardReadOnlyCriteria(String s) {
++        super(s);
++    }
++
++    public boolean isReadOnly() {
++        return true;
++    }
++}

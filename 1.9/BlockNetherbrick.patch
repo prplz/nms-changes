@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockNetherbrick.java
++++ b/net/minecraft/server/BlockNetherbrick.java
+@@ -7,7 +7,7 @@
+         this.a(CreativeModeTab.b);
+     }
+ 
+-    public MaterialMapColor g(IBlockData iblockdata) {
++    public MaterialMapColor r(IBlockData iblockdata) {
+         return MaterialMapColor.K;
+     }
+ }

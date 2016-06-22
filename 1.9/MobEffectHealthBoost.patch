@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/MobEffectHealthBoost.java
++++ b/net/minecraft/server/MobEffectHealthBoost.java
+@@ -2,8 +2,8 @@
+ 
+ public class MobEffectHealthBoost extends MobEffectList {
+ 
+-    public MobEffectHealthBoost(int i, MinecraftKey minecraftkey, boolean flag, int j) {
+-        super(i, minecraftkey, flag, j);
++    public MobEffectHealthBoost(boolean flag, int i) {
++        super(flag, i);
+     }
+ 
+     public void a(EntityLiving entityliving, AttributeMapBase attributemapbase, int i) {

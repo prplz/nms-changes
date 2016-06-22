@@ -1,0 +1,24 @@
+--- a/net/minecraft/server/PacketPlayOutBlockAction.java
++++ b/net/minecraft/server/PacketPlayOutBlockAction.java
+@@ -19,10 +19,10 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c();
++        this.a = packetdataserializer.e();
+         this.b = packetdataserializer.readUnsignedByte();
+         this.c = packetdataserializer.readUnsignedByte();
+-        this.d = Block.getById(packetdataserializer.e() & 4095);
++        this.d = Block.getById(packetdataserializer.g() & 4095);
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+@@ -35,8 +35,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RemoteConnectionThread.java
++++ b/net/minecraft/server/RemoteConnectionThread.java
+@@ -55,7 +55,7 @@
+     }
+ 
+     protected int d() {
+-        return this.b.I();
++        return this.b.H();
+     }
+ 
+     protected void a(DatagramSocket datagramsocket) {

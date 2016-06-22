@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ControllerJump.java
++++ b/net/minecraft/server/ControllerJump.java
+@@ -14,7 +14,7 @@
+     }
+ 
+     public void b() {
+-        this.b.i(this.a);
++        this.b.k(this.a);
+         this.a = false;
+     }
+ }

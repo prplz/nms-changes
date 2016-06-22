@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/EnumDirection.java
++++ b/net/minecraft/server/EnumDirection.java
+@@ -36,7 +36,7 @@
+         return this.g;
+     }
+ 
+-    public int b() {
++    public int get2DRotationValue() {
+         return this.i;
+     }
+ 
+@@ -118,6 +118,10 @@
+         return fromType2(MathHelper.floor(d0 / 90.0D + 0.5D) & 3);
+     }
+ 
++    public float l() {
++        return (float) ((this.i & 3) * 90);
++    }
++
+     public static EnumDirection a(Random random) {
+         return values()[random.nextInt(values().length)];
+     }

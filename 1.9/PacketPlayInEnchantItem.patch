@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInEnchantItem.java
++++ b/net/minecraft/server/PacketPlayInEnchantItem.java
+@@ -30,8 +30,4 @@
+     public int b() {
+         return this.b;
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayIn) packetlistener);
+-    }
+ }

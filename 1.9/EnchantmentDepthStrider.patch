@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/EnchantmentDepthStrider.java
++++ b/net/minecraft/server/EnchantmentDepthStrider.java
+@@ -2,8 +2,8 @@
+ 
+ public class EnchantmentDepthStrider extends Enchantment {
+ 
+-    public EnchantmentDepthStrider(int i, MinecraftKey minecraftkey, int j) {
+-        super(i, minecraftkey, j, EnchantmentSlotType.ARMOR_FEET);
++    public EnchantmentDepthStrider(Enchantment.Rarity enchantment_rarity, EnumItemSlot... aenumitemslot) {
++        super(enchantment_rarity, EnchantmentSlotType.ARMOR_FEET, aenumitemslot);
+         this.c("waterWalker");
+     }
+ 
+@@ -18,4 +18,8 @@
+     public int getMaxLevel() {
+         return 3;
+     }
++
++    public boolean a(Enchantment enchantment) {
++        return super.a(enchantment) && enchantment != Enchantments.j;
++    }
+ }

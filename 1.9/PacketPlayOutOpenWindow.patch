@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PacketPlayOutOpenWindow.java
++++ b/net/minecraft/server/PacketPlayOutOpenWindow.java
+@@ -35,7 +35,7 @@
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = packetdataserializer.readUnsignedByte();
+         this.b = packetdataserializer.c(32);
+-        this.c = packetdataserializer.d();
++        this.c = packetdataserializer.f();
+         this.d = packetdataserializer.readUnsignedByte();
+         if (this.b.equals("EntityHorse")) {
+             this.e = packetdataserializer.readInt();
+@@ -53,8 +53,4 @@
+         }
+ 
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

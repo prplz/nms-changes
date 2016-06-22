@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/IHopper.java
++++ b/net/minecraft/server/IHopper.java
+@@ -4,9 +4,9 @@
+ 
+     World getWorld();
+ 
+-    double A();
++    double E();
+ 
+-    double B();
++    double F();
+ 
+-    double C();
++    double G();
+ }

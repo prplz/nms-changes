@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketStatusInPing.java
++++ b/net/minecraft/server/PacketStatusInPing.java
+@@ -23,8 +23,4 @@
+     public long a() {
+         return this.a;
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketStatusInListener) packetlistener);
+-    }
+ }

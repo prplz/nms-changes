@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutScoreboardObjective.java
++++ b/net/minecraft/server/PacketPlayOutScoreboardObjective.java
+@@ -41,8 +41,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

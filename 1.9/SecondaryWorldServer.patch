@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/SecondaryWorldServer.java
++++ b/net/minecraft/server/SecondaryWorldServer.java
+@@ -41,8 +41,9 @@
+     protected void a() {}
+ 
+     public World b() {
+-        this.worldMaps = this.a.T();
++        this.worldMaps = this.a.X();
+         this.scoreboard = this.a.getScoreboard();
++        this.B = this.a.ak();
+         String s = PersistentVillage.a(this.worldProvider);
+         PersistentVillage persistentvillage = (PersistentVillage) this.worldMaps.get(PersistentVillage.class, s);
+ 
+@@ -56,4 +57,8 @@
+ 
+         return this;
+     }
++
++    public void c() {
++        this.worldProvider.q();
++    }
+ }

@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/AttributeModifiable.java
++++ b/net/minecraft/server/AttributeModifiable.java
+@@ -111,6 +111,15 @@
+         this.f();
+     }
+ 
++    public void b(UUID uuid) {
++        AttributeModifier attributemodifier = this.a(uuid);
++
++        if (attributemodifier != null) {
++            this.c(attributemodifier);
++        }
++
++    }
++
+     public double getValue() {
+         if (this.g) {
+             this.h = this.g();

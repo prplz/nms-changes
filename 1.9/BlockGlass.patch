@@ -1,0 +1,16 @@
+--- a/net/minecraft/server/BlockGlass.java
++++ b/net/minecraft/server/BlockGlass.java
+@@ -13,11 +13,11 @@
+         return 0;
+     }
+ 
+-    public boolean d() {
++    public boolean c(IBlockData iblockdata) {
+         return false;
+     }
+ 
+-    protected boolean I() {
++    protected boolean o() {
+         return true;
+     }
+ }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockRedFlowers.java
++++ b/net/minecraft/server/BlockRedFlowers.java
+@@ -4,7 +4,7 @@
+ 
+     public BlockRedFlowers() {}
+ 
+-    public BlockFlowers.EnumFlowerType l() {
++    public BlockFlowers.EnumFlowerType e() {
+         return BlockFlowers.EnumFlowerType.RED;
+     }
+ }

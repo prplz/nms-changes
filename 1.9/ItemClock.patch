@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/ItemClock.java
++++ b/net/minecraft/server/ItemClock.java
+@@ -0,0 +1,9 @@
++package net.minecraft.server;
++
++public class ItemClock extends Item {
++
++    public ItemClock() {
++        this.a(new MinecraftKey("time"), new IDynamicTexture() {
++        });
++    }
++}

@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/ShapeDetector.java
++++ b/net/minecraft/server/ShapeDetector.java
+@@ -31,6 +31,10 @@
+ 
+     }
+ 
++    public int a() {
++        return this.b;
++    }
++
+     public int b() {
+         return this.c;
+     }
+@@ -125,7 +129,7 @@
+             return this.a;
+         }
+ 
+-        public EnumDirection b() {
++        public EnumDirection getFacing() {
+             return this.b;
+         }
+ 
+@@ -142,7 +146,7 @@
+         }
+ 
+         public ShapeDetectorBlock a(int i, int j, int k) {
+-            return (ShapeDetectorBlock) this.d.getUnchecked(ShapeDetector.a(this.a, this.b(), this.c(), i, j, k));
++            return (ShapeDetectorBlock) this.d.getUnchecked(ShapeDetector.a(this.a, this.getFacing(), this.c(), i, j, k));
+         }
+ 
+         public String toString() {

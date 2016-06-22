@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RecipeMapExtend.java
++++ b/net/minecraft/server/RecipeMapExtend.java
+@@ -47,7 +47,7 @@
+             itemstack.setTag(new NBTTagCompound());
+         }
+ 
+-        itemstack.getTag().setBoolean("map_is_scaling", true);
++        itemstack.getTag().setInt("map_scale_direction", 1);
+         return itemstack;
+     }
+ }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInChat.java
++++ b/net/minecraft/server/PacketPlayInChat.java
+@@ -31,8 +31,4 @@
+     public String a() {
+         return this.a;
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayIn) packetlistener);
+-    }
+ }

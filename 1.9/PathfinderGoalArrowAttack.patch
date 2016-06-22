@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PathfinderGoalArrowAttack.java
++++ b/net/minecraft/server/PathfinderGoalArrowAttack.java
+@@ -45,7 +45,7 @@
+     }
+ 
+     public boolean b() {
+-        return this.a() || !this.a.getNavigation().m();
++        return this.a() || !this.a.getNavigation().n();
+     }
+ 
+     public void d() {
+@@ -65,7 +65,7 @@
+         }
+ 
+         if (d0 <= (double) this.j && this.f >= 20) {
+-            this.a.getNavigation().n();
++            this.a.getNavigation().o();
+         } else {
+             this.a.getNavigation().a((Entity) this.c, this.e);
+         }

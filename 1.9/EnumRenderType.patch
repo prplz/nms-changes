@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumRenderType.java
++++ b/net/minecraft/server/EnumRenderType.java
+@@ -0,0 +1,8 @@
++package net.minecraft.server;
++
++public enum EnumRenderType {
++
++    INVISIBLE, LIQUID, ENTITYBLOCK_ANIMATED, MODEL;
++
++    private EnumRenderType() {}
++}

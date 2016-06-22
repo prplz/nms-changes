@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockObsidian.java
++++ b/net/minecraft/server/BlockObsidian.java
+@@ -13,7 +13,7 @@
+         return Item.getItemOf(Blocks.OBSIDIAN);
+     }
+ 
+-    public MaterialMapColor g(IBlockData iblockdata) {
++    public MaterialMapColor r(IBlockData iblockdata) {
+         return MaterialMapColor.E;
+     }
+ }

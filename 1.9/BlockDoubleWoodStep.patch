@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockDoubleWoodStep.java
++++ b/net/minecraft/server/BlockDoubleWoodStep.java
+@@ -4,7 +4,7 @@
+ 
+     public BlockDoubleWoodStep() {}
+ 
+-    public boolean l() {
++    public boolean e() {
+         return true;
+     }
+ }

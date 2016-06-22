@@ -1,0 +1,35 @@
+--- a/net/minecraft/server/PacketPlayOutMultiBlockChange.java
++++ b/net/minecraft/server/PacketPlayOutMultiBlockChange.java
+@@ -21,10 +21,10 @@
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = new ChunkCoordIntPair(packetdataserializer.readInt(), packetdataserializer.readInt());
+-        this.b = new PacketPlayOutMultiBlockChange.MultiBlockChangeInfo[packetdataserializer.e()];
++        this.b = new PacketPlayOutMultiBlockChange.MultiBlockChangeInfo[packetdataserializer.g()];
+ 
+         for (int i = 0; i < this.b.length; ++i) {
+-            this.b[i] = new PacketPlayOutMultiBlockChange.MultiBlockChangeInfo(packetdataserializer.readShort(), (IBlockData) Block.d.a(packetdataserializer.e()));
++            this.b[i] = new PacketPlayOutMultiBlockChange.MultiBlockChangeInfo(packetdataserializer.readShort(), (IBlockData) Block.REGISTRY_ID.fromId(packetdataserializer.g()));
+         }
+ 
+     }
+@@ -40,7 +40,7 @@
+             PacketPlayOutMultiBlockChange.MultiBlockChangeInfo packetplayoutmultiblockchange_multiblockchangeinfo = apacketplayoutmultiblockchange_multiblockchangeinfo[j];
+ 
+             packetdataserializer.writeShort(packetplayoutmultiblockchange_multiblockchangeinfo.b());
+-            packetdataserializer.b(Block.d.b(packetplayoutmultiblockchange_multiblockchangeinfo.c()));
++            packetdataserializer.b(Block.REGISTRY_ID.getId(packetplayoutmultiblockchange_multiblockchangeinfo.c()));
+         }
+ 
+     }
+@@ -49,10 +49,6 @@
+         packetlistenerplayout.a(this);
+     }
+ 
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+-
+     public class MultiBlockChangeInfo {
+ 
+         private final short b;

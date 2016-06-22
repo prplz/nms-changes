@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemWorldMapBase.java
++++ b/net/minecraft/server/ItemWorldMapBase.java
+@@ -8,7 +8,7 @@
+         return true;
+     }
+ 
+-    public Packet c(ItemStack itemstack, World world, EntityHuman entityhuman) {
++    public Packet<?> a(ItemStack itemstack, World world, EntityHuman entityhuman) {
+         return null;
+     }
+ }

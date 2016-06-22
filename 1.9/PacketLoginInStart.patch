@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketLoginInStart.java
++++ b/net/minecraft/server/PacketLoginInStart.java
+@@ -29,8 +29,4 @@
+     public GameProfile a() {
+         return this.a;
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketLoginInListener) packetlistener);
+-    }
+ }

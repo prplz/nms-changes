@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutLogin.java
++++ b/net/minecraft/server/PacketPlayOutLogin.java
+@@ -64,8 +64,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }

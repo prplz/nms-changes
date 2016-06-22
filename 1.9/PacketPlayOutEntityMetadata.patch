@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/PacketPlayOutEntityMetadata.java
++++ b/net/minecraft/server/PacketPlayOutEntityMetadata.java
+@@ -6,7 +6,7 @@
+ public class PacketPlayOutEntityMetadata implements Packet<PacketListenerPlayOut> {
+ 
+     private int a;
+-    private List<DataWatcher.WatchableObject> b;
++    private List<DataWatcher.Item<?>> b;
+ 
+     public PacketPlayOutEntityMetadata() {}
+ 
+@@ -21,7 +21,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.e();
++        this.a = packetdataserializer.g();
+         this.b = DataWatcher.b(packetdataserializer);
+     }
+ 
+@@ -33,8 +33,4 @@
+     public void a(PacketListenerPlayOut packetlistenerplayout) {
+         packetlistenerplayout.a(this);
+     }
+-
+-    public void a(PacketListener packetlistener) {
+-        this.a((PacketListenerPlayOut) packetlistener);
+-    }
+ }
