@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IBlockProperties.java
++++ b/net/minecraft/server/IBlockProperties.java
+@@ -9,6 +9,8 @@
+ 
+     boolean b();
+ 
++    boolean a(Entity entity);
++
+     int c();
+ 
+     int d();

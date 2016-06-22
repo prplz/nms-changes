@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/DataConverterSignText.java
++++ b/net/minecraft/server/DataConverterSignText.java
+@@ -34,7 +34,7 @@
+ 
+                 return ichatbasecomponent;
+             } else {
+-                throw new JsonParseException("Don\'t know how to turn " + jsonelement.toString() + " into a Component");
++                throw new JsonParseException("Don\'t know how to turn " + jsonelement + " into a Component");
+             }
+         }
+ 

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldGenMushrooms.java
++++ b/net/minecraft/server/WorldGenMushrooms.java
+@@ -4,7 +4,7 @@
+ 
+ public class WorldGenMushrooms extends WorldGenerator {
+ 
+-    private BlockPlant a;
++    private final BlockPlant a;
+ 
+     public WorldGenMushrooms(BlockPlant blockplant) {
+         this.a = blockplant;

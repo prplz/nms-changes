@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NetworkManager.java
++++ b/net/minecraft/server/NetworkManager.java
+@@ -221,7 +221,7 @@
+     public void a() {
+         this.m();
+         if (this.m instanceof ITickable) {
+-            ((ITickable) this.m).c();
++            ((ITickable) this.m).E_();
+         }
+ 
+         this.channel.flush();

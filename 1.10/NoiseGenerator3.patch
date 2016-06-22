@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/NoiseGenerator3.java
++++ b/net/minecraft/server/NoiseGenerator3.java
+@@ -4,8 +4,8 @@
+ 
+ public class NoiseGenerator3 extends NoiseGenerator {
+ 
+-    private NoiseGenerator3Handler[] a;
+-    private int b;
++    private final NoiseGenerator3Handler[] a;
++    private final int b;
+ 
+     public NoiseGenerator3(Random random, int i) {
+         this.b = i;

@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PlayerListBox.java
++++ b/net/minecraft/server/PlayerListBox.java
+@@ -5,7 +5,7 @@
+ 
+ public class PlayerListBox extends JList implements ITickable {
+ 
+-    private MinecraftServer a;
++    private final MinecraftServer a;
+     private int b;
+ 
+     public PlayerListBox(MinecraftServer minecraftserver) {
+@@ -13,7 +13,7 @@
+         minecraftserver.a((ITickable) this);
+     }
+ 
+-    public void c() {
++    public void E_() {
+         if (this.b++ % 20 == 0) {
+             Vector vector = new Vector();
+ 

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/EntityThrownExpBottle.java
++++ b/net/minecraft/server/EntityThrownExpBottle.java
+@@ -14,6 +14,10 @@
+         super(world, d0, d1, d2);
+     }
+ 
++    public static void a(DataConverterManager dataconvertermanager) {
++        EntityProjectile.a(dataconvertermanager, "ThrowableExpBottle");
++    }
++
+     protected float j() {
+         return 0.07F;
+     }

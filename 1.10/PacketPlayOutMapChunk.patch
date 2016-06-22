@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutMapChunk.java
++++ b/net/minecraft/server/PacketPlayOutMapChunk.java
+@@ -37,7 +37,7 @@
+             int j = blockposition.getY() >> 4;
+ 
+             if (this.e() || (i & 1 << j) != 0) {
+-                NBTTagCompound nbttagcompound = tileentity.E_();
++                NBTTagCompound nbttagcompound = tileentity.c();
+ 
+                 this.e.add(nbttagcompound);
+             }

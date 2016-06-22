@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalBreed.java
++++ b/net/minecraft/server/PathfinderGoalBreed.java
+@@ -6,7 +6,7 @@
+ 
+ public class PathfinderGoalBreed extends PathfinderGoal {
+ 
+-    private EntityAnimal animal;
++    private final EntityAnimal animal;
+     World a;
+     private EntityAnimal partner;
+     int b;

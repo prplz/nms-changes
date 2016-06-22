@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/EntityMinecartRideable.java
++++ b/net/minecraft/server/EntityMinecartRideable.java
+@@ -12,6 +12,10 @@
+         super(world, d0, d1, d2);
+     }
+ 
++    public static void a(DataConverterManager dataconvertermanager) {
++        EntityMinecartAbstract.a(dataconvertermanager, "MinecartRideable");
++    }
++
+     public boolean a(EntityHuman entityhuman, @Nullable ItemStack itemstack, EnumHand enumhand) {
+         if (entityhuman.isSneaking()) {
+             return false;
+@@ -36,7 +40,7 @@
+                 this.e(-this.u());
+                 this.d(10);
+                 this.setDamage(50.0F);
+-                this.ao();
++                this.ap();
+             }
+         }
+ 

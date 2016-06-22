@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInSettings.java
++++ b/net/minecraft/server/PacketPlayInSettings.java
+@@ -51,7 +51,7 @@
+         return this.e;
+     }
+ 
+-    public EnumMainHand f() {
++    public EnumMainHand getMainHand() {
+         return this.f;
+     }
+ }

@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/EntityEnderPearl.java
++++ b/net/minecraft/server/EntityEnderPearl.java
+@@ -13,6 +13,10 @@
+         this.d = entityliving;
+     }
+ 
++    public static void a(DataConverterManager dataconvertermanager) {
++        EntityProjectile.a(dataconvertermanager, "ThrownEnderpearl");
++    }
++
+     protected void a(MovingObjectPosition movingobjectposition) {
+         EntityLiving entityliving = this.getShooter();
+ 
+@@ -60,7 +64,7 @@
+                     }
+ 
+                     if (entityliving.isPassenger()) {
+-                        this.stopRiding();
++                        entityliving.stopRiding();
+                     }
+ 
+                     entityliving.enderTeleportTo(this.locX, this.locY, this.locZ);

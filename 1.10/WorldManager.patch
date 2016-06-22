@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/WorldManager.java
++++ b/net/minecraft/server/WorldManager.java
+@@ -5,8 +5,8 @@
+ 
+ public class WorldManager implements IWorldAccess {
+ 
+-    private MinecraftServer a;
+-    private WorldServer world;
++    private final MinecraftServer a;
++    private final WorldServer world;
+ 
+     public WorldManager(MinecraftServer minecraftserver, WorldServer worldserver) {
+         this.a = minecraftserver;

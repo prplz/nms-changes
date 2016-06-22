@@ -1,0 +1,25 @@
+--- a/net/minecraft/server/BlockStateList.java
++++ b/net/minecraft/server/BlockStateList.java
+@@ -137,6 +137,11 @@
+         return Objects.toStringHelper(this).add("block", Block.REGISTRY.b(this.c)).add("properties", Iterables.transform(this.d.values(), BlockStateList.b)).toString();
+     }
+ 
++    @Nullable
++    public IBlockState<?> a(String s) {
++        return (IBlockState) this.d.get(s);
++    }
++
+     static class BlockData extends BlockDataAbstract {
+ 
+         private final Block a;
+@@ -236,6 +241,10 @@
+             return this.a.l(this);
+         }
+ 
++        public boolean a(Entity entity) {
++            return this.a.a((IBlockData) this, entity);
++        }
++
+         public int c() {
+             return this.a.m(this);
+         }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/InventoryCraftResult.java
++++ b/net/minecraft/server/InventoryCraftResult.java
+@@ -4,7 +4,7 @@
+ 
+ public class InventoryCraftResult implements IInventory {
+ 
+-    private ItemStack[] items = new ItemStack[1];
++    private final ItemStack[] items = new ItemStack[1];
+ 
+     public InventoryCraftResult() {}
+ 

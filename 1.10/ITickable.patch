@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/ITickable.java
++++ b/net/minecraft/server/ITickable.java
+@@ -2,5 +2,5 @@
+ 
+ public interface ITickable {
+ 
+-    void c();
++    void E_();
+ }

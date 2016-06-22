@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ContainerDispenser.java
++++ b/net/minecraft/server/ContainerDispenser.java
+@@ -4,7 +4,7 @@
+ 
+ public class ContainerDispenser extends Container {
+ 
+-    public IInventory items;
++    public final IInventory items;
+ 
+     public ContainerDispenser(IInventory iinventory, IInventory iinventory1) {
+         this.items = iinventory1;

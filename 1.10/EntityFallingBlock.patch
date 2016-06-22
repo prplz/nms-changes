@@ -1,0 +1,41 @@
+--- a/net/minecraft/server/EntityFallingBlock.java
++++ b/net/minecraft/server/EntityFallingBlock.java
+@@ -73,7 +73,10 @@
+                 }
+             }
+ 
+-            this.motY -= 0.03999999910593033D;
++            if (!this.isNoGravity()) {
++                this.motY -= 0.03999999910593033D;
++            }
++
+             this.move(this.motX, this.motY, this.motZ);
+             this.motX *= 0.9800000190734863D;
+             this.motY *= 0.9800000190734863D;
+@@ -110,7 +113,7 @@
+                                             String s = (String) iterator.next();
+                                             NBTBase nbtbase = this.tileEntityData.get(s);
+ 
+-                                            if (!s.equals("x") && !s.equals("y") && !s.equals("z")) {
++                                            if (!"x".equals(s) && !"y".equals(s) && !"z".equals(s)) {
+                                                 nbttagcompound.set(s, nbtbase.clone());
+                                             }
+                                         }
+@@ -169,6 +172,8 @@
+ 
+     }
+ 
++    public static void a(DataConverterManager dataconvertermanager) {}
++
+     protected void b(NBTTagCompound nbttagcompound) {
+         Block block = this.block != null ? this.block.getBlock() : Blocks.AIR;
+         MinecraftKey minecraftkey = (MinecraftKey) Block.REGISTRY.b(block);
+@@ -242,7 +247,7 @@
+         return this.block;
+     }
+ 
+-    public boolean bs() {
++    public boolean bu() {
+         return true;
+     }
+ }

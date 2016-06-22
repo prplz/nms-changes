@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/LootItemFunctionSetTag.java
++++ b/net/minecraft/server/LootItemFunctionSetTag.java
+@@ -19,7 +19,7 @@
+         NBTTagCompound nbttagcompound = itemstack.getTag();
+ 
+         if (nbttagcompound == null) {
+-            nbttagcompound = (NBTTagCompound) this.a.clone();
++            nbttagcompound = this.a.g();
+         } else {
+             nbttagcompound.a(this.a);
+         }

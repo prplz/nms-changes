@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldProviderTheEnd.java
++++ b/net/minecraft/server/WorldProviderTheEnd.java
+@@ -4,7 +4,7 @@
+ 
+ public class WorldProviderTheEnd extends WorldProvider {
+ 
+-    private EnderDragonBattle g = null;
++    private EnderDragonBattle g;
+ 
+     public WorldProviderTheEnd() {}
+ 

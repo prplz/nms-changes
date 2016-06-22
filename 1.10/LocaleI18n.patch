@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/LocaleI18n.java
++++ b/net/minecraft/server/LocaleI18n.java
+@@ -3,8 +3,8 @@
+ @Deprecated
+ public class LocaleI18n {
+ 
+-    private static LocaleLanguage a = LocaleLanguage.a();
+-    private static LocaleLanguage b = new LocaleLanguage();
++    private static final LocaleLanguage a = LocaleLanguage.a();
++    private static final LocaleLanguage b = new LocaleLanguage();
+ 
+     @Deprecated
+     public static String get(String s) {

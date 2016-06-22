@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalRestrictSun.java
++++ b/net/minecraft/server/PathfinderGoalRestrictSun.java
+@@ -2,7 +2,7 @@
+ 
+ public class PathfinderGoalRestrictSun extends PathfinderGoal {
+ 
+-    private EntityCreature a;
++    private final EntityCreature a;
+ 
+     public PathfinderGoalRestrictSun(EntityCreature entitycreature) {
+         this.a = entitycreature;

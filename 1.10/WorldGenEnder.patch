@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/WorldGenEnder.java
++++ b/net/minecraft/server/WorldGenEnder.java
+@@ -6,8 +6,8 @@
+ 
+ public class WorldGenEnder extends WorldGenerator {
+ 
+-    private boolean a = false;
+-    private WorldGenEnder.Spike b = null;
++    private boolean a;
++    private WorldGenEnder.Spike b;
+     private BlockPosition c;
+ 
+     public WorldGenEnder() {}

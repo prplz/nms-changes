@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RecipiesShield.java
++++ b/net/minecraft/server/RecipiesShield.java
+@@ -73,7 +73,7 @@
+             NBTTagCompound nbttagcompound;
+ 
+             if (itemstack.hasTag()) {
+-                nbttagcompound = (NBTTagCompound) itemstack.getTag().clone();
++                nbttagcompound = itemstack.getTag().g();
+                 enumcolor = EnumColor.fromInvColorIndex(TileEntityBanner.b(itemstack));
+             } else {
+                 nbttagcompound = new NBTTagCompound();

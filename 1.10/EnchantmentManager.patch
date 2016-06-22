@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/EnchantmentManager.java
++++ b/net/minecraft/server/EnchantmentManager.java
+@@ -136,7 +136,7 @@
+         EnchantmentManager.d.b = entity;
+         EnchantmentManager.d.a = entityliving;
+         if (entityliving != null) {
+-            a((EnchantmentManager.EnchantmentModifier) EnchantmentManager.d, entityliving.aG());
++            a((EnchantmentManager.EnchantmentModifier) EnchantmentManager.d, entityliving.aI());
+         }
+ 
+         if (entity instanceof EntityHuman) {
+@@ -149,7 +149,7 @@
+         EnchantmentManager.e.a = entityliving;
+         EnchantmentManager.e.b = entity;
+         if (entityliving != null) {
+-            a((EnchantmentManager.EnchantmentModifier) EnchantmentManager.e, entityliving.aG());
++            a((EnchantmentManager.EnchantmentModifier) EnchantmentManager.e, entityliving.aI());
+         }
+ 
+         if (entityliving instanceof EntityHuman) {
+@@ -216,6 +216,10 @@
+         return a(Enchantments.WATER_WORKER, entityliving) > 0;
+     }
+ 
++    public static boolean j(EntityLiving entityliving) {
++        return a(Enchantments.j, entityliving) > 0;
++    }
++
+     @Nullable
+     public static ItemStack b(Enchantment enchantment, EntityLiving entityliving) {
+         Iterable iterable = enchantment.a(entityliving);

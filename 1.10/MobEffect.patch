@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/MobEffect.java
++++ b/net/minecraft/server/MobEffect.java
+@@ -107,7 +107,7 @@
+     }
+ 
+     public String toString() {
+-        String s = "";
++        String s;
+ 
+         if (this.amplification > 0) {
+             s = this.f() + " x " + (this.amplification + 1) + ", Duration: " + this.duration;

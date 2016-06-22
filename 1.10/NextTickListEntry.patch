@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NextTickListEntry.java
++++ b/net/minecraft/server/NextTickListEntry.java
+@@ -7,7 +7,7 @@
+     public final BlockPosition a;
+     public long b;
+     public int c;
+-    private long f;
++    private final long f;
+ 
+     public NextTickListEntry(BlockPosition blockposition, Block block) {
+         this.f = (long) (NextTickListEntry.d++);

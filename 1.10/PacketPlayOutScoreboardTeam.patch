@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutScoreboardTeam.java
++++ b/net/minecraft/server/PacketPlayOutScoreboardTeam.java
+@@ -14,7 +14,7 @@
+     private String e;
+     private String f;
+     private int g;
+-    private Collection<String> h;
++    private final Collection<String> h;
+     private int i;
+     private int j;
+ 

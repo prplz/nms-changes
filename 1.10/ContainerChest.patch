@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/ContainerChest.java
++++ b/net/minecraft/server/ContainerChest.java
+@@ -4,8 +4,8 @@
+ 
+ public class ContainerChest extends Container {
+ 
+-    private IInventory container;
+-    private int f;
++    private final IInventory container;
++    private final int f;
+ 
+     public ContainerChest(IInventory iinventory, IInventory iinventory1, EntityHuman entityhuman) {
+         this.container = iinventory1;

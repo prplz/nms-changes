@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalMoveIndoors.java
++++ b/net/minecraft/server/PathfinderGoalMoveIndoors.java
+@@ -2,7 +2,7 @@
+ 
+ public class PathfinderGoalMoveIndoors extends PathfinderGoal {
+ 
+-    private EntityCreature a;
++    private final EntityCreature a;
+     private VillageDoor b;
+     private int c = -1;
+     private int d = -1;

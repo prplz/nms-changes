@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/EntityLargeFireball.java
++++ b/net/minecraft/server/EntityLargeFireball.java
+@@ -27,6 +27,10 @@
+ 
+     }
+ 
++    public static void a(DataConverterManager dataconvertermanager) {
++        EntityFireball.a(dataconvertermanager, "Fireball");
++    }
++
+     public void b(NBTTagCompound nbttagcompound) {
+         super.b(nbttagcompound);
+         nbttagcompound.setInt("ExplosionPower", this.yield);

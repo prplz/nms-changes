@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NoiseGeneratorPerlin.java
++++ b/net/minecraft/server/NoiseGeneratorPerlin.java
+@@ -4,7 +4,7 @@
+ 
+ public class NoiseGeneratorPerlin extends NoiseGenerator {
+ 
+-    private int[] d;
++    private final int[] d;
+     public double a;
+     public double b;
+     public double c;

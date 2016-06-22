@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldGenMonument.java
++++ b/net/minecraft/server/WorldGenMonument.java
+@@ -92,7 +92,7 @@
+ 
+     public static class WorldGenMonumentStart extends StructureStart {
+ 
+-        private Set<ChunkCoordIntPair> c = Sets.newHashSet();
++        private final Set<ChunkCoordIntPair> c = Sets.newHashSet();
+         private boolean d;
+ 
+         public WorldGenMonumentStart() {}

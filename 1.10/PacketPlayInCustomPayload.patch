@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketPlayInCustomPayload.java
++++ b/net/minecraft/server/PacketPlayInCustomPayload.java
+@@ -28,6 +28,10 @@
+ 
+     public void a(PacketListenerPlayIn packetlistenerplayin) {
+         packetlistenerplayin.a(this);
++        if (this.b != null) {
++            this.b.release();
++        }
++
+     }
+ 
+     public String a() {

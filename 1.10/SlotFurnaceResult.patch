@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/SlotFurnaceResult.java
++++ b/net/minecraft/server/SlotFurnaceResult.java
+@@ -4,7 +4,7 @@
+ 
+ public class SlotFurnaceResult extends Slot {
+ 
+-    private EntityHuman a;
++    private final EntityHuman a;
+     private int b;
+ 
+     public SlotFurnaceResult(EntityHuman entityhuman, IInventory iinventory, int i, int j, int k) {

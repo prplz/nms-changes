@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemTool.java
++++ b/net/minecraft/server/ItemTool.java
+@@ -5,7 +5,7 @@
+ 
+ public class ItemTool extends Item {
+ 
+-    private Set<Block> e;
++    private final Set<Block> e;
+     protected float a;
+     protected float b;
+     protected float c;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/Container.java
++++ b/net/minecraft/server/Container.java
+@@ -17,7 +17,7 @@
+     private int g;
+     private final Set<Slot> h = Sets.newHashSet();
+     protected List<ICrafting> listeners = Lists.newArrayList();
+-    private Set<EntityHuman> i = Sets.newHashSet();
++    private final Set<EntityHuman> i = Sets.newHashSet();
+ 
+     public Container() {}
+ 

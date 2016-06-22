@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/LootItemFunctionEnchant.java
++++ b/net/minecraft/server/LootItemFunctionEnchant.java
+@@ -45,7 +45,7 @@
+             }
+ 
+             if (arraylist.isEmpty()) {
+-                LootItemFunctionEnchant.a.warn("Couldn\'t find a compatible enchantment for " + itemstack);
++                LootItemFunctionEnchant.a.warn("Couldn\'t find a compatible enchantment for {}", new Object[] { itemstack});
+                 return itemstack;
+             }
+ 

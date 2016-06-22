@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockAir.java
++++ b/net/minecraft/server/BlockAir.java
+@@ -14,7 +14,7 @@
+ 
+     @Nullable
+     public AxisAlignedBB a(IBlockData iblockdata, World world, BlockPosition blockposition) {
+-        return null;
++        return BlockAir.k;
+     }
+ 
+     public boolean b(IBlockData iblockdata) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CommandEntityData.java
++++ b/net/minecraft/server/CommandEntityData.java
+@@ -28,7 +28,7 @@
+                 throw new CommandException("commands.entitydata.noPlayers", new Object[] { entity.getScoreboardDisplayName()});
+             } else {
+                 NBTTagCompound nbttagcompound = a(entity);
+-                NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttagcompound.clone();
++                NBTTagCompound nbttagcompound1 = nbttagcompound.g();
+ 
+                 NBTTagCompound nbttagcompound2;
+ 

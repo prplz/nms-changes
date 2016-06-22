@@ -1,0 +1,101 @@
+--- a/net/minecraft/server/TileEntity.java
++++ b/net/minecraft/server/TileEntity.java
+@@ -9,8 +9,8 @@
+ public abstract class TileEntity {
+ 
+     private static final Logger a = LogManager.getLogger();
+-    private static Map<String, Class<? extends TileEntity>> f = Maps.newHashMap();
+-    private static Map<Class<? extends TileEntity>, String> g = Maps.newHashMap();
++    private static final Map<String, Class<? extends TileEntity>> f = Maps.newHashMap();
++    private static final Map<Class<? extends TileEntity>, String> g = Maps.newHashMap();
+     protected World world;
+     protected BlockPosition position;
+     protected boolean d;
+@@ -48,10 +48,10 @@
+     }
+ 
+     public NBTTagCompound save(NBTTagCompound nbttagcompound) {
+-        return this.d(nbttagcompound);
++        return this.c(nbttagcompound);
+     }
+ 
+-    private NBTTagCompound d(NBTTagCompound nbttagcompound) {
++    private NBTTagCompound c(NBTTagCompound nbttagcompound) {
+         String s = (String) TileEntity.g.get(this.getClass());
+ 
+         if (s == null) {
+@@ -65,7 +65,7 @@
+         }
+     }
+ 
+-    public static TileEntity c(NBTTagCompound nbttagcompound) {
++    public static TileEntity a(World world, NBTTagCompound nbttagcompound) {
+         TileEntity tileentity = null;
+         String s = nbttagcompound.getString("id");
+ 
+@@ -76,23 +76,26 @@
+                 tileentity = (TileEntity) oclass.newInstance();
+             }
+         } catch (Throwable throwable) {
+-            TileEntity.a.error("Failed to create block entity " + s, throwable);
++            TileEntity.a.error("Failed to create block entity {}", new Object[] { s, throwable});
+         }
+ 
+         if (tileentity != null) {
+             try {
++                tileentity.b(world);
+                 tileentity.a(nbttagcompound);
+             } catch (Throwable throwable1) {
+-                TileEntity.a.error("Failed to load data for block entity " + s, throwable1);
++                TileEntity.a.error("Failed to load data for block entity {}", new Object[] { s, throwable1});
+                 tileentity = null;
+             }
+         } else {
+-            TileEntity.a.warn("Skipping BlockEntity with id " + s);
++            TileEntity.a.warn("Skipping BlockEntity with id {}", new Object[] { s});
+         }
+ 
+         return tileentity;
+     }
+ 
++    protected void b(World world) {}
++
+     public int u() {
+         if (this.h == -1) {
+             IBlockData iblockdata = this.world.getType(this.position);
+@@ -133,8 +136,8 @@
+         return null;
+     }
+ 
+-    public NBTTagCompound E_() {
+-        return this.d(new NBTTagCompound());
++    public NBTTagCompound c() {
++        return this.c(new NBTTagCompound());
+     }
+ 
+     public boolean x() {
+@@ -206,7 +209,7 @@
+         }
+     }
+ 
+-    public void a(BlockPosition blockposition) {
++    public void setPosition(BlockPosition blockposition) {
+         if (blockposition instanceof BlockPosition.MutableBlockPosition || blockposition instanceof BlockPosition.PooledBlockPosition) {
+             TileEntity.a.warn("Tried to assign a mutable BlockPos to a block entity...", new Error(blockposition.getClass().toString()));
+             blockposition = new BlockPosition(blockposition);
+@@ -219,6 +222,15 @@
+         return false;
+     }
+ 
++    @Nullable
++    public IChatBaseComponent i_() {
++        return null;
++    }
++
++    public void a(EnumBlockRotation enumblockrotation) {}
++
++    public void a(EnumBlockMirror enumblockmirror) {}
++
+     static {
+         a(TileEntityFurnace.class, "Furnace");
+         a(TileEntityChest.class, "Chest");

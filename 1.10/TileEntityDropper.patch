@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/TileEntityDropper.java
++++ b/net/minecraft/server/TileEntityDropper.java
+@@ -4,6 +4,10 @@
+ 
+     public TileEntityDropper() {}
+ 
++    public static void b(DataConverterManager dataconvertermanager) {
++        dataconvertermanager.a(DataConverterTypes.BLOCK_ENTITY, (DataInspector) (new DataInspectorItemList("Dropper", new String[] { "Items"})));
++    }
++
+     public String getName() {
+         return this.hasCustomName() ? this.a : "container.dropper";
+     }

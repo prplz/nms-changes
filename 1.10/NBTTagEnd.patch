@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/NBTTagEnd.java
++++ b/net/minecraft/server/NBTTagEnd.java
+@@ -22,7 +22,11 @@
+         return "END";
+     }
+ 
+-    public NBTBase clone() {
++    public NBTTagEnd c() {
+         return new NBTTagEnd();
+     }
++
++    public NBTBase clone() {
++        return this.c();
++    }
+ }

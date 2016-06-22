@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockHalfTransparent.java
++++ b/net/minecraft/server/BlockHalfTransparent.java
+@@ -2,7 +2,7 @@
+ 
+ public class BlockHalfTransparent extends Block {
+ 
+-    private boolean a;
++    private final boolean a;
+ 
+     protected BlockHalfTransparent(Material material, boolean flag) {
+         this(material, flag, material.r());

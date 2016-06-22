@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ISourceBlock.java
++++ b/net/minecraft/server/ISourceBlock.java
+@@ -10,7 +10,7 @@
+ 
+     BlockPosition getBlockPosition();
+ 
+-    int f();
++    IBlockData e();
+ 
+     <T extends TileEntity> T getTileEntity();
+ }

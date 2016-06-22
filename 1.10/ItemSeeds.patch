@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/ItemSeeds.java
++++ b/net/minecraft/server/ItemSeeds.java
+@@ -2,8 +2,8 @@
+ 
+ public class ItemSeeds extends Item {
+ 
+-    private Block a;
+-    private Block b;
++    private final Block a;
++    private final Block b;
+ 
+     public ItemSeeds(Block block, Block block1) {
+         this.a = block;

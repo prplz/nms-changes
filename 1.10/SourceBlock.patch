@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/SourceBlock.java
++++ b/net/minecraft/server/SourceBlock.java
+@@ -30,10 +30,8 @@
+         return this.b;
+     }
+ 
+-    public int f() {
+-        IBlockData iblockdata = this.a.getType(this.b);
+-
+-        return iblockdata.getBlock().toLegacyData(iblockdata);
++    public IBlockData e() {
++        return this.a.getType(this.b);
+     }
+ 
+     public <T extends TileEntity> T getTileEntity() {

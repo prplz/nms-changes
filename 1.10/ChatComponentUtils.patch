@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ChatComponentUtils.java
++++ b/net/minecraft/server/ChatComponentUtils.java
+@@ -24,7 +24,7 @@
+                 if (entity1 instanceof EntityHuman) {
+                     s = entity1.getName();
+                 } else {
+-                    s = entity1.bd();
++                    s = entity1.bf();
+                 }
+             }
+ 

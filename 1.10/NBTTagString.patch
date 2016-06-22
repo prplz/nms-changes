@@ -1,0 +1,24 @@
+--- a/net/minecraft/server/NBTTagString.java
++++ b/net/minecraft/server/NBTTagString.java
+@@ -37,7 +37,7 @@
+         return "\"" + this.data.replace("\"", "\\\"") + "\"";
+     }
+ 
+-    public NBTBase clone() {
++    public NBTTagString c() {
+         return new NBTTagString(this.data);
+     }
+ 
+@@ -59,7 +59,11 @@
+         return super.hashCode() ^ this.data.hashCode();
+     }
+ 
+-    public String a_() {
++    public String c_() {
+         return this.data;
+     }
++
++    public NBTBase clone() {
++        return this.c();
++    }
+ }

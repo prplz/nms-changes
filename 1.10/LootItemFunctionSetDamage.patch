@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/LootItemFunctionSetDamage.java
++++ b/net/minecraft/server/LootItemFunctionSetDamage.java
+@@ -23,7 +23,7 @@
+ 
+             itemstack.setData(MathHelper.d(f * (float) itemstack.j()));
+         } else {
+-            LootItemFunctionSetDamage.a.warn("Couldn\'t set damage of loot item " + itemstack);
++            LootItemFunctionSetDamage.a.warn("Couldn\'t set damage of loot item {}", new Object[] { itemstack});
+         }
+ 
+         return itemstack;

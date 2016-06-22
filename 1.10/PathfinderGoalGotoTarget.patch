@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalGotoTarget.java
++++ b/net/minecraft/server/PathfinderGoalGotoTarget.java
+@@ -9,7 +9,7 @@
+     private int f;
+     protected BlockPosition b;
+     private boolean g;
+-    private int h;
++    private final int h;
+ 
+     public PathfinderGoalGotoTarget(EntityCreature entitycreature, double d0, int i) {
+         this.b = BlockPosition.ZERO;

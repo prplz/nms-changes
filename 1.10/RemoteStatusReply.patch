@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/RemoteStatusReply.java
++++ b/net/minecraft/server/RemoteStatusReply.java
+@@ -6,8 +6,8 @@
+ 
+ public class RemoteStatusReply {
+ 
+-    private ByteArrayOutputStream a;
+-    private DataOutputStream b;
++    private final ByteArrayOutputStream a;
++    private final DataOutputStream b;
+ 
+     public RemoteStatusReply(int i) {
+         this.a = new ByteArrayOutputStream(i);

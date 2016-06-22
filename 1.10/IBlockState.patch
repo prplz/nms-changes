@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/IBlockState.java
++++ b/net/minecraft/server/IBlockState.java
+@@ -1,5 +1,6 @@
+ package net.minecraft.server;
+ 
++import com.google.common.base.Optional;
+ import java.util.Collection;
+ 
+ public interface IBlockState<T extends Comparable<T>> {
+@@ -10,5 +11,7 @@
+ 
+     Class<T> b();
+ 
++    Optional<T> b(String s);
++
+     String a(T t0);
+ }

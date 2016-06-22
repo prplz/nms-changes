@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemBanner.java
++++ b/net/minecraft/server/ItemBanner.java
+@@ -56,7 +56,7 @@
+ 
+     public static EnumColor b(ItemStack itemstack) {
+         NBTTagCompound nbttagcompound = itemstack.a("BlockEntityTag", false);
+-        EnumColor enumcolor = null;
++        EnumColor enumcolor;
+ 
+         if (nbttagcompound != null && nbttagcompound.hasKey("Base")) {
+             enumcolor = EnumColor.fromInvColorIndex(nbttagcompound.getInt("Base"));

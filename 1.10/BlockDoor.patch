@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockDoor.java
++++ b/net/minecraft/server/BlockDoor.java
+@@ -231,7 +231,7 @@
+     }
+ 
+     public IBlockData a(IBlockData iblockdata, EnumBlockMirror enumblockmirror) {
+-        return iblockdata.a(enumblockmirror.a((EnumDirection) iblockdata.get(BlockDoor.FACING)));
++        return enumblockmirror == EnumBlockMirror.NONE ? iblockdata : iblockdata.a(enumblockmirror.a((EnumDirection) iblockdata.get(BlockDoor.FACING))).a((IBlockState) BlockDoor.HINGE);
+     }
+ 
+     public IBlockData fromLegacyData(int i) {
