@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/PacketPlayOutScoreboardScore.java
++++ b/net/minecraft/server/PacketPlayOutScoreboardScore.java
+@@ -33,9 +33,9 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(40);
++        this.a = packetdataserializer.e(40);
+         this.d = (PacketPlayOutScoreboardScore.EnumScoreboardAction) packetdataserializer.a(PacketPlayOutScoreboardScore.EnumScoreboardAction.class);
+-        this.b = packetdataserializer.c(16);
++        this.b = packetdataserializer.e(16);
+         if (this.d != PacketPlayOutScoreboardScore.EnumScoreboardAction.REMOVE) {
+             this.c = packetdataserializer.g();
+         }
+@@ -47,7 +47,7 @@
+         packetdataserializer.a((Enum) this.d);
+         packetdataserializer.a(this.b);
+         if (this.d != PacketPlayOutScoreboardScore.EnumScoreboardAction.REMOVE) {
+-            packetdataserializer.b(this.c);
++            packetdataserializer.d(this.c);
+         }
+ 
+     }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/Pathfinder.java
++++ b/net/minecraft/server/Pathfinder.java
+@@ -45,7 +45,7 @@
+ 
+         while (!this.a.e()) {
+             ++i;
+-            if (i >= 2000) {
++            if (i >= 200) {
+                 break;
+             }
+ 

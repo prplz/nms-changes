@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPrepender.java
++++ b/net/minecraft/server/PacketPrepender.java
+@@ -18,7 +18,7 @@
+             PacketDataSerializer packetdataserializer = new PacketDataSerializer(bytebuf1);
+ 
+             packetdataserializer.ensureWritable(j + i);
+-            packetdataserializer.b(i);
++            packetdataserializer.d(i);
+             packetdataserializer.writeBytes(bytebuf, bytebuf.readerIndex(), i);
+         }
+     }

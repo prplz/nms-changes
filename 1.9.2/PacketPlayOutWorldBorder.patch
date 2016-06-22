@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/PacketPlayOutWorldBorder.java
++++ b/net/minecraft/server/PacketPlayOutWorldBorder.java
+@@ -86,11 +86,11 @@
+             break;
+ 
+         case 4:
+-            packetdataserializer.b(this.i);
++            packetdataserializer.d(this.i);
+             break;
+ 
+         case 5:
+-            packetdataserializer.b(this.h);
++            packetdataserializer.d(this.h);
+             break;
+ 
+         case 6:
+@@ -99,9 +99,9 @@
+             packetdataserializer.writeDouble(this.f);
+             packetdataserializer.writeDouble(this.e);
+             packetdataserializer.b(this.g);
+-            packetdataserializer.b(this.b);
+-            packetdataserializer.b(this.i);
+-            packetdataserializer.b(this.h);
++            packetdataserializer.d(this.b);
++            packetdataserializer.d(this.i);
++            packetdataserializer.d(this.h);
+         }
+ 
+     }

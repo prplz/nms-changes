@@ -1,0 +1,35 @@
+--- a/net/minecraft/server/EntityIronGolem.java
++++ b/net/minecraft/server/EntityIronGolem.java
+@@ -124,7 +124,7 @@
+             this.a((EntityLiving) this, entity);
+         }
+ 
+-        this.a(SoundEffects.cG, 1.0F, 1.0F);
++        this.a(SoundEffects.cH, 1.0F, 1.0F);
+         return flag;
+     }
+ 
+@@ -138,19 +138,19 @@
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.cI;
++        return SoundEffects.cJ;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.cH;
++        return SoundEffects.cI;
+     }
+ 
+     protected void a(BlockPosition blockposition, Block block) {
+-        this.a(SoundEffects.cJ, 1.0F, 1.0F);
++        this.a(SoundEffects.cK, 1.0F, 1.0F);
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.y;
++        return LootTables.z;
+     }
+ 
+     public int da() {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketLoginInStart.java
++++ b/net/minecraft/server/PacketLoginInStart.java
+@@ -15,7 +15,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = new GameProfile((UUID) null, packetdataserializer.c(16));
++        this.a = new GameProfile((UUID) null, packetdataserializer.e(16));
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {

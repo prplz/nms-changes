@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PacketPlayOutMultiBlockChange.java
++++ b/net/minecraft/server/PacketPlayOutMultiBlockChange.java
+@@ -32,7 +32,7 @@
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+         packetdataserializer.writeInt(this.a.x);
+         packetdataserializer.writeInt(this.a.z);
+-        packetdataserializer.b(this.b.length);
++        packetdataserializer.d(this.b.length);
+         PacketPlayOutMultiBlockChange.MultiBlockChangeInfo[] apacketplayoutmultiblockchange_multiblockchangeinfo = this.b;
+         int i = apacketplayoutmultiblockchange_multiblockchangeinfo.length;
+ 
+@@ -40,7 +40,7 @@
+             PacketPlayOutMultiBlockChange.MultiBlockChangeInfo packetplayoutmultiblockchange_multiblockchangeinfo = apacketplayoutmultiblockchange_multiblockchangeinfo[j];
+ 
+             packetdataserializer.writeShort(packetplayoutmultiblockchange_multiblockchangeinfo.b());
+-            packetdataserializer.b(Block.REGISTRY_ID.getId(packetplayoutmultiblockchange_multiblockchangeinfo.c()));
++            packetdataserializer.d(Block.REGISTRY_ID.getId(packetplayoutmultiblockchange_multiblockchangeinfo.c()));
+         }
+ 
+     }

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/EntityMinecartContainer.java
++++ b/net/minecraft/server/EntityMinecartContainer.java
+@@ -70,10 +70,6 @@
+         return true;
+     }
+ 
+-    public String getName() {
+-        return this.hasCustomName() ? this.getCustomName() : "container.minecart";
+-    }
+-
+     public int getMaxStackSize() {
+         return 64;
+     }

@@ -1,0 +1,35 @@
+--- a/net/minecraft/server/EntitySilverfish.java
++++ b/net/minecraft/server/EntitySilverfish.java
+@@ -40,19 +40,19 @@
+     }
+ 
+     protected SoundEffect G() {
+-        return SoundEffects.fd;
++        return SoundEffects.fe;
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.ff;
++        return SoundEffects.fg;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.fe;
++        return SoundEffects.ff;
+     }
+ 
+     protected void a(BlockPosition blockposition, Block block) {
+-        this.a(SoundEffects.fg, 0.15F, 1.0F);
++        this.a(SoundEffects.fh, 0.15F, 1.0F);
+     }
+ 
+     public boolean damageEntity(DamageSource damagesource, float f) {
+@@ -68,7 +68,7 @@
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.t;
++        return LootTables.u;
+     }
+ 
+     public void m() {

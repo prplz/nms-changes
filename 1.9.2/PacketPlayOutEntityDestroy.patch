@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/PacketPlayOutEntityDestroy.java
++++ b/net/minecraft/server/PacketPlayOutEntityDestroy.java
+@@ -22,10 +22,10 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a.length);
++        packetdataserializer.d(this.a.length);
+ 
+         for (int i = 0; i < this.a.length; ++i) {
+-            packetdataserializer.b(this.a[i]);
++            packetdataserializer.d(this.a[i]);
+         }
+ 
+     }

@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/TileEntityLootable.java
++++ b/net/minecraft/server/TileEntityLootable.java
+@@ -59,4 +59,9 @@
+     public MinecraftKey b() {
+         return this.m;
+     }
++
++    public void a(MinecraftKey minecraftkey, long i) {
++        this.m = minecraftkey;
++        this.n = i;
++    }
+ }

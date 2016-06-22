@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/PacketPlayInEntityAction.java
++++ b/net/minecraft/server/PacketPlayInEntityAction.java
+@@ -17,9 +17,9 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
++        packetdataserializer.d(this.a);
+         packetdataserializer.a((Enum) this.animation);
+-        packetdataserializer.b(this.c);
++        packetdataserializer.d(this.c);
+     }
+ 
+     public void a(PacketListenerPlayIn packetlistenerplayin) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutScoreboardDisplayObjective.java
++++ b/net/minecraft/server/PacketPlayOutScoreboardDisplayObjective.java
+@@ -21,7 +21,7 @@
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = packetdataserializer.readByte();
+-        this.b = packetdataserializer.c(16);
++        this.b = packetdataserializer.e(16);
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {

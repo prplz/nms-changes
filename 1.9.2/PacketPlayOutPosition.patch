@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutPosition.java
++++ b/net/minecraft/server/PacketPlayOutPosition.java
+@@ -44,7 +44,7 @@
+         packetdataserializer.writeFloat(this.d);
+         packetdataserializer.writeFloat(this.e);
+         packetdataserializer.writeByte(PacketPlayOutPosition.EnumPlayerTeleportFlags.a(this.f));
+-        packetdataserializer.b(this.g);
++        packetdataserializer.d(this.g);
+     }
+ 
+     public void a(PacketListenerPlayOut packetlistenerplayout) {

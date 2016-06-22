@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInChat.java
++++ b/net/minecraft/server/PacketPlayInChat.java
+@@ -17,7 +17,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(100);
++        this.a = packetdataserializer.e(100);
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {

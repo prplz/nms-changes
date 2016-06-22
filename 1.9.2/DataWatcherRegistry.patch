@@ -1,0 +1,32 @@
+--- a/net/minecraft/server/DataWatcherRegistry.java
++++ b/net/minecraft/server/DataWatcherRegistry.java
+@@ -25,7 +25,7 @@
+     };
+     public static final DataWatcherSerializer<Integer> b = new DataWatcherSerializer() {
+         public void a(PacketDataSerializer packetdataserializer, Integer integer) {
+-            packetdataserializer.b(integer.intValue());
++            packetdataserializer.d(integer.intValue());
+         }
+ 
+         public Integer b(PacketDataSerializer packetdataserializer) {
+@@ -63,7 +63,7 @@
+         }
+ 
+         public String b(PacketDataSerializer packetdataserializer) {
+-            return packetdataserializer.c(32767);
++            return packetdataserializer.e(32767);
+         }
+ 
+         public DataWatcherObject<String> a(int i) {
+@@ -111,9 +111,9 @@
+     public static final DataWatcherSerializer<Optional<IBlockData>> g = new DataWatcherSerializer() {
+         public void a(PacketDataSerializer packetdataserializer, Optional<IBlockData> optional) {
+             if (optional.isPresent()) {
+-                packetdataserializer.b(Block.getCombinedId((IBlockData) optional.get()));
++                packetdataserializer.d(Block.getCombinedId((IBlockData) optional.get()));
+             } else {
+-                packetdataserializer.b(0);
++                packetdataserializer.d(0);
+             }
+ 
+         }

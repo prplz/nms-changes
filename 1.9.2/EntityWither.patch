@@ -1,0 +1,21 @@
+--- a/net/minecraft/server/EntityWither.java
++++ b/net/minecraft/server/EntityWither.java
+@@ -70,15 +70,15 @@
+     }
+ 
+     protected SoundEffect G() {
+-        return SoundEffects.gE;
++        return SoundEffects.gF;
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.gH;
++        return SoundEffects.gI;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.gG;
++        return SoundEffects.gH;
+     }
+ 
+     public void n() {

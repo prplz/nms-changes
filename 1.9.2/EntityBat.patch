@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/EntityBat.java
++++ b/net/minecraft/server/EntityBat.java
+@@ -186,6 +186,6 @@
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.ab;
++        return LootTables.ac;
+     }
+ }

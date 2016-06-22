@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutWorldParticles.java
++++ b/net/minecraft/server/PacketPlayOutWorldParticles.java
+@@ -71,7 +71,7 @@
+         int i = this.a.d();
+ 
+         for (int j = 0; j < i; ++j) {
+-            packetdataserializer.b(this.k[j]);
++            packetdataserializer.d(this.k[j]);
+         }
+ 
+     }

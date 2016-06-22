@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketEncoder.java
++++ b/net/minecraft/server/PacketEncoder.java
+@@ -31,7 +31,7 @@
+         } else {
+             PacketDataSerializer packetdataserializer = new PacketDataSerializer(bytebuf);
+ 
+-            packetdataserializer.b(integer.intValue());
++            packetdataserializer.d(integer.intValue());
+ 
+             try {
+                 packet.b(packetdataserializer);

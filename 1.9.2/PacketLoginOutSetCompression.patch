@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketLoginOutSetCompression.java
++++ b/net/minecraft/server/PacketLoginOutSetCompression.java
+@@ -17,7 +17,7 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
++        packetdataserializer.d(this.a);
+     }
+ 
+     public void a(PacketLoginOutListener packetloginoutlistener) {

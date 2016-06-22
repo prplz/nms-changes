@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutCustomSoundEffect.java
++++ b/net/minecraft/server/PacketPlayOutCustomSoundEffect.java
+@@ -28,7 +28,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(256);
++        this.a = packetdataserializer.e(256);
+         this.b = (SoundCategory) packetdataserializer.a(SoundCategory.class);
+         this.c = packetdataserializer.readInt();
+         this.d = packetdataserializer.readInt();

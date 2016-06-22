@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/EntityCaveSpider.java
++++ b/net/minecraft/server/EntityCaveSpider.java
+@@ -43,6 +43,6 @@
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.r;
++        return LootTables.s;
+     }
+ }

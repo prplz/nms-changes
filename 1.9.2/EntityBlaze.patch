@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityBlaze.java
++++ b/net/minecraft/server/EntityBlaze.java
+@@ -100,7 +100,7 @@
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.o;
++        return LootTables.p;
+     }
+ 
+     public boolean o() {

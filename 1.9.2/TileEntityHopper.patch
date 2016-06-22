@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/TileEntityHopper.java
++++ b/net/minecraft/server/TileEntityHopper.java
+@@ -439,7 +439,7 @@
+             if (tileentity instanceof IInventory) {
+                 object = (IInventory) tileentity;
+                 if (object instanceof TileEntityChest && block instanceof BlockChest) {
+-                    object = ((BlockChest) block).c(world, blockposition);
++                    object = ((BlockChest) block).a(world, blockposition, true);
+                 }
+             }
+         }

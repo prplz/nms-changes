@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutBlockBreakAnimation.java
++++ b/net/minecraft/server/PacketPlayOutBlockBreakAnimation.java
+@@ -23,7 +23,7 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
++        packetdataserializer.d(this.a);
+         packetdataserializer.a(this.b);
+         packetdataserializer.writeByte(this.c);
+     }

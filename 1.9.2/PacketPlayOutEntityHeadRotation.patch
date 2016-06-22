@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutEntityHeadRotation.java
++++ b/net/minecraft/server/PacketPlayOutEntityHeadRotation.java
+@@ -20,7 +20,7 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
++        packetdataserializer.d(this.a);
+         packetdataserializer.writeByte(this.b);
+     }
+ 

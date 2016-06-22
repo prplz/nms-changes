@@ -1,0 +1,30 @@
+--- a/net/minecraft/server/EntitySquid.java
++++ b/net/minecraft/server/EntitySquid.java
+@@ -38,15 +38,15 @@
+     }
+ 
+     protected SoundEffect G() {
+-        return SoundEffects.fW;
++        return SoundEffects.fX;
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.fY;
++        return SoundEffects.fZ;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.fX;
++        return SoundEffects.fY;
+     }
+ 
+     protected float cd() {
+@@ -58,7 +58,7 @@
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.af;
++        return LootTables.ag;
+     }
+ 
+     public boolean isInWater() {

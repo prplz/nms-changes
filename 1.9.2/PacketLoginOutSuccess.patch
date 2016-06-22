@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketLoginOutSuccess.java
++++ b/net/minecraft/server/PacketLoginOutSuccess.java
+@@ -15,8 +15,8 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        String s = packetdataserializer.c(36);
+-        String s1 = packetdataserializer.c(16);
++        String s = packetdataserializer.e(36);
++        String s1 = packetdataserializer.e(16);
+         UUID uuid = UUID.fromString(s);
+ 
+         this.a = new GameProfile(uuid, s1);

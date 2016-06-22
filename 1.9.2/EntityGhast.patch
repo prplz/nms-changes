@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/EntityGhast.java
++++ b/net/minecraft/server/EntityGhast.java
+@@ -66,19 +66,19 @@
+     }
+ 
+     protected SoundEffect G() {
+-        return SoundEffects.bJ;
++        return SoundEffects.bK;
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.bL;
++        return SoundEffects.bM;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.bK;
++        return SoundEffects.bL;
+     }
+ 
+     protected MinecraftKey J() {
+-        return LootTables.ae;
++        return LootTables.af;
+     }
+ 
+     protected float cd() {

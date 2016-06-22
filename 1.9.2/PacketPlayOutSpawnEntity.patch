@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutSpawnEntity.java
++++ b/net/minecraft/server/PacketPlayOutSpawnEntity.java
+@@ -64,7 +64,7 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
++        packetdataserializer.d(this.a);
+         packetdataserializer.a(this.b);
+         packetdataserializer.writeByte(this.k);
+         packetdataserializer.writeDouble(this.c);

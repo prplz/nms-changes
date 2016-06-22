@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayInResourcePackStatus.java
++++ b/net/minecraft/server/PacketPlayInResourcePackStatus.java
+@@ -10,7 +10,7 @@
+     public PacketPlayInResourcePackStatus() {}
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(40);
++        this.a = packetdataserializer.e(40);
+         this.status = (PacketPlayInResourcePackStatus.EnumResourcePackStatus) packetdataserializer.a(PacketPlayInResourcePackStatus.EnumResourcePackStatus.class);
+     }
+ 

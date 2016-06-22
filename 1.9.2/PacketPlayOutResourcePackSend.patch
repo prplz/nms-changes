@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketPlayOutResourcePackSend.java
++++ b/net/minecraft/server/PacketPlayOutResourcePackSend.java
+@@ -18,8 +18,8 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(32767);
+-        this.b = packetdataserializer.c(40);
++        this.a = packetdataserializer.e(32767);
++        this.b = packetdataserializer.e(40);
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemWaterLily.java
++++ b/net/minecraft/server/ItemWaterLily.java
+@@ -29,7 +29,7 @@
+                     }
+ 
+                     entityhuman.b(StatisticList.b((Item) this));
+-                    world.a(entityhuman, blockposition, SoundEffects.gv, SoundCategory.BLOCKS, 1.0F, 1.0F);
++                    world.a(entityhuman, blockposition, SoundEffects.gw, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                     return new InteractionResultWrapper(EnumInteractionResult.SUCCESS, itemstack);
+                 }
+             }

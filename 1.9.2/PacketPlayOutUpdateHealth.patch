@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutUpdateHealth.java
++++ b/net/minecraft/server/PacketPlayOutUpdateHealth.java
+@@ -24,7 +24,7 @@
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+         packetdataserializer.writeFloat(this.a);
+-        packetdataserializer.b(this.b);
++        packetdataserializer.d(this.b);
+         packetdataserializer.writeFloat(this.c);
+     }
+ 

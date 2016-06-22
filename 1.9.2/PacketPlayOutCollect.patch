@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketPlayOutCollect.java
++++ b/net/minecraft/server/PacketPlayOutCollect.java
+@@ -20,8 +20,8 @@
+     }
+ 
+     public void b(PacketDataSerializer packetdataserializer) throws IOException {
+-        packetdataserializer.b(this.a);
+-        packetdataserializer.b(this.b);
++        packetdataserializer.d(this.a);
++        packetdataserializer.d(this.b);
+     }
+ 
+     public void a(PacketListenerPlayOut packetlistenerplayout) {

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketPlayOutMapChunk.java
++++ b/net/minecraft/server/PacketPlayOutMapChunk.java
+@@ -43,8 +43,8 @@
+         packetdataserializer.writeInt(this.a);
+         packetdataserializer.writeInt(this.b);
+         packetdataserializer.writeBoolean(this.e);
+-        packetdataserializer.b(this.c);
+-        packetdataserializer.b(this.d.length);
++        packetdataserializer.d(this.c);
++        packetdataserializer.d(this.d.length);
+         packetdataserializer.writeBytes(this.d);
+     }
+ 

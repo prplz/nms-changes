@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutCustomPayload.java
++++ b/net/minecraft/server/PacketPlayOutCustomPayload.java
+@@ -19,7 +19,7 @@
+     }
+ 
+     public void a(PacketDataSerializer packetdataserializer) throws IOException {
+-        this.a = packetdataserializer.c(20);
++        this.a = packetdataserializer.e(20);
+         int i = packetdataserializer.readableBytes();
+ 
+         if (i >= 0 && i <= 1048576) {

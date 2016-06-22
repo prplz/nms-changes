@@ -1,0 +1,110 @@
+--- a/net/minecraft/server/EntitySheep.java
++++ b/net/minecraft/server/EntitySheep.java
+@@ -65,57 +65,57 @@
+ 
+     protected MinecraftKey J() {
+         if (this.isSheared()) {
+-            return LootTables.K;
++            return LootTables.L;
+         } else {
+             switch (EntitySheep.SyntheticClass_1.a[this.getColor().ordinal()]) {
+             case 1:
+             default:
+-                return LootTables.L;
++                return LootTables.M;
+ 
+             case 2:
+-                return LootTables.M;
++                return LootTables.N;
+ 
+             case 3:
+-                return LootTables.N;
++                return LootTables.O;
+ 
+             case 4:
+-                return LootTables.O;
++                return LootTables.P;
+ 
+             case 5:
+-                return LootTables.P;
++                return LootTables.Q;
+ 
+             case 6:
+-                return LootTables.Q;
++                return LootTables.R;
+ 
+             case 7:
+-                return LootTables.R;
++                return LootTables.S;
+ 
+             case 8:
+-                return LootTables.S;
++                return LootTables.T;
+ 
+             case 9:
+-                return LootTables.T;
++                return LootTables.U;
+ 
+             case 10:
+-                return LootTables.U;
++                return LootTables.V;
+ 
+             case 11:
+-                return LootTables.V;
++                return LootTables.W;
+ 
+             case 12:
+-                return LootTables.W;
++                return LootTables.X;
+ 
+             case 13:
+-                return LootTables.X;
++                return LootTables.Y;
+ 
+             case 14:
+-                return LootTables.Y;
++                return LootTables.Z;
+ 
+             case 15:
+-                return LootTables.Z;
++                return LootTables.aa;
+ 
+             case 16:
+-                return LootTables.aa;
++                return LootTables.ab;
+             }
+         }
+     }
+@@ -136,7 +136,7 @@
+             }
+ 
+             itemstack.damage(1, entityhuman);
+-            this.a(SoundEffects.eO, 1.0F, 1.0F);
++            this.a(SoundEffects.eP, 1.0F, 1.0F);
+         }
+ 
+         return super.a(entityhuman, enumhand, itemstack);
+@@ -155,19 +155,19 @@
+     }
+ 
+     protected SoundEffect G() {
+-        return SoundEffects.eL;
++        return SoundEffects.eM;
+     }
+ 
+     protected SoundEffect bR() {
+-        return SoundEffects.eN;
++        return SoundEffects.eO;
+     }
+ 
+     protected SoundEffect bS() {
+-        return SoundEffects.eM;
++        return SoundEffects.eN;
+     }
+ 
+     protected void a(BlockPosition blockposition, Block block) {
+-        this.a(SoundEffects.eP, 0.15F, 1.0F);
++        this.a(SoundEffects.eQ, 0.15F, 1.0F);
+     }
+ 
+     public EnumColor getColor() {

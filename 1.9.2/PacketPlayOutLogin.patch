@@ -1,0 +1,24 @@
+--- a/net/minecraft/server/PacketPlayOutLogin.java
++++ b/net/minecraft/server/PacketPlayOutLogin.java
+@@ -34,10 +34,10 @@
+         int i = short0 & -9;
+ 
+         this.c = WorldSettings.EnumGamemode.getById(i);
+-        this.d = packetdataserializer.readByte();
++        this.d = packetdataserializer.readInt();
+         this.e = EnumDifficulty.getById(packetdataserializer.readUnsignedByte());
+         this.f = packetdataserializer.readUnsignedByte();
+-        this.g = WorldType.getType(packetdataserializer.c(16));
++        this.g = WorldType.getType(packetdataserializer.e(16));
+         if (this.g == null) {
+             this.g = WorldType.NORMAL;
+         }
+@@ -54,7 +54,7 @@
+         }
+ 
+         packetdataserializer.writeByte(i);
+-        packetdataserializer.writeByte(this.d);
++        packetdataserializer.writeInt(this.d);
+         packetdataserializer.writeByte(this.e.a());
+         packetdataserializer.writeByte(this.f);
+         packetdataserializer.a(this.g.name());
