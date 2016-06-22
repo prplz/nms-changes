@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/BlockLadder.java
++++ b/net/minecraft/server/BlockLadder.java
+@@ -65,7 +65,7 @@
+         }
+     }
+ 
+-    public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {
++    public void a(IBlockData iblockdata, World world, BlockPosition blockposition, Block block) {
+         EnumDirection enumdirection = (EnumDirection) iblockdata.get(BlockLadder.FACING);
+ 
+         if (!this.a(world, blockposition, enumdirection)) {
+@@ -73,7 +73,7 @@
+             world.setAir(blockposition);
+         }
+ 
+-        super.doPhysics(world, blockposition, iblockdata, block);
++        super.a(iblockdata, world, blockposition, block);
+     }
+ 
+     protected boolean a(World world, BlockPosition blockposition, EnumDirection enumdirection) {

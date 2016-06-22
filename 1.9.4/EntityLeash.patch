@@ -1,0 +1,28 @@
+--- a/net/minecraft/server/EntityLeash.java
++++ b/net/minecraft/server/EntityLeash.java
+@@ -2,6 +2,7 @@
+ 
+ import java.util.Iterator;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class EntityLeash extends EntityHanging {
+ 
+@@ -43,7 +44,7 @@
+         return -0.0625F;
+     }
+ 
+-    public void a(Entity entity) {
++    public void a(@Nullable Entity entity) {
+         this.a(SoundEffects.de, 1.0F, 1.0F);
+     }
+ 
+@@ -55,7 +56,7 @@
+ 
+     public void a(NBTTagCompound nbttagcompound) {}
+ 
+-    public boolean a(EntityHuman entityhuman, ItemStack itemstack, EnumHand enumhand) {
++    public boolean a(EntityHuman entityhuman, @Nullable ItemStack itemstack, EnumHand enumhand) {
+         if (this.world.isClientSide) {
+             return true;
+         } else {

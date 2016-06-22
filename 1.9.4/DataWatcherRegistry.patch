@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/DataWatcherRegistry.java
++++ b/net/minecraft/server/DataWatcherRegistry.java
+@@ -2,6 +2,7 @@
+ 
+ import com.google.common.base.Optional;
+ import java.util.UUID;
++import javax.annotation.Nullable;
+ 
+ public class DataWatcherRegistry {
+ 
+@@ -249,6 +250,7 @@
+         DataWatcherRegistry.n.c(datawatcherserializer);
+     }
+ 
++    @Nullable
+     public static DataWatcherSerializer<?> a(int i) {
+         return (DataWatcherSerializer) DataWatcherRegistry.n.fromId(i);
+     }

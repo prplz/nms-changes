@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/InventoryEnderChest.java
++++ b/net/minecraft/server/InventoryEnderChest.java
+@@ -54,7 +54,7 @@
+ 
+     public void startOpen(EntityHuman entityhuman) {
+         if (this.a != null) {
+-            this.a.b();
++            this.a.d();
+         }
+ 
+         super.startOpen(entityhuman);
+@@ -62,7 +62,7 @@
+ 
+     public void closeContainer(EntityHuman entityhuman) {
+         if (this.a != null) {
+-            this.a.d();
++            this.a.e();
+         }
+ 
+         super.closeContainer(entityhuman);

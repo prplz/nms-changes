@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/CommandWhitelist.java
++++ b/net/minecraft/server/CommandWhitelist.java
+@@ -3,6 +3,7 @@
+ import com.mojang.authlib.GameProfile;
+ import java.util.Collections;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class CommandWhitelist extends CommandAbstract {
+ 
+@@ -71,7 +72,7 @@
+         }
+     }
+ 
+-    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, BlockPosition blockposition) {
++    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, @Nullable BlockPosition blockposition) {
+         if (astring.length == 1) {
+             return a(astring, new String[] { "on", "off", "list", "add", "remove", "reload"});
+         } else {

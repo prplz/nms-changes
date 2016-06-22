@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/GenericAttributes.java
++++ b/net/minecraft/server/GenericAttributes.java
+@@ -3,6 +3,7 @@
+ import java.util.Collection;
+ import java.util.Iterator;
+ import java.util.UUID;
++import javax.annotation.Nullable;
+ import org.apache.logging.log4j.LogManager;
+ import org.apache.logging.log4j.Logger;
+ 
+@@ -104,6 +105,7 @@
+ 
+     }
+ 
++    @Nullable
+     public static AttributeModifier a(NBTTagCompound nbttagcompound) {
+         UUID uuid = nbttagcompound.a("UUID");
+ 

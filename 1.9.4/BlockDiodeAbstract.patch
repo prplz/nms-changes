@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockDiodeAbstract.java
++++ b/net/minecraft/server/BlockDiodeAbstract.java
+@@ -58,7 +58,7 @@
+         return !this.z(iblockdata) ? 0 : (iblockdata.get(BlockDiodeAbstract.FACING) == enumdirection ? this.a(iblockaccess, blockposition, iblockdata) : 0);
+     }
+ 
+-    public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {
++    public void a(IBlockData iblockdata, World world, BlockPosition blockposition, Block block) {
+         if (this.b(world, blockposition)) {
+             this.g(world, blockposition, iblockdata);
+         } else {

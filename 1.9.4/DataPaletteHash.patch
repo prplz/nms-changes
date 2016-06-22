@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/DataPaletteHash.java
++++ b/net/minecraft/server/DataPaletteHash.java
+@@ -1,5 +1,7 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public class DataPaletteHash implements DataPalette {
+ 
+     private final RegistryID<IBlockData> a;
+@@ -25,6 +27,7 @@
+         return i;
+     }
+ 
++    @Nullable
+     public IBlockData a(int i) {
+         return (IBlockData) this.a.fromId(i);
+     }

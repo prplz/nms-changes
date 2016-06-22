@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockStationary.java
++++ b/net/minecraft/server/BlockStationary.java
+@@ -13,7 +13,7 @@
+ 
+     }
+ 
+-    public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {
++    public void a(IBlockData iblockdata, World world, BlockPosition blockposition, Block block) {
+         if (!this.e(world, blockposition, iblockdata)) {
+             this.f(world, blockposition, iblockdata);
+         }

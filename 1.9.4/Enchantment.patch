@@ -1,0 +1,34 @@
+--- a/net/minecraft/server/Enchantment.java
++++ b/net/minecraft/server/Enchantment.java
+@@ -2,6 +2,7 @@
+ 
+ import com.google.common.collect.Lists;
+ import java.util.ArrayList;
++import javax.annotation.Nullable;
+ 
+ public abstract class Enchantment {
+ 
+@@ -11,6 +12,7 @@
+     public EnchantmentSlotType itemTarget;
+     protected String d;
+ 
++    @Nullable
+     public static Enchantment c(int i) {
+         return (Enchantment) Enchantment.enchantments.getId(i);
+     }
+@@ -19,6 +21,7 @@
+         return Enchantment.enchantments.a((Object) enchantment);
+     }
+ 
++    @Nullable
+     public static Enchantment b(String s) {
+         return (Enchantment) Enchantment.enchantments.get(new MinecraftKey(s));
+     }
+@@ -29,6 +32,7 @@
+         this.a = aenumitemslot;
+     }
+ 
++    @Nullable
+     public Iterable<ItemStack> a(EntityLiving entityliving) {
+         ArrayList arraylist = Lists.newArrayList();
+         EnumItemSlot[] aenumitemslot = this.a;

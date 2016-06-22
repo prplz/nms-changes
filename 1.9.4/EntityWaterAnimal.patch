@@ -1,0 +1,25 @@
+--- a/net/minecraft/server/EntityWaterAnimal.java
++++ b/net/minecraft/server/EntityWaterAnimal.java
+@@ -6,11 +6,11 @@
+         super(world);
+     }
+ 
+-    public boolean bB() {
++    public boolean bC() {
+         return true;
+     }
+ 
+-    public boolean cF() {
++    public boolean cG() {
+         return true;
+     }
+ 
+@@ -47,7 +47,7 @@
+ 
+     }
+ 
+-    public boolean bd() {
++    public boolean be() {
+         return false;
+     }
+ }

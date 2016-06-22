@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/RegistryBlockID.java
++++ b/net/minecraft/server/RegistryBlockID.java
+@@ -6,6 +6,7 @@
+ import java.util.IdentityHashMap;
+ import java.util.Iterator;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class RegistryBlockID<T> implements Registry<T> {
+ 
+@@ -37,6 +38,7 @@
+         return integer == null ? -1 : integer.intValue();
+     }
+ 
++    @Nullable
+     public final T fromId(int i) {
+         return i >= 0 && i < this.b.size() ? this.b.get(i) : null;
+     }

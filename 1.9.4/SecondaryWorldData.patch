@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/SecondaryWorldData.java
++++ b/net/minecraft/server/SecondaryWorldData.java
+@@ -1,5 +1,7 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public class SecondaryWorldData extends WorldData {
+ 
+     private final WorldData b;
+@@ -8,7 +10,7 @@
+         this.b = worlddata;
+     }
+ 
+-    public NBTTagCompound a(NBTTagCompound nbttagcompound) {
++    public NBTTagCompound a(@Nullable NBTTagCompound nbttagcompound) {
+         return this.b.a(nbttagcompound);
+     }
+ 

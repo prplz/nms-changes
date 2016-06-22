@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/CommandOp.java
++++ b/net/minecraft/server/CommandOp.java
+@@ -5,6 +5,7 @@
+ import java.util.ArrayList;
+ import java.util.Collections;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class CommandOp extends CommandAbstract {
+ 
+@@ -37,7 +38,7 @@
+         }
+     }
+ 
+-    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, BlockPosition blockposition) {
++    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, @Nullable BlockPosition blockposition) {
+         if (astring.length == 1) {
+             String s = astring[astring.length - 1];
+             ArrayList arraylist = Lists.newArrayList();

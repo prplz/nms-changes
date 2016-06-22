@@ -1,0 +1,18 @@
+--- a/net/minecraft/server/CraftingManager.java
++++ b/net/minecraft/server/CraftingManager.java
+@@ -8,6 +8,7 @@
+ import java.util.HashMap;
+ import java.util.Iterator;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class CraftingManager {
+ 
+@@ -276,6 +277,7 @@
+         this.recipes.add(irecipe);
+     }
+ 
++    @Nullable
+     public ItemStack craft(InventoryCrafting inventorycrafting, World world) {
+         Iterator iterator = this.recipes.iterator();
+ 

@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/TileEntityComparator.java
++++ b/net/minecraft/server/TileEntityComparator.java
+@@ -6,9 +6,10 @@
+ 
+     public TileEntityComparator() {}
+ 
+-    public void save(NBTTagCompound nbttagcompound) {
++    public NBTTagCompound save(NBTTagCompound nbttagcompound) {
+         super.save(nbttagcompound);
+         nbttagcompound.setInt("OutputSignal", this.a);
++        return nbttagcompound;
+     }
+ 
+     public void a(NBTTagCompound nbttagcompound) {
+@@ -16,7 +17,7 @@
+         this.a = nbttagcompound.getInt("OutputSignal");
+     }
+ 
+-    public int b() {
++    public int c() {
+         return this.a;
+     }
+ 

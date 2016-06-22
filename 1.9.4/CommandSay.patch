@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/CommandSay.java
++++ b/net/minecraft/server/CommandSay.java
+@@ -2,6 +2,7 @@
+ 
+ import java.util.Collections;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class CommandSay extends CommandAbstract {
+ 
+@@ -29,7 +30,7 @@
+         }
+     }
+ 
+-    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, BlockPosition blockposition) {
++    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, @Nullable BlockPosition blockposition) {
+         return astring.length >= 1 ? a(astring, minecraftserver.getPlayers()) : Collections.emptyList();
+     }
+ }

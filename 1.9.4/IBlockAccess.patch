@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/IBlockAccess.java
++++ b/net/minecraft/server/IBlockAccess.java
+@@ -1,7 +1,10 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public interface IBlockAccess {
+ 
++    @Nullable
+     TileEntity getTileEntity(BlockPosition blockposition);
+ 
+     IBlockData getType(BlockPosition blockposition);

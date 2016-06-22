@@ -1,0 +1,30 @@
+--- a/net/minecraft/server/IDragonController.java
++++ b/net/minecraft/server/IDragonController.java
+@@ -1,5 +1,7 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public interface IDragonController {
+ 
+     boolean a();
+@@ -8,7 +10,7 @@
+ 
+     void c();
+ 
+-    void a(EntityEnderCrystal entityendercrystal, BlockPosition blockposition, DamageSource damagesource, EntityHuman entityhuman);
++    void a(EntityEnderCrystal entityendercrystal, BlockPosition blockposition, DamageSource damagesource, @Nullable EntityHuman entityhuman);
+ 
+     void d();
+ 
+@@ -18,8 +20,9 @@
+ 
+     float h();
+ 
+-    DragonControllerPhase<? extends IDragonController> i();
++    DragonControllerPhase<? extends IDragonController> getControllerPhase();
+ 
++    @Nullable
+     Vec3D g();
+ 
+     float a(EntityComplexPart entitycomplexpart, DamageSource damagesource, float f);

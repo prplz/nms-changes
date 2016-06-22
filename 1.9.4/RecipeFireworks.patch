@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/RecipeFireworks.java
++++ b/net/minecraft/server/RecipeFireworks.java
+@@ -2,6 +2,7 @@
+ 
+ import com.google.common.collect.Lists;
+ import java.util.ArrayList;
++import javax.annotation.Nullable;
+ 
+ public class RecipeFireworks implements IRecipe {
+ 
+@@ -159,6 +160,7 @@
+         }
+     }
+ 
++    @Nullable
+     public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         return this.a.cloneItemStack();
+     }
+@@ -167,6 +169,7 @@
+         return 10;
+     }
+ 
++    @Nullable
+     public ItemStack b() {
+         return this.a;
+     }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockCocoa.java
++++ b/net/minecraft/server/BlockCocoa.java
+@@ -85,7 +85,7 @@
+         return this.getBlockData().set(BlockCocoa.FACING, enumdirection.opposite()).set(BlockCocoa.AGE, Integer.valueOf(0));
+     }
+ 
+-    public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {
++    public void a(IBlockData iblockdata, World world, BlockPosition blockposition, Block block) {
+         if (!this.e(world, blockposition, iblockdata)) {
+             this.f(world, blockposition, iblockdata);
+         }

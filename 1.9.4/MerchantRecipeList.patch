@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/MerchantRecipeList.java
++++ b/net/minecraft/server/MerchantRecipeList.java
+@@ -1,6 +1,7 @@
+ package net.minecraft.server;
+ 
+ import java.util.ArrayList;
++import javax.annotation.Nullable;
+ 
+ public class MerchantRecipeList extends ArrayList<MerchantRecipe> {
+ 
+@@ -10,7 +11,8 @@
+         this.a(nbttagcompound);
+     }
+ 
+-    public MerchantRecipe a(ItemStack itemstack, ItemStack itemstack1, int i) {
++    @Nullable
++    public MerchantRecipe a(ItemStack itemstack, @Nullable ItemStack itemstack1, int i) {
+         if (i > 0 && i < this.size()) {
+             MerchantRecipe merchantrecipe = (MerchantRecipe) this.get(i);
+ 

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/IChunkProvider.java
++++ b/net/minecraft/server/IChunkProvider.java
+@@ -1,7 +1,10 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public interface IChunkProvider {
+ 
++    @Nullable
+     Chunk getLoadedChunkAt(int i, int j);
+ 
+     Chunk getChunkAt(int i, int j);

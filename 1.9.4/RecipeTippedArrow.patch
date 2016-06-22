@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/RecipeTippedArrow.java
++++ b/net/minecraft/server/RecipeTippedArrow.java
+@@ -1,6 +1,7 @@
+ package net.minecraft.server;
+ 
+ import java.util.Collection;
++import javax.annotation.Nullable;
+ 
+ class RecipeTippedArrow implements IRecipe {
+ 
+@@ -36,6 +37,7 @@
+         }
+     }
+ 
++    @Nullable
+     public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         ItemStack itemstack = inventorycrafting.c(1, 1);
+ 
+@@ -54,6 +56,7 @@
+         return 9;
+     }
+ 
++    @Nullable
+     public ItemStack b() {
+         return null;
+     }

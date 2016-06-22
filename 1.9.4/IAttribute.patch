@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/IAttribute.java
++++ b/net/minecraft/server/IAttribute.java
+@@ -1,5 +1,7 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public interface IAttribute {
+ 
+     String getName();
+@@ -10,5 +12,6 @@
+ 
+     boolean c();
+ 
++    @Nullable
+     IAttribute d();
+ }

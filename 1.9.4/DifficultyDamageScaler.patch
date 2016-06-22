@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/DifficultyDamageScaler.java
++++ b/net/minecraft/server/DifficultyDamageScaler.java
+@@ -1,5 +1,8 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.concurrent.Immutable;
++
++@Immutable
+ public class DifficultyDamageScaler {
+ 
+     private final EnumDifficulty a;

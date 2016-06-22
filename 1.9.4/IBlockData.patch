@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IBlockData.java
++++ b/net/minecraft/server/IBlockData.java
+@@ -3,7 +3,7 @@
+ import com.google.common.collect.ImmutableMap;
+ import java.util.Collection;
+ 
+-public interface IBlockData extends IBlockProperties {
++public interface IBlockData extends IBlockPhysics, IBlockProperties {
+ 
+     Collection<IBlockState<?>> r();
+ 

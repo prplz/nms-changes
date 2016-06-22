@@ -1,0 +1,21 @@
+--- a/net/minecraft/server/WorldGenBigTree.java
++++ b/net/minecraft/server/WorldGenBigTree.java
+@@ -278,15 +278,15 @@
+ 
+     static class Position extends BlockPosition {
+ 
+-        private final int c;
++        private final int b;
+ 
+         public Position(BlockPosition blockposition, int i) {
+             super(blockposition.getX(), blockposition.getY(), blockposition.getZ());
+-            this.c = i;
++            this.b = i;
+         }
+ 
+         public int s() {
+-            return this.c;
++            return this.b;
+         }
+     }
+ }

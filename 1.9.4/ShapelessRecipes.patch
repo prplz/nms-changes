@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/ShapelessRecipes.java
++++ b/net/minecraft/server/ShapelessRecipes.java
+@@ -4,6 +4,7 @@
+ import java.util.ArrayList;
+ import java.util.Iterator;
+ import java.util.List;
++import javax.annotation.Nullable;
+ 
+ public class ShapelessRecipes implements IRecipe {
+ 
+@@ -15,6 +16,7 @@
+         this.ingredients = list;
+     }
+ 
++    @Nullable
+     public ItemStack b() {
+         return this.result;
+     }
+@@ -64,6 +66,7 @@
+         return arraylist.isEmpty();
+     }
+ 
++    @Nullable
+     public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         return this.result.cloneItemStack();
+     }

@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/CommandTitle.java
++++ b/net/minecraft/server/CommandTitle.java
+@@ -3,6 +3,7 @@
+ import com.google.gson.JsonParseException;
+ import java.util.Collections;
+ import java.util.List;
++import javax.annotation.Nullable;
+ import org.apache.logging.log4j.LogManager;
+ import org.apache.logging.log4j.Logger;
+ 
+@@ -83,7 +84,7 @@
+         }
+     }
+ 
+-    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, BlockPosition blockposition) {
++    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, @Nullable BlockPosition blockposition) {
+         return astring.length == 1 ? a(astring, minecraftserver.getPlayers()) : (astring.length == 2 ? a(astring, PacketPlayOutTitle.EnumTitleAction.a()) : Collections.emptyList());
+     }
+ 

@@ -1,0 +1,34 @@
+--- a/net/minecraft/server/DataWatcher.java
++++ b/net/minecraft/server/DataWatcher.java
+@@ -11,6 +11,7 @@
+ import java.util.Map;
+ import java.util.concurrent.locks.ReadWriteLock;
+ import java.util.concurrent.locks.ReentrantReadWriteLock;
++import javax.annotation.Nullable;
+ import org.apache.commons.lang3.ObjectUtils;
+ 
+ public class DataWatcher {
+@@ -135,6 +136,7 @@
+         packetdataserializer.writeByte(255);
+     }
+ 
++    @Nullable
+     public List<DataWatcher.Item<?>> b() {
+         ArrayList arraylist = null;
+ 
+@@ -176,6 +178,7 @@
+         packetdataserializer.writeByte(255);
+     }
+ 
++    @Nullable
+     public List<DataWatcher.Item<?>> c() {
+         ArrayList arraylist = null;
+ 
+@@ -207,6 +210,7 @@
+         }
+     }
+ 
++    @Nullable
+     public static List<DataWatcher.Item<?>> b(PacketDataSerializer packetdataserializer) throws IOException {
+         ArrayList arraylist = null;
+ 

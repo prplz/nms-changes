@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockEndRod.java
++++ b/net/minecraft/server/BlockEndRod.java
+@@ -62,7 +62,7 @@
+ 
+     public void onPlace(World world, BlockPosition blockposition, IBlockData iblockdata) {}
+ 
+-    public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {}
++    public void a(IBlockData iblockdata, World world, BlockPosition blockposition, Block block) {}
+ 
+     public IBlockData fromLegacyData(int i) {
+         IBlockData iblockdata = this.getBlockData();

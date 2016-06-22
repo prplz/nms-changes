@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/TileEntityContainer.java
++++ b/net/minecraft/server/TileEntityContainer.java
+@@ -13,12 +13,13 @@
+         this.a = ChestLock.b(nbttagcompound);
+     }
+ 
+-    public void save(NBTTagCompound nbttagcompound) {
++    public NBTTagCompound save(NBTTagCompound nbttagcompound) {
+         super.save(nbttagcompound);
+         if (this.a != null) {
+             this.a.a(nbttagcompound);
+         }
+ 
++        return nbttagcompound;
+     }
+ 
+     public boolean x_() {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalLookAtPlayer.java
++++ b/net/minecraft/server/PathfinderGoalLookAtPlayer.java
+@@ -56,7 +56,7 @@
+     }
+ 
+     public void e() {
+-        this.a.getControllerLook().a(this.b.locX, this.b.locY + (double) this.b.getHeadHeight(), this.b.locZ, (float) this.a.cE(), (float) this.a.N());
++        this.a.getControllerLook().a(this.b.locX, this.b.locY + (double) this.b.getHeadHeight(), this.b.locZ, (float) this.a.cF(), (float) this.a.N());
+         --this.e;
+     }
+ }
