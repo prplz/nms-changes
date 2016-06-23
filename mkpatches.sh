@@ -3,7 +3,7 @@
 a="$1/net/minecraft/server"
 b="$2/net/minecraft/server"
 
-for file in $(printf "$(/bin/ls $a)\n$(/bin/ls $b)" | sort | uniq)
+for file in $(echo "$(ls $a && ls $b)" | sort | uniq)
 do
     echo "Diffing $file"
     if [ -f "$a/$file" ]
