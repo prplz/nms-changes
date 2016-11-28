@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityPotion.java
++++ b/net/minecraft/server/EntityPotion.java
+@@ -9,7 +9,7 @@
+ 
+ public class EntityPotion extends EntityProjectile {
+ 
+-    private static final DataWatcherObject<Optional<ItemStack>> d = DataWatcher.a(EntityItem.class, DataWatcherRegistry.f);
++    private static final DataWatcherObject<Optional<ItemStack>> d = DataWatcher.a(EntityPotion.class, DataWatcherRegistry.f);
+     private static final Logger e = LogManager.getLogger();
+ 
+     public EntityPotion(World world) {

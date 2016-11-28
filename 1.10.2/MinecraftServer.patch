@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/MinecraftServer.java
++++ b/net/minecraft/server/MinecraftServer.java
+@@ -358,7 +358,7 @@
+                 long i = 0L;
+ 
+                 this.q.setMOTD(new ChatComponentText(this.motd));
+-                this.q.setServerInfo(new ServerPing.ServerData("1.10", 210));
++                this.q.setServerInfo(new ServerPing.ServerData("1.10.2", 210));
+                 this.a(this.q);
+ 
+                 while (this.isRunning) {
+@@ -703,7 +703,7 @@
+     }
+ 
+     public String getVersion() {
+-        return "1.10";
++        return "1.10.2";
+     }
+ 
+     public int H() {

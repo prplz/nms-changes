@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/DataConverterHealth.java
++++ b/net/minecraft/server/DataConverterHealth.java
+@@ -25,7 +25,7 @@
+                     return nbttagcompound;
+                 }
+ 
+-                f = nbttagcompound.getFloat("Heath");
++                f = nbttagcompound.getFloat("Health");
+             }
+ 
+             nbttagcompound.setFloat("Health", f);

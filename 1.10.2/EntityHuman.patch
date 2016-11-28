@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityHuman.java
++++ b/net/minecraft/server/EntityHuman.java
+@@ -647,7 +647,7 @@
+ 
+     public void b(NBTTagCompound nbttagcompound) {
+         super.b(nbttagcompound);
+-        nbttagcompound.setInt("DataVersion", 510);
++        nbttagcompound.setInt("DataVersion", 512);
+         nbttagcompound.set("Inventory", this.inventory.a(new NBTTagList()));
+         nbttagcompound.setInt("SelectedItemSlot", this.inventory.itemInHandIndex);
+         nbttagcompound.setBoolean("Sleeping", this.sleeping);

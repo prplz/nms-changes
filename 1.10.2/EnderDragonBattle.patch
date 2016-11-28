@@ -1,0 +1,85 @@
+--- a/net/minecraft/server/EnderDragonBattle.java
++++ b/net/minecraft/server/EnderDragonBattle.java
+@@ -78,33 +78,29 @@
+     }
+ 
+     public NBTTagCompound a() {
+-        if (this.n) {
+-            return new NBTTagCompound();
+-        } else {
+-            NBTTagCompound nbttagcompound = new NBTTagCompound();
+-
+-            if (this.m != null) {
+-                nbttagcompound.a("DragonUUID", this.m);
+-            }
++        NBTTagCompound nbttagcompound = new NBTTagCompound();
+ 
+-            nbttagcompound.setBoolean("DragonKilled", this.k);
+-            nbttagcompound.setBoolean("PreviouslyKilled", this.l);
+-            if (this.o != null) {
+-                nbttagcompound.set("ExitPortalLocation", GameProfileSerializer.a(this.o));
+-            }
++        if (this.m != null) {
++            nbttagcompound.a("DragonUUID", this.m);
++        }
+ 
+-            NBTTagList nbttaglist = new NBTTagList();
+-            Iterator iterator = this.e.iterator();
++        nbttagcompound.setBoolean("DragonKilled", this.k);
++        nbttagcompound.setBoolean("PreviouslyKilled", this.l);
++        if (this.o != null) {
++            nbttagcompound.set("ExitPortalLocation", GameProfileSerializer.a(this.o));
++        }
+ 
+-            while (iterator.hasNext()) {
+-                int i = ((Integer) iterator.next()).intValue();
++        NBTTagList nbttaglist = new NBTTagList();
++        Iterator iterator = this.e.iterator();
+ 
+-                nbttaglist.add(new NBTTagInt(i));
+-            }
++        while (iterator.hasNext()) {
++            int i = ((Integer) iterator.next()).intValue();
+ 
+-            nbttagcompound.set("Gateways", nbttaglist);
+-            return nbttagcompound;
++            nbttaglist.add(new NBTTagInt(i));
+         }
++
++        nbttagcompound.set("Gateways", nbttaglist);
++        return nbttagcompound;
+     }
+ 
+     public void b() {
+@@ -246,7 +242,7 @@
+                         ShapeDetector.ShapeDetectorCollection shapedetector_shapedetectorcollection = this.f.a(this.d, tileentity.getPosition());
+ 
+                         if (shapedetector_shapedetectorcollection != null) {
+-                            BlockPosition blockposition = shapedetector_shapedetectorcollection.a(3, 3, 4).getPosition();
++                            BlockPosition blockposition = shapedetector_shapedetectorcollection.a(3, 3, 3).getPosition();
+ 
+                             if (this.o == null && blockposition.getX() == 0 && blockposition.getZ() == 0) {
+                                 this.o = blockposition;
+@@ -266,7 +262,7 @@
+ 
+             if (shapedetector_shapedetectorcollection1 != null) {
+                 if (this.o == null) {
+-                    this.o = shapedetector_shapedetectorcollection1.a(3, 3, 4).getPosition();
++                    this.o = shapedetector_shapedetectorcollection1.a(3, 3, 3).getPosition();
+                 }
+ 
+                 return shapedetector_shapedetectorcollection1;
+@@ -422,11 +418,11 @@
+                 if (shapedetector_shapedetectorcollection == null) {
+                     EnderDragonBattle.a.debug("Couldn\'t find a portal, so we made one.");
+                     this.a(true);
+-                    blockposition = this.o;
+                 } else {
+                     EnderDragonBattle.a.debug("Found the exit portal & temporarily using it.");
+-                    blockposition = shapedetector_shapedetectorcollection.a(3, 3, 3).getPosition();
+                 }
++
++                blockposition = this.o;
+             }
+ 
+             ArrayList arraylist = Lists.newArrayList();

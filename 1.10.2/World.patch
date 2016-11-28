@@ -1,0 +1,16 @@
+--- a/net/minecraft/server/World.java
++++ b/net/minecraft/server/World.java
+@@ -1213,6 +1213,13 @@
+             this.tileEntityListTick.add(tileentity);
+         }
+ 
++        if (this.isClientSide) {
++            BlockPosition blockposition = tileentity.getPosition();
++            IBlockData iblockdata = this.getType(blockposition);
++
++            this.notify(blockposition, iblockdata, iblockdata, 2);
++        }
++
+         return flag;
+     }
+ 
