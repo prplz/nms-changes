@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityLargeFireball.java
++++ b/net/minecraft/server/EntityLargeFireball.java
+@@ -27,7 +27,7 @@
+ 
+     }
+ 
+-    public static void a(DataConverterManager dataconvertermanager) {
++    public static void b(DataConverterManager dataconvertermanager) {
+         EntityFireball.a(dataconvertermanager, "Fireball");
+     }
+ 

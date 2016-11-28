@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/BiomeBigHills.java
++++ b/net/minecraft/server/BiomeBigHills.java
+@@ -16,6 +16,7 @@
+             this.t.z = 3;
+         }
+ 
++        this.v.add(new BiomeBase.BiomeMeta(EntityLlama.class, 5, 4, 6));
+         this.A = biomebighills_type;
+     }
+ 

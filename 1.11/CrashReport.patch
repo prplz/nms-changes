@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CrashReport.java
++++ b/net/minecraft/server/CrashReport.java
+@@ -36,7 +36,7 @@
+     private void h() {
+         this.d.a("Minecraft Version", new CrashReportCallable() {
+             public String a() {
+-                return "1.10.2";
++                return "1.11";
+             }
+ 
+             public Object call() throws Exception {

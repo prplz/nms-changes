@@ -1,0 +1,44 @@
+--- a/net/minecraft/server/BlockFlowers.java
++++ b/net/minecraft/server/BlockFlowers.java
+@@ -11,7 +11,11 @@
+     protected BlockStateEnum<BlockFlowers.EnumFlowerVarient> TYPE;
+ 
+     protected BlockFlowers() {
+-        this.w(this.blockStateList.getBlockData().set(this.g(), this.e() == BlockFlowers.EnumFlowerType.RED ? BlockFlowers.EnumFlowerVarient.POPPY : BlockFlowers.EnumFlowerVarient.DANDELION));
++        this.y(this.blockStateList.getBlockData().set(this.g(), this.e() == BlockFlowers.EnumFlowerType.RED ? BlockFlowers.EnumFlowerVarient.POPPY : BlockFlowers.EnumFlowerVarient.DANDELION));
++    }
++
++    public AxisAlignedBB b(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
++        return super.b(iblockdata, iblockaccess, blockposition).a(iblockdata.e(iblockaccess, blockposition));
+     }
+ 
+     public int getDropData(IBlockData iblockdata) {
+@@ -31,7 +35,7 @@
+                     return blockflowers_enumflowervarient.a() == BlockFlowers.this.e();
+                 }
+ 
+-                public boolean apply(Object object) {
++                public boolean apply(@Nullable Object object) {
+                     return this.a((BlockFlowers.EnumFlowerVarient) object);
+                 }
+             });
+@@ -48,6 +52,10 @@
+         return new BlockStateList(this, new IBlockState[] { this.g()});
+     }
+ 
++    public Block.EnumRandomOffset u() {
++        return Block.EnumRandomOffset.XZ;
++    }
++
+     public static enum EnumFlowerVarient implements INamable {
+ 
+         DANDELION(BlockFlowers.EnumFlowerType.YELLOW, 0, "dandelion"), POPPY(BlockFlowers.EnumFlowerType.RED, 0, "poppy"), BLUE_ORCHID(BlockFlowers.EnumFlowerType.RED, 1, "blue_orchid", "blueOrchid"), ALLIUM(BlockFlowers.EnumFlowerType.RED, 2, "allium"), HOUSTONIA(BlockFlowers.EnumFlowerType.RED, 3, "houstonia"), RED_TULIP(BlockFlowers.EnumFlowerType.RED, 4, "red_tulip", "tulipRed"), ORANGE_TULIP(BlockFlowers.EnumFlowerType.RED, 5, "orange_tulip", "tulipOrange"), WHITE_TULIP(BlockFlowers.EnumFlowerType.RED, 6, "white_tulip", "tulipWhite"), PINK_TULIP(BlockFlowers.EnumFlowerType.RED, 7, "pink_tulip", "tulipPink"), OXEYE_DAISY(BlockFlowers.EnumFlowerType.RED, 8, "oxeye_daisy", "oxeyeDaisy");
+@@ -110,7 +118,7 @@
+                         return blockflowers_enumflowervarient.a() == blockflowers_enumflowertype;
+                     }
+ 
+-                    public boolean apply(Object object) {
++                    public boolean apply(@Nullable Object object) {
+                         return this.a((BlockFlowers.EnumFlowerVarient) object);
+                     }
+                 });

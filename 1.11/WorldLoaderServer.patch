@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldLoaderServer.java
++++ b/net/minecraft/server/WorldLoaderServer.java
+@@ -61,7 +61,7 @@
+         WorldData worlddata = this.c(s);
+         Object object;
+ 
+-        if (worlddata.getType() == WorldType.FLAT) {
++        if (worlddata != null && worlddata.getType() == WorldType.FLAT) {
+             object = new WorldChunkManagerHell(Biomes.c);
+         } else {
+             object = new WorldChunkManager(worlddata);

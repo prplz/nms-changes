@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockFlowing.java
++++ b/net/minecraft/server/BlockFlowing.java
+@@ -78,7 +78,7 @@
+                     iblockdata = iblockdata.set(BlockFlowing.LEVEL, Integer.valueOf(i1));
+                     world.setTypeAndData(blockposition, iblockdata, 2);
+                     world.a(blockposition, (Block) this, j);
+-                    world.applyPhysics(blockposition, this);
++                    world.applyPhysics(blockposition, this, false);
+                 }
+             }
+         } else {

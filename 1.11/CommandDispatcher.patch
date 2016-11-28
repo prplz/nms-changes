@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/CommandDispatcher.java
++++ b/net/minecraft/server/CommandDispatcher.java
+@@ -53,6 +53,7 @@
+         this.a((ICommand) (new CommandTitle()));
+         this.a((ICommand) (new CommandEntityData()));
+         this.a((ICommand) (new CommandStopSound()));
++        this.a((ICommand) (new CommandLocate()));
+         if (minecraftserver.aa()) {
+             this.a((ICommand) (new CommandOp()));
+             this.a((ICommand) (new CommandDeop()));

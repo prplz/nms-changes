@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CommandAchievement.java
++++ b/net/minecraft/server/CommandAchievement.java
+@@ -93,7 +93,7 @@
+                                         return entityplayer.getStatisticManager().hasAchievement(achievement) && achievement != statistic;
+                                     }
+ 
+-                                    public boolean apply(Object object) {
++                                    public boolean apply(@Nullable Object object) {
+                                         return this.a((Achievement) object);
+                                     }
+                                 }));

@@ -1,0 +1,70 @@
+--- a/net/minecraft/server/PathfinderGoalVillagerFarm.java
++++ b/net/minecraft/server/PathfinderGoalVillagerFarm.java
+@@ -19,8 +19,8 @@
+             }
+ 
+             this.f = -1;
+-            this.d = this.c.dn();
+-            this.e = this.c.dm();
++            this.d = this.c.dq();
++            this.e = this.c.dp();
+         }
+ 
+         return super.a();
+@@ -30,14 +30,6 @@
+         return this.f >= 0 && super.b();
+     }
+ 
+-    public void c() {
+-        super.c();
+-    }
+-
+-    public void d() {
+-        super.d();
+-    }
+-
+     public void e() {
+         super.e();
+         this.c.getControllerLook().a((double) this.b.getX() + 0.5D, (double) (this.b.getY() + 1), (double) this.b.getZ() + 0.5D, 10.0F, (float) this.c.N());
+@@ -47,16 +39,16 @@
+             IBlockData iblockdata = world.getType(blockposition);
+             Block block = iblockdata.getBlock();
+ 
+-            if (this.f == 0 && block instanceof BlockCrops && ((BlockCrops) block).y(iblockdata)) {
++            if (this.f == 0 && block instanceof BlockCrops && ((BlockCrops) block).A(iblockdata)) {
+                 world.setAir(blockposition, true);
+             } else if (this.f == 1 && iblockdata.getMaterial() == Material.AIR) {
+-                InventorySubcontainer inventorysubcontainer = this.c.dj();
++                InventorySubcontainer inventorysubcontainer = this.c.dm();
+ 
+                 for (int i = 0; i < inventorysubcontainer.getSize(); ++i) {
+                     ItemStack itemstack = inventorysubcontainer.getItem(i);
+                     boolean flag = false;
+ 
+-                    if (itemstack != null) {
++                    if (!itemstack.isEmpty()) {
+                         if (itemstack.getItem() == Items.WHEAT_SEEDS) {
+                             world.setTypeAndData(blockposition, Blocks.WHEAT.getBlockData(), 3);
+                             flag = true;
+@@ -73,9 +65,9 @@
+                     }
+ 
+                     if (flag) {
+-                        --itemstack.count;
+-                        if (itemstack.count <= 0) {
+-                            inventorysubcontainer.setItem(i, (ItemStack) null);
++                        itemstack.subtract(1);
++                        if (itemstack.isEmpty()) {
++                            inventorysubcontainer.setItem(i, ItemStack.a);
+                         }
+                         break;
+                     }
+@@ -96,7 +88,7 @@
+             IBlockData iblockdata = world.getType(blockposition);
+ 
+             block = iblockdata.getBlock();
+-            if (block instanceof BlockCrops && ((BlockCrops) block).y(iblockdata) && this.e && (this.f == 0 || this.f < 0)) {
++            if (block instanceof BlockCrops && ((BlockCrops) block).A(iblockdata) && this.e && (this.f == 0 || this.f < 0)) {
+                 this.f = 0;
+                 return true;
+             }

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/PacketPlayInWindowClick.java
++++ b/net/minecraft/server/PacketPlayInWindowClick.java
+@@ -11,7 +11,9 @@
+     private ItemStack item;
+     private InventoryClickType shift;
+ 
+-    public PacketPlayInWindowClick() {}
++    public PacketPlayInWindowClick() {
++        this.item = ItemStack.a;
++    }
+ 
+     public void a(PacketListenerPlayIn packetlistenerplayin) {
+         packetlistenerplayin.a(this);

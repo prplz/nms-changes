@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/MobEffect.java
++++ b/net/minecraft/server/MobEffect.java
+@@ -173,7 +173,7 @@
+                 flag1 = nbttagcompound.getBoolean("ShowParticles");
+             }
+ 
+-            return new MobEffect(mobeffectlist, i, b1, flag, flag1);
++            return new MobEffect(mobeffectlist, i, b1 < 0 ? 0 : b1, flag, flag1);
+         }
+     }
+ 

@@ -1,0 +1,27 @@
+--- a/net/minecraft/server/RecipesFurnace.java
++++ b/net/minecraft/server/RecipesFurnace.java
+@@ -4,7 +4,6 @@
+ import java.util.Iterator;
+ import java.util.Map;
+ import java.util.Map.Entry;
+-import javax.annotation.Nullable;
+ 
+ public class RecipesFurnace {
+ 
+@@ -68,7 +67,6 @@
+         this.experience.put(itemstack1, Float.valueOf(f));
+     }
+ 
+-    @Nullable
+     public ItemStack getResult(ItemStack itemstack) {
+         Iterator iterator = this.recipes.entrySet().iterator();
+ 
+@@ -76,7 +74,7 @@
+ 
+         do {
+             if (!iterator.hasNext()) {
+-                return null;
++                return ItemStack.a;
+             }
+ 
+             entry = (Entry) iterator.next();

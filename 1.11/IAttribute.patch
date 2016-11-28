@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IAttribute.java
++++ b/net/minecraft/server/IAttribute.java
+@@ -8,7 +8,7 @@
+ 
+     double a(double d0);
+ 
+-    double b();
++    double getDefault();
+ 
+     boolean c();
+ 

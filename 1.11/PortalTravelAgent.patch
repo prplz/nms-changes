@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PortalTravelAgent.java
++++ b/net/minecraft/server/PortalTravelAgent.java
+@@ -327,7 +327,7 @@
+                     i4 = j2 + (i3 - 1) * l5;
+                     BlockPosition blockposition = new BlockPosition(k3, l3, i4);
+ 
+-                    this.world.applyPhysics(blockposition, this.world.getType(blockposition).getBlock());
++                    this.world.applyPhysics(blockposition, this.world.getType(blockposition).getBlock(), false);
+                 }
+             }
+         }

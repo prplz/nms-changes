@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/ChatBaseComponent.java
++++ b/net/minecraft/server/ChatBaseComponent.java
+@@ -79,7 +79,7 @@
+                 return ichatbasecomponent.iterator();
+             }
+ 
+-            public Object apply(Object object) {
++            public Object apply(@Nullable Object object) {
+                 return this.a((IChatBaseComponent) object);
+             }
+         }));
+@@ -92,7 +92,7 @@
+                 return ichatbasecomponent1;
+             }
+ 
+-            public Object apply(Object object) {
++            public Object apply(@Nullable Object object) {
+                 return this.a((IChatBaseComponent) object);
+             }
+         });

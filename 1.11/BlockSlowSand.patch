@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockSlowSand.java
++++ b/net/minecraft/server/BlockSlowSand.java
+@@ -12,7 +12,7 @@
+     }
+ 
+     @Nullable
+-    public AxisAlignedBB a(IBlockData iblockdata, World world, BlockPosition blockposition) {
++    public AxisAlignedBB a(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
+         return BlockSlowSand.a;
+     }
+ 

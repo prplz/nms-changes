@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockWood.java
++++ b/net/minecraft/server/BlockWood.java
+@@ -6,7 +6,7 @@
+ 
+     public BlockWood() {
+         super(Material.WOOD);
+-        this.w(this.blockStateList.getBlockData().set(BlockWood.VARIANT, BlockWood.EnumLogVariant.OAK));
++        this.y(this.blockStateList.getBlockData().set(BlockWood.VARIANT, BlockWood.EnumLogVariant.OAK));
+         this.a(CreativeModeTab.b);
+     }
+ 

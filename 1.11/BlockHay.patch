@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockHay.java
++++ b/net/minecraft/server/BlockHay.java
+@@ -4,7 +4,7 @@
+ 
+     public BlockHay() {
+         super(Material.GRASS, MaterialMapColor.t);
+-        this.w(this.blockStateList.getBlockData().set(BlockHay.AXIS, EnumDirection.EnumAxis.Y));
++        this.y(this.blockStateList.getBlockData().set(BlockHay.AXIS, EnumDirection.EnumAxis.Y));
+         this.a(CreativeModeTab.b);
+     }
+ 

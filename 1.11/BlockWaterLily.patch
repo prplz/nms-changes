@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockWaterLily.java
++++ b/net/minecraft/server/BlockWaterLily.java
+@@ -26,7 +26,7 @@
+ 
+     }
+ 
+-    public AxisAlignedBB a(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
++    public AxisAlignedBB b(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
+         return BlockWaterLily.a;
+     }
+ 

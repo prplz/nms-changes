@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/IMerchant.java
++++ b/net/minecraft/server/IMerchant.java
+@@ -1,11 +1,14 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public interface IMerchant {
+ 
+     void setTradingPlayer(EntityHuman entityhuman);
+ 
+     EntityHuman getTrader();
+ 
++    @Nullable
+     MerchantRecipeList getOffers(EntityHuman entityhuman);
+ 
+     void a(MerchantRecipe merchantrecipe);
+@@ -13,4 +16,8 @@
+     void a(ItemStack itemstack);
+ 
+     IChatBaseComponent getScoreboardDisplayName();
++
++    World t_();
++
++    BlockPosition u_();
+ }

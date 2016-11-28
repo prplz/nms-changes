@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/WorldLoader.java
++++ b/net/minecraft/server/WorldLoader.java
+@@ -22,6 +22,7 @@
+         this.a = file;
+     }
+ 
++    @Nullable
+     public WorldData c(String s) {
+         File file = new File(this.a, s);
+ 

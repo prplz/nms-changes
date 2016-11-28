@@ -1,0 +1,38 @@
+--- a/net/minecraft/server/PathfinderGoalTarget.java
++++ b/net/minecraft/server/PathfinderGoalTarget.java
+@@ -1,5 +1,7 @@
+ package net.minecraft.server;
+ 
++import javax.annotation.Nullable;
++
+ public abstract class PathfinderGoalTarget extends PathfinderGoal {
+ 
+     protected final EntityCreature e;
+@@ -81,7 +83,7 @@
+         this.g = null;
+     }
+ 
+-    public static boolean a(EntityInsentient entityinsentient, EntityLiving entityliving, boolean flag, boolean flag1) {
++    public static boolean a(EntityInsentient entityinsentient, @Nullable EntityLiving entityliving, boolean flag, boolean flag1) {
+         if (entityliving == null) {
+             return false;
+         } else if (entityliving == entityinsentient) {
+@@ -109,7 +111,7 @@
+         }
+     }
+ 
+-    protected boolean a(EntityLiving entityliving, boolean flag) {
++    protected boolean a(@Nullable EntityLiving entityliving, boolean flag) {
+         if (!a(this.e, entityliving, flag, this.f)) {
+             return false;
+         } else if (!this.e.f(new BlockPosition(entityliving))) {
+@@ -152,4 +154,9 @@
+             }
+         }
+     }
++
++    public PathfinderGoalTarget b(int i) {
++        this.h = i;
++        return this;
++    }
+ }

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/ExceptionEntityNotFound.java
++++ b/net/minecraft/server/ExceptionEntityNotFound.java
+@@ -2,8 +2,8 @@
+ 
+ public class ExceptionEntityNotFound extends CommandException {
+ 
+-    public ExceptionEntityNotFound() {
+-        this("commands.generic.entity.notFound", new Object[0]);
++    public ExceptionEntityNotFound(String s) {
++        this("commands.generic.entity.notFound", new Object[] { s});
+     }
+ 
+     public ExceptionEntityNotFound(String s, Object... aobject) {

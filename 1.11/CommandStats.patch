@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CommandStats.java
++++ b/net/minecraft/server/CommandStats.java
+@@ -105,7 +105,7 @@
+                             throw new CommandException("commands.stats.noCompatibleBlock", new Object[] { Integer.valueOf(blockposition.getX()), Integer.valueOf(blockposition.getY()), Integer.valueOf(blockposition.getZ())});
+                         }
+ 
+-                        commandobjectiveexecutor = ((TileEntitySign) tileentity).g();
++                        commandobjectiveexecutor = ((TileEntitySign) tileentity).f();
+                     }
+                 } else {
+                     Entity entity = b(minecraftserver, icommandlistener, astring[1]);

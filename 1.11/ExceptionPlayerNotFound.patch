@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/ExceptionPlayerNotFound.java
++++ b/net/minecraft/server/ExceptionPlayerNotFound.java
+@@ -2,8 +2,8 @@
+ 
+ public class ExceptionPlayerNotFound extends CommandException {
+ 
+-    public ExceptionPlayerNotFound() {
+-        this("commands.generic.player.notFound", new Object[0]);
++    public ExceptionPlayerNotFound(String s) {
++        super(s, new Object[0]);
+     }
+ 
+     public ExceptionPlayerNotFound(String s, Object... aobject) {

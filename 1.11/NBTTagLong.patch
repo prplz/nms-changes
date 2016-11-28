@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagLong.java
++++ b/net/minecraft/server/NBTTagLong.java
+@@ -65,7 +65,7 @@
+         return (byte) ((int) (this.data & 255L));
+     }
+ 
+-    public double h() {
++    public double asDouble() {
+         return (double) this.data;
+     }
+ 

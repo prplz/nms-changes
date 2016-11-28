@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnchantmentDurability.java
++++ b/net/minecraft/server/EnchantmentDurability.java
+@@ -22,7 +22,7 @@
+     }
+ 
+     public boolean canEnchant(ItemStack itemstack) {
+-        return itemstack.e() ? true : super.canEnchant(itemstack);
++        return itemstack.f() ? true : super.canEnchant(itemstack);
+     }
+ 
+     public static boolean a(ItemStack itemstack, int i, Random random) {

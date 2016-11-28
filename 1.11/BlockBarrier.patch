@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/BlockBarrier.java
++++ b/net/minecraft/server/BlockBarrier.java
+@@ -4,9 +4,9 @@
+ 
+     protected BlockBarrier() {
+         super(Material.BANNER);
+-        this.k();
++        this.j();
+         this.b(6000001.0F);
+-        this.q();
++        this.p();
+         this.n = true;
+     }
+ 

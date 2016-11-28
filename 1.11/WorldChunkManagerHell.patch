@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/WorldChunkManagerHell.java
++++ b/net/minecraft/server/WorldChunkManagerHell.java
+@@ -47,4 +47,12 @@
+     public boolean a(int i, int j, int k, List<BiomeBase> list) {
+         return list.contains(this.a);
+     }
++
++    public boolean c() {
++        return true;
++    }
++
++    public BiomeBase d() {
++        return this.a;
++    }
+ }

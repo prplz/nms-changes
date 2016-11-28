@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutChat.java
++++ b/net/minecraft/server/PacketPlayOutChat.java
+@@ -35,4 +35,8 @@
+     public boolean b() {
+         return this.b == 1 || this.b == 2;
+     }
++
++    public byte c() {
++        return this.b;
++    }
+ }

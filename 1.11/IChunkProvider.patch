@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/IChunkProvider.java
++++ b/net/minecraft/server/IChunkProvider.java
+@@ -12,4 +12,6 @@
+     boolean unloadChunks();
+ 
+     String getName();
++
++    boolean e(int i, int j);
+ }

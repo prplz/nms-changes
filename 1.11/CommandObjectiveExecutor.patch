@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/CommandObjectiveExecutor.java
++++ b/net/minecraft/server/CommandObjectiveExecutor.java
+@@ -59,8 +59,8 @@
+                     icommandlistener.a(commandobjectiveexecutor_enumcommandresult, i);
+                 }
+ 
+-                public MinecraftServer h() {
+-                    return icommandlistener.h();
++                public MinecraftServer B_() {
++                    return icommandlistener.B_();
+                 }
+             };
+ 
+@@ -68,7 +68,7 @@
+ 
+             try {
+                 s1 = CommandAbstract.e(minecraftserver, icommandlistener1, s);
+-            } catch (ExceptionEntityNotFound exceptionentitynotfound) {
++            } catch (CommandException commandexception) {
+                 return;
+             }
+ 

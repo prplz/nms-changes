@@ -1,0 +1,24 @@
+--- a/net/minecraft/server/BlockDataAbstract.java
++++ b/net/minecraft/server/BlockDataAbstract.java
+@@ -27,7 +27,8 @@
+             return iblockstate.a(comparable);
+         }
+ 
+-        public Object apply(Object object) {
++        @Nullable
++        public Object apply(@Nullable Object object) {
+             return this.a((Entry) object);
+         }
+     };
+@@ -58,9 +59,9 @@
+         StringBuilder stringbuilder = new StringBuilder();
+ 
+         stringbuilder.append(Block.REGISTRY.b(this.getBlock()));
+-        if (!this.s().isEmpty()) {
++        if (!this.u().isEmpty()) {
+             stringbuilder.append("[");
+-            BlockDataAbstract.a.appendTo(stringbuilder, Iterables.transform(this.s().entrySet(), BlockDataAbstract.b));
++            BlockDataAbstract.a.appendTo(stringbuilder, Iterables.transform(this.u().entrySet(), BlockDataAbstract.b));
+             stringbuilder.append("]");
+         }
+ 

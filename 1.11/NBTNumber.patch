@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTNumber.java
++++ b/net/minecraft/server/NBTNumber.java
+@@ -12,7 +12,7 @@
+ 
+     public abstract byte g();
+ 
+-    public abstract double h();
++    public abstract double asDouble();
+ 
+     public abstract float i();
+ }

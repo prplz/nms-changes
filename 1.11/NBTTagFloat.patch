@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagFloat.java
++++ b/net/minecraft/server/NBTTagFloat.java
+@@ -65,7 +65,7 @@
+         return (byte) (MathHelper.d(this.data) & 255);
+     }
+ 
+-    public double h() {
++    public double asDouble() {
+         return (double) this.data;
+     }
+ 

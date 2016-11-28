@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockMushroom.java
++++ b/net/minecraft/server/BlockMushroom.java
+@@ -11,7 +11,7 @@
+         this.a(true);
+     }
+ 
+-    public AxisAlignedBB a(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
++    public AxisAlignedBB b(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
+         return BlockMushroom.a;
+     }
+ 

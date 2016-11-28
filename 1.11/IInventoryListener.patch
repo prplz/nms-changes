@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/IInventoryListener.java
++++ b/net/minecraft/server/IInventoryListener.java
+@@ -2,5 +2,5 @@
+ 
+ public interface IInventoryListener {
+ 
+-    void a(InventorySubcontainer inventorysubcontainer);
++    void a(IInventory iinventory);
+ }

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/BossBattle.java
++++ b/net/minecraft/server/BossBattle.java
+@@ -29,6 +29,10 @@
+         return this.title;
+     }
+ 
++    public void a(IChatBaseComponent ichatbasecomponent) {
++        this.title = ichatbasecomponent;
++    }
++
+     public float getProgress() {
+         return this.b;
+     }

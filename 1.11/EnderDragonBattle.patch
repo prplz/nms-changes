@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/EnderDragonBattle.java
++++ b/net/minecraft/server/EnderDragonBattle.java
+@@ -377,6 +377,9 @@
+         if (entityenderdragon.getUniqueID().equals(this.m)) {
+             this.c.setProgress(entityenderdragon.getHealth() / entityenderdragon.getMaxHealth());
+             this.g = 0;
++            if (entityenderdragon.hasCustomName()) {
++                this.c.a(entityenderdragon.getScoreboardDisplayName());
++            }
+         }
+ 
+     }

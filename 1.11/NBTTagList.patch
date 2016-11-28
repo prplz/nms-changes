@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagList.java
++++ b/net/minecraft/server/NBTTagList.java
+@@ -157,7 +157,7 @@
+             NBTBase nbtbase = (NBTBase) this.list.get(i);
+ 
+             if (nbtbase.getTypeId() == 6) {
+-                return ((NBTTagDouble) nbtbase).h();
++                return ((NBTTagDouble) nbtbase).asDouble();
+             }
+         }
+ 

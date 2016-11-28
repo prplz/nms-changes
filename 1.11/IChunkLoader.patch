@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/IChunkLoader.java
++++ b/net/minecraft/server/IChunkLoader.java
+@@ -15,4 +15,6 @@
+     void a();
+ 
+     void b();
++
++    boolean a(int i, int j);
+ }

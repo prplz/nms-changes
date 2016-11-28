@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/IJumpable.java
++++ b/net/minecraft/server/IJumpable.java
+@@ -2,9 +2,9 @@
+ 
+ public interface IJumpable {
+ 
+-    boolean b();
++    boolean a();
+ 
+     void b(int i);
+ 
+-    void r_();
++    void q_();
+ }

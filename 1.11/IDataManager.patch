@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/IDataManager.java
++++ b/net/minecraft/server/IDataManager.java
+@@ -1,9 +1,11 @@
+ package net.minecraft.server;
+ 
+ import java.io.File;
++import javax.annotation.Nullable;
+ 
+ public interface IDataManager {
+ 
++    @Nullable
+     WorldData getWorldData();
+ 
+     void checkSession() throws ExceptionWorldConflict;

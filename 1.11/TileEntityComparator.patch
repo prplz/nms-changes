@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/TileEntityComparator.java
++++ b/net/minecraft/server/TileEntityComparator.java
+@@ -17,7 +17,7 @@
+         this.a = nbttagcompound.getInt("OutputSignal");
+     }
+ 
+-    public int d() {
++    public int a() {
+         return this.a;
+     }
+ 

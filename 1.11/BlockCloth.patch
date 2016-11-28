@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockCloth.java
++++ b/net/minecraft/server/BlockCloth.java
+@@ -6,7 +6,7 @@
+ 
+     public BlockCloth(Material material) {
+         super(material);
+-        this.w(this.blockStateList.getBlockData().set(BlockCloth.COLOR, EnumColor.WHITE));
++        this.y(this.blockStateList.getBlockData().set(BlockCloth.COLOR, EnumColor.WHITE));
+         this.a(CreativeModeTab.b);
+     }
+ 

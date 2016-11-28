@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CommandBanIp.java
++++ b/net/minecraft/server/CommandBanIp.java
+@@ -41,7 +41,7 @@
+                 EntityPlayer entityplayer = minecraftserver.getPlayerList().getPlayer(astring[0]);
+ 
+                 if (entityplayer == null) {
+-                    throw new ExceptionPlayerNotFound("commands.banip.invalid", new Object[0]);
++                    throw new ExceptionPlayerNotFound("commands.banip.invalid");
+                 }
+ 
+                 this.a(minecraftserver, icommandlistener, entityplayer.A(), ichatbasecomponent == null ? null : ichatbasecomponent.toPlainText());

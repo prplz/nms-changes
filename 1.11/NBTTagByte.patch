@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagByte.java
++++ b/net/minecraft/server/NBTTagByte.java
+@@ -65,7 +65,7 @@
+         return this.data;
+     }
+ 
+-    public double h() {
++    public double asDouble() {
+         return (double) this.data;
+     }
+ 

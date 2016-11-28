@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/DataInspectorItem.java
++++ b/net/minecraft/server/DataInspectorItem.java
+@@ -4,8 +4,8 @@
+ 
+     private final String[] a;
+ 
+-    public DataInspectorItem(String s, String... astring) {
+-        super("id", s);
++    public DataInspectorItem(Class<?> oclass, String... astring) {
++        super(oclass);
+         this.a = astring;
+     }
+ 

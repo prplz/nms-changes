@@ -1,0 +1,28 @@
+--- a/net/minecraft/server/WorldNBTStorage.java
++++ b/net/minecraft/server/WorldNBTStorage.java
+@@ -18,7 +18,7 @@
+     private final File baseDir;
+     private final File playerDir;
+     private final File dataDir;
+-    private final long sessionId = MinecraftServer.av();
++    private final long sessionId = MinecraftServer.aw();
+     private final String g;
+     private final DefinedStructureManager h;
+     protected final DataConverterManager a;
+@@ -33,7 +33,7 @@
+         this.g = s;
+         if (flag) {
+             this.playerDir.mkdirs();
+-            this.h = new DefinedStructureManager((new File(this.baseDir, "structures")).toString());
++            this.h = new DefinedStructureManager((new File(this.baseDir, "structures")).toString(), dataconvertermanager);
+         } else {
+             this.h = null;
+         }
+@@ -84,6 +84,7 @@
+         throw new RuntimeException("Old Chunk Storage is no longer supported.");
+     }
+ 
++    @Nullable
+     public WorldData getWorldData() {
+         File file = new File(this.baseDir, "level.dat");
+ 

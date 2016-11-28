@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/BlockPressurePlateWeighted.java
++++ b/net/minecraft/server/BlockPressurePlateWeighted.java
+@@ -11,7 +11,7 @@
+ 
+     protected BlockPressurePlateWeighted(Material material, int i, MaterialMapColor materialmapcolor) {
+         super(material, materialmapcolor);
+-        this.w(this.blockStateList.getBlockData().set(BlockPressurePlateWeighted.POWER, Integer.valueOf(0)));
++        this.y(this.blockStateList.getBlockData().set(BlockPressurePlateWeighted.POWER, Integer.valueOf(0)));
+         this.weight = i;
+     }
+ 
+@@ -28,7 +28,7 @@
+     }
+ 
+     protected void b(World world, BlockPosition blockposition) {
+-        world.a((EntityHuman) null, blockposition, SoundEffects.dy, SoundCategory.BLOCKS, 0.3F, 0.90000004F);
++        world.a((EntityHuman) null, blockposition, SoundEffects.dR, SoundCategory.BLOCKS, 0.3F, 0.90000004F);
+     }
+ 
+     protected void c(World world, BlockPosition blockposition) {

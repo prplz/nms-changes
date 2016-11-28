@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/AttributeBase.java
++++ b/net/minecraft/server/AttributeBase.java
+@@ -22,7 +22,7 @@
+         return this.b;
+     }
+ 
+-    public double b() {
++    public double getDefault() {
+         return this.c;
+     }
+ 

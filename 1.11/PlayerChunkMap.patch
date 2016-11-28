@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/PlayerChunkMap.java
++++ b/net/minecraft/server/PlayerChunkMap.java
+@@ -22,7 +22,7 @@
+             return entityplayer != null && !entityplayer.isSpectator();
+         }
+ 
+-        public boolean apply(Object object) {
++        public boolean apply(@Nullable Object object) {
+             return this.a((EntityPlayer) object);
+         }
+     };
+@@ -31,7 +31,7 @@
+             return entityplayer != null && (!entityplayer.isSpectator() || entityplayer.x().getGameRules().getBoolean("spectatorsGenerateChunks"));
+         }
+ 
+-        public boolean apply(Object object) {
++        public boolean apply(@Nullable Object object) {
+             return this.a((EntityPlayer) object);
+         }
+     };

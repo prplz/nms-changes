@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ShapeDetectorBlock.java
++++ b/net/minecraft/server/ShapeDetectorBlock.java
+@@ -46,7 +46,7 @@
+                 return shapedetectorblock != null && predicate.apply(shapedetectorblock.a());
+             }
+ 
+-            public boolean apply(Object object) {
++            public boolean apply(@Nullable Object object) {
+                 return this.a((ShapeDetectorBlock) object);
+             }
+         };

@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/ItemCooldown.java
++++ b/net/minecraft/server/ItemCooldown.java
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void a(Item item, int i) {
+-        this.a.put(item, new ItemCooldown.Info(this.b, this.b + i, (ItemCooldown.SyntheticClass_1) null));
++        this.a.put(item, new ItemCooldown.Info(this.b, this.b + i, null));
+         this.b(item, i);
+     }
+ 
+@@ -55,8 +55,6 @@
+ 
+     protected void c(Item item) {}
+ 
+-    static class SyntheticClass_1 {    }
+-
+     class Info {
+ 
+         final int a;
+@@ -67,7 +65,7 @@
+             this.b = j;
+         }
+ 
+-        Info(int i, int j, ItemCooldown.SyntheticClass_1 itemcooldown_syntheticclass_1) {
++        Info(int i, int j, Object object) {
+             this(i, j);
+         }
+     }

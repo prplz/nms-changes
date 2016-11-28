@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/BiomeTheEndDecorator.java
++++ b/net/minecraft/server/BiomeTheEndDecorator.java
+@@ -14,7 +14,7 @@
+ 
+ public class BiomeTheEndDecorator extends BiomeDecorator {
+ 
+-    private static final LoadingCache<Long, WorldGenEnder.Spike[]> M = CacheBuilder.newBuilder().expireAfterWrite(5L, TimeUnit.MINUTES).build(new BiomeTheEndDecorator.SpikeCache((BiomeTheEndDecorator.SyntheticClass_1) null));
++    private static final LoadingCache<Long, WorldGenEnder.Spike[]> M = CacheBuilder.newBuilder().expireAfterWrite(5L, TimeUnit.MINUTES).build(new BiomeTheEndDecorator.SpikeCache(null));
+     private final WorldGenEnder N = new WorldGenEnder();
+ 
+     public BiomeTheEndDecorator() {}
+@@ -43,8 +43,6 @@
+         return (WorldGenEnder.Spike[]) BiomeTheEndDecorator.M.getUnchecked(Long.valueOf(i));
+     }
+ 
+-    static class SyntheticClass_1 {    }
+-
+     static class SpikeCache extends CacheLoader<Long, WorldGenEnder.Spike[]> {
+ 
+         private SpikeCache() {}
+@@ -73,7 +71,7 @@
+             return this.a((Long) object);
+         }
+ 
+-        SpikeCache(BiomeTheEndDecorator.SyntheticClass_1 biometheenddecorator_syntheticclass_1) {
++        SpikeCache(Object object) {
+             this();
+         }
+     }

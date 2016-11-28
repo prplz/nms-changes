@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ICommand.java
++++ b/net/minecraft/server/ICommand.java
+@@ -9,7 +9,7 @@
+ 
+     String getUsage(ICommandListener icommandlistener);
+ 
+-    List<String> b();
++    List<String> getAliases();
+ 
+     void execute(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring) throws CommandException;
+ 

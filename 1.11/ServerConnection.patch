@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ServerConnection.java
++++ b/net/minecraft/server/ServerConnection.java
+@@ -73,7 +73,7 @@
+             Class oclass;
+             LazyInitVar lazyinitvar;
+ 
+-            if (Epoll.isAvailable() && this.f.ae()) {
++            if (Epoll.isAvailable() && this.f.af()) {
+                 oclass = EpollServerSocketChannel.class;
+                 lazyinitvar = ServerConnection.b;
+                 ServerConnection.e.info("Using epoll channel type");

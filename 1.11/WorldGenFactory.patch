@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/WorldGenFactory.java
++++ b/net/minecraft/server/WorldGenFactory.java
+@@ -87,6 +87,7 @@
+         b(WorldGenLargeFeature.WorldGenLargeFeatureStart.class, "Temple");
+         b(WorldGenMonument.WorldGenMonumentStart.class, "Monument");
+         b(WorldGenEndCity.Start.class, "EndCity");
++        b(WorldGenWoodlandMansion.a.class, "Mansion");
+         WorldGenMineshaftPieces.a();
+         WorldGenVillagePieces.a();
+         WorldGenNetherPieces.a();
+@@ -94,5 +95,6 @@
+         WorldGenRegistration.a();
+         WorldGenMonumentPieces.a();
+         WorldGenEndCityPieces.a();
++        WorldGenWoodlandMansionPieces.a();
+     }
+ }

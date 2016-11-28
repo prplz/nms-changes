@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalRestrictSun.java
++++ b/net/minecraft/server/PathfinderGoalRestrictSun.java
+@@ -9,7 +9,7 @@
+     }
+ 
+     public boolean a() {
+-        return this.a.world.B() && this.a.getEquipment(EnumItemSlot.HEAD) == null;
++        return this.a.world.B() && this.a.getEquipment(EnumItemSlot.HEAD).isEmpty();
+     }
+ 
+     public void c() {

@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/EntityGolem.java
++++ b/net/minecraft/server/EntityGolem.java
+@@ -16,12 +16,12 @@
+     }
+ 
+     @Nullable
+-    protected SoundEffect bV() {
++    protected SoundEffect bW() {
+         return null;
+     }
+ 
+     @Nullable
+-    protected SoundEffect bW() {
++    protected SoundEffect bX() {
+         return null;
+     }
+ 

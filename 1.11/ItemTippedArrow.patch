@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/ItemTippedArrow.java
++++ b/net/minecraft/server/ItemTippedArrow.java
+@@ -11,7 +11,7 @@
+         return entitytippedarrow;
+     }
+ 
+-    public String a(ItemStack itemstack) {
+-        return LocaleI18n.get(PotionUtil.c(itemstack).b("tipped_arrow.effect."));
++    public String b(ItemStack itemstack) {
++        return LocaleI18n.get(PotionUtil.d(itemstack).b("tipped_arrow.effect."));
+     }
+ }

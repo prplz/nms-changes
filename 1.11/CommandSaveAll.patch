@@ -1,0 +1,21 @@
+--- a/net/minecraft/server/CommandSaveAll.java
++++ b/net/minecraft/server/CommandSaveAll.java
+@@ -1,5 +1,9 @@
+ package net.minecraft.server;
+ 
++import java.util.Collections;
++import java.util.List;
++import javax.annotation.Nullable;
++
+ public class CommandSaveAll extends CommandAbstract {
+ 
+     public CommandSaveAll() {}
+@@ -55,4 +59,8 @@
+ 
+         a(icommandlistener, (ICommand) this, "commands.save.success", new Object[0]);
+     }
++
++    public List<String> tabComplete(MinecraftServer minecraftserver, ICommandListener icommandlistener, String[] astring, @Nullable BlockPosition blockposition) {
++        return astring.length == 1 ? a(astring, new String[] { "flush"}) : Collections.emptyList();
++    }
+ }

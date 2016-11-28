@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RegistryMaterials.java
++++ b/net/minecraft/server/RegistryMaterials.java
+@@ -38,7 +38,7 @@
+         return super.d(k0);
+     }
+ 
+-    public int a(V v0) {
++    public int a(@Nullable V v0) {
+         return this.a.getId(v0);
+     }
+ 
