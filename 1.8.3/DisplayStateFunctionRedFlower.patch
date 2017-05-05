@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/DisplayStateFunctionRedFlower.java
++++ b/net/minecraft/server/DisplayStateFunctionRedFlower.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-import com.google.common.base.Function;
+-
+-final class DisplayStateFunctionRedFlower implements Function {
+-
+-    DisplayStateFunctionRedFlower() {}
+-
+-    public String a(ItemStack itemstack) {
+-        return EnumFlowerVarient.a(EnumFlowerType.RED, itemstack.getData()).d();
+-    }
+-
+-    public Object apply(Object object) {
+-        return this.a((ItemStack) object);
+-    }
+-}

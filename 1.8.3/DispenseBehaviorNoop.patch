@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/DispenseBehaviorNoop.java
++++ b/net/minecraft/server/DispenseBehaviorNoop.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-final class DispenseBehaviorNoop implements IDispenseBehavior {
+-
+-    DispenseBehaviorNoop() {}
+-
+-    public ItemStack a(ISourceBlock isourceblock, ItemStack itemstack) {
+-        return itemstack;
+-    }
+-}

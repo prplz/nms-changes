@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RegionFileCache.java
++++ b/net/minecraft/server/RegionFileCache.java
+@@ -10,7 +10,7 @@
+ 
+ public class RegionFileCache {
+ 
+-    private static final Map a = Maps.newHashMap();
++    private static final Map<File, RegionFile> a = Maps.newHashMap();
+ 
+     public static synchronized RegionFile a(File file, int i, int j) {
+         File file1 = new File(file, "region");

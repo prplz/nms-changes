@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WhiteListEntry.java
++++ b/net/minecraft/server/WhiteListEntry.java
+@@ -4,7 +4,7 @@
+ import com.mojang.authlib.GameProfile;
+ import java.util.UUID;
+ 
+-public class WhiteListEntry extends JsonListEntry {
++public class WhiteListEntry extends JsonListEntry<GameProfile> {
+ 
+     public WhiteListEntry(GameProfile gameprofile) {
+         super(gameprofile);

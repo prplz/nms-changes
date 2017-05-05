@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/ItemSkull.java
++++ b/net/minecraft/server/ItemSkull.java
+@@ -19,7 +19,7 @@
+         } else {
+             IBlockData iblockdata = world.getType(blockposition);
+             Block block = iblockdata.getBlock();
+-            boolean flag = block.f(world, blockposition);
++            boolean flag = block.a(world, blockposition);
+ 
+             if (!flag) {
+                 if (!world.getType(blockposition).getBlock().getMaterial().isBuildable()) {
+@@ -34,7 +34,7 @@
+             } else if (!Blocks.SKULL.canPlace(world, blockposition)) {
+                 return false;
+             } else {
+-                if (!world.isStatic) {
++                if (!world.isClientSide) {
+                     world.setTypeAndData(blockposition, Blocks.SKULL.getBlockData().set(BlockSkull.FACING, enumdirection), 3);
+                     int i = 0;
+ 

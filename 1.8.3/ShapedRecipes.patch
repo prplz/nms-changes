@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/ShapedRecipes.java
++++ b/net/minecraft/server/ShapedRecipes.java
+@@ -104,9 +104,4 @@
+     public int a() {
+         return this.width * this.height;
+     }
+-
+-    public ShapedRecipes c() {
+-        this.e = true;
+-        return this;
+-    }
+ }

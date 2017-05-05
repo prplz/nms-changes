@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/PathfinderGoalOwnerHurtTarget.java
++++ b/net/minecraft/server/PathfinderGoalOwnerHurtTarget.java
+@@ -21,8 +21,8 @@
+             if (entityliving == null) {
+                 return false;
+             } else {
+-                this.b = entityliving.be();
+-                int i = entityliving.bf();
++                this.b = entityliving.bf();
++                int i = entityliving.bg();
+ 
+                 return i != this.c && this.a(this.b, false) && this.a.a(this.b, entityliving);
+             }
+@@ -34,7 +34,7 @@
+         EntityLiving entityliving = this.a.getOwner();
+ 
+         if (entityliving != null) {
+-            this.c = entityliving.bf();
++            this.c = entityliving.bg();
+         }
+ 
+         super.c();

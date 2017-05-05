@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumGameRuleType.java
++++ b/net/minecraft/server/EnumGameRuleType.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumGameRuleType {
+-
+-    ANY_VALUE, BOOLEAN_VALUE, NUMERICAL_VALUE;
+-
+-    private EnumGameRuleType() {}
+-}

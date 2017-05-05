@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockAir.java
++++ b/net/minecraft/server/BlockAir.java
+@@ -23,4 +23,8 @@
+     }
+ 
+     public void dropNaturally(World world, BlockPosition blockposition, IBlockData iblockdata, float f, int i) {}
++
++    public boolean a(World world, BlockPosition blockposition) {
++        return true;
++    }
+ }

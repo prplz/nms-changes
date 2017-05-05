@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityAmbient.java
++++ b/net/minecraft/server/EntityAmbient.java
+@@ -6,7 +6,7 @@
+         super(world);
+     }
+ 
+-    public boolean ca() {
++    public boolean cb() {
+         return false;
+     }
+ 

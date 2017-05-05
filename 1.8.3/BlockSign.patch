@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/BlockSign.java
++++ b/net/minecraft/server/BlockSign.java
+@@ -28,6 +28,10 @@
+         return false;
+     }
+ 
++    public boolean g() {
++        return true;
++    }
++
+     public TileEntity a(World world, int i) {
+         return new TileEntitySign();
+     }
+@@ -37,7 +41,7 @@
+     }
+ 
+     public boolean interact(World world, BlockPosition blockposition, IBlockData iblockdata, EntityHuman entityhuman, EnumDirection enumdirection, float f, float f1, float f2) {
+-        if (world.isStatic) {
++        if (world.isClientSide) {
+             return true;
+         } else {
+             TileEntity tileentity = world.getTileEntity(blockposition);
+@@ -45,4 +49,8 @@
+             return tileentity instanceof TileEntitySign ? ((TileEntitySign) tileentity).b(entityhuman) : false;
+         }
+     }
++
++    public boolean canPlace(World world, BlockPosition blockposition) {
++        return !this.e(world, blockposition) && super.canPlace(world, blockposition);
++    }
+ }

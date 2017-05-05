@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldGenReed.java
++++ b/net/minecraft/server/WorldGenReed.java
+@@ -17,7 +17,7 @@
+                     int j = 2 + random.nextInt(random.nextInt(3) + 1);
+ 
+                     for (int k = 0; k < j; ++k) {
+-                        if (Blocks.REEDS.d(world, blockposition1)) {
++                        if (Blocks.REEDS.e(world, blockposition1)) {
+                             world.setTypeAndData(blockposition1.up(k), Blocks.REEDS.getBlockData(), 2);
+                         }
+                     }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/SlotFurnaceResult.java
++++ b/net/minecraft/server/SlotFurnaceResult.java
+@@ -34,7 +34,7 @@
+ 
+     protected void c(ItemStack itemstack) {
+         itemstack.a(this.a.world, this.a, this.b);
+-        if (!this.a.world.isStatic) {
++        if (!this.a.world.isClientSide) {
+             int i = this.b;
+             float f = RecipesFurnace.getInstance().b(itemstack);
+             int j;

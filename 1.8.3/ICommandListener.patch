@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/ICommandListener.java
++++ b/net/minecraft/server/ICommandListener.java
+@@ -20,5 +20,5 @@
+ 
+     boolean getSendCommandFeedback();
+ 
+-    void a(EnumCommandResult enumcommandresult, int i);
++    void a(CommandObjectiveExecutor.EnumCommandResult commandobjectiveexecutor_enumcommandresult, int i);
+ }

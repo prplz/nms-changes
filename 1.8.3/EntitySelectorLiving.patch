@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/EntitySelectorLiving.java
++++ b/net/minecraft/server/EntitySelectorLiving.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-import com.google.common.base.Predicate;
+-
+-final class EntitySelectorLiving implements Predicate {
+-
+-    EntitySelectorLiving() {}
+-
+-    public boolean a(Entity entity) {
+-        return entity.isAlive();
+-    }
+-
+-    public boolean apply(Object object) {
+-        return this.a((Entity) object);
+-    }
+-}

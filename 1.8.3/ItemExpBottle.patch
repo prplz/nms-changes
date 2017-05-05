@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemExpBottle.java
++++ b/net/minecraft/server/ItemExpBottle.java
+@@ -12,7 +12,7 @@
+         }
+ 
+         world.makeSound(entityhuman, "random.bow", 0.5F, 0.4F / (ItemExpBottle.g.nextFloat() * 0.4F + 0.8F));
+-        if (!world.isStatic) {
++        if (!world.isClientSide) {
+             world.addEntity(new EntityThrownExpBottle(world, entityhuman));
+         }
+ 

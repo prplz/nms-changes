@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumProtocolState.java
++++ b/net/minecraft/server/EnumProtocolState.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-enum EnumProtocolState {
+-
+-    HELLO, KEY, AUTHENTICATING, READY_TO_ACCEPT, ACCEPTED;
+-
+-    private EnumProtocolState() {}
+-}

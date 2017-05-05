@@ -1,0 +1,12 @@
+--- a/net/minecraft/server/EnumStoneBlockData2.java
++++ b/net/minecraft/server/EnumStoneBlockData2.java
+@@ -1,9 +0,0 @@
+-package net.minecraft.server;
+-
+-enum EnumStoneBlockData2 {;
+-    EnumStoneBlockData2(int i, String s, String s1) {}
+-
+-    public IBlockData d() {
+-        return Blocks.COBBLESTONE.getBlockData();
+-    }
+-}

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/NBTReadLimiter.java
++++ b/net/minecraft/server/NBTReadLimiter.java
+@@ -2,7 +2,9 @@
+ 
+ public class NBTReadLimiter {
+ 
+-    public static final NBTReadLimiter a = new NBTReadLimiterUnlimited(0L);
++    public static final NBTReadLimiter a = new NBTReadLimiter(0L) {
++        public void a(long i) {}
++    };
+     private final long b;
+     private long c;
+ 

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/StatisticWrapper.java
++++ b/net/minecraft/server/StatisticWrapper.java
+@@ -15,7 +15,7 @@
+         this.a = i;
+     }
+ 
+-    public IJsonStatistic b() {
++    public <T extends IJsonStatistic> T b() {
+         return this.b;
+     }
+ 

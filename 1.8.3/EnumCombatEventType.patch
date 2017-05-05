@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumCombatEventType.java
++++ b/net/minecraft/server/EnumCombatEventType.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumCombatEventType {
+-
+-    ENTER_COMBAT, END_COMBAT, ENTITY_DIED;
+-
+-    private EnumCombatEventType() {}
+-}

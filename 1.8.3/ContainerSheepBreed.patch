@@ -1,0 +1,17 @@
+--- a/net/minecraft/server/ContainerSheepBreed.java
++++ b/net/minecraft/server/ContainerSheepBreed.java
+@@ -1,14 +0,0 @@
+-package net.minecraft.server;
+-
+-class ContainerSheepBreed extends Container {
+-
+-    final EntitySheep a;
+-
+-    ContainerSheepBreed(EntitySheep entitysheep) {
+-        this.a = entitysheep;
+-    }
+-
+-    public boolean a(EntityHuman entityhuman) {
+-        return false;
+-    }
+-}

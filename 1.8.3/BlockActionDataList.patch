@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/BlockActionDataList.java
++++ b/net/minecraft/server/BlockActionDataList.java
+@@ -1,12 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.ArrayList;
+-
+-class BlockActionDataList extends ArrayList {
+-
+-    private BlockActionDataList() {}
+-
+-    public BlockActionDataList(EntitySelectorLiving2 entityselectorliving2) {
+-        this();
+-    }
+-}

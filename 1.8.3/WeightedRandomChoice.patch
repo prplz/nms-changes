@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/WeightedRandomChoice.java
++++ b/net/minecraft/server/WeightedRandomChoice.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-public class WeightedRandomChoice {
+-
+-    protected int a;
+-
+-    public WeightedRandomChoice(int i) {
+-        this.a = i;
+-    }
+-}

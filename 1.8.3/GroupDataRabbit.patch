@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/GroupDataRabbit.java
++++ b/net/minecraft/server/GroupDataRabbit.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-public class GroupDataRabbit implements GroupDataEntity {
+-
+-    public int a;
+-
+-    public GroupDataRabbit(int i) {
+-        this.a = i;
+-    }
+-}

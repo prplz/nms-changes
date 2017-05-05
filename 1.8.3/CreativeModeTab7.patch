@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/CreativeModeTab7.java
++++ b/net/minecraft/server/CreativeModeTab7.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-final class CreativeModeTab7 extends CreativeModeTab {
+-
+-    CreativeModeTab7(int i, String s) {
+-        super(i, s);
+-    }
+-}

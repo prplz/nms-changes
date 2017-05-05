@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumMobType.java
++++ b/net/minecraft/server/EnumMobType.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumMobType {
+-
+-    EVERYTHING, MOBS;
+-
+-    private EnumMobType() {}
+-}

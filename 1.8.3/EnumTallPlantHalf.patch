@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/EnumTallPlantHalf.java
++++ b/net/minecraft/server/EnumTallPlantHalf.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-enum EnumTallPlantHalf implements INamable {
+-
+-    UPPER, LOWER;
+-
+-    private EnumTallPlantHalf() {}
+-
+-    public String toString() {
+-        return this.getName();
+-    }
+-
+-    public String getName() {
+-        return this == EnumTallPlantHalf.UPPER ? "upper" : "lower";
+-    }
+-}

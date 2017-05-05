@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/CrashReportLevelSeed.java
++++ b/net/minecraft/server/CrashReportLevelSeed.java
+@@ -1,20 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.concurrent.Callable;
+-
+-class CrashReportLevelSeed implements Callable {
+-
+-    final WorldData a;
+-
+-    CrashReportLevelSeed(WorldData worlddata) {
+-        this.a = worlddata;
+-    }
+-
+-    public String a() {
+-        return String.valueOf(this.a.getSeed());
+-    }
+-
+-    public Object call() {
+-        return this.a();
+-    }
+-}

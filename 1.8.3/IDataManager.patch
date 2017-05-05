@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IDataManager.java
++++ b/net/minecraft/server/IDataManager.java
+@@ -6,7 +6,7 @@
+ 
+     WorldData getWorldData();
+ 
+-    void checkSession();
++    void checkSession() throws ExceptionWorldConflict;
+ 
+     IChunkLoader createChunkLoader(WorldProvider worldprovider);
+ 

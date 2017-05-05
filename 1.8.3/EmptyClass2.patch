@@ -1,0 +1,6 @@
+--- a/net/minecraft/server/EmptyClass2.java
++++ b/net/minecraft/server/EmptyClass2.java
+@@ -1,3 +0,0 @@
+-package net.minecraft.server;
+-
+-class EmptyClass2 {}

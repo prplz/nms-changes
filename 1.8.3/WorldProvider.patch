@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldProvider.java
++++ b/net/minecraft/server/WorldProvider.java
+@@ -97,7 +97,7 @@
+     }
+ 
+     public int getSeaLevel() {
+-        return this.type == WorldType.FLAT ? 4 : 64;
++        return this.type == WorldType.FLAT ? 4 : this.b.F() + 1;
+     }
+ 
+     public abstract String getName();

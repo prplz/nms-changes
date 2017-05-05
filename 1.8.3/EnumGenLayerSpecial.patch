@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumGenLayerSpecial.java
++++ b/net/minecraft/server/EnumGenLayerSpecial.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumGenLayerSpecial {
+-
+-    COOL_WARM, HEAT_ICE, SPECIAL;
+-
+-    private EnumGenLayerSpecial() {}
+-}

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderAbstract.java
++++ b/net/minecraft/server/PathfinderAbstract.java
+@@ -3,7 +3,7 @@
+ public abstract class PathfinderAbstract {
+ 
+     protected IBlockAccess a;
+-    protected IntHashMap b = new IntHashMap();
++    protected IntHashMap<PathPoint> b = new IntHashMap();
+     protected int c;
+     protected int d;
+     protected int e;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemSnowball.java
++++ b/net/minecraft/server/ItemSnowball.java
+@@ -13,7 +13,7 @@
+         }
+ 
+         world.makeSound(entityhuman, "random.bow", 0.5F, 0.4F / (ItemSnowball.g.nextFloat() * 0.4F + 0.8F));
+-        if (!world.isStatic) {
++        if (!world.isClientSide) {
+             world.addEntity(new EntitySnowball(world, entityhuman));
+         }
+ 

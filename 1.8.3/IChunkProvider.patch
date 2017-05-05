@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IChunkProvider.java
++++ b/net/minecraft/server/IChunkProvider.java
+@@ -22,7 +22,7 @@
+ 
+     String getName();
+ 
+-    List getMobsFor(EnumCreatureType enumcreaturetype, BlockPosition blockposition);
++    List<BiomeBase.BiomeMeta> getMobsFor(EnumCreatureType enumcreaturetype, BlockPosition blockposition);
+ 
+     BlockPosition findNearestMapFeature(World world, String s, BlockPosition blockposition);
+ 

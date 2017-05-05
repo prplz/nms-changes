@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/TimeCounter.java
++++ b/net/minecraft/server/TimeCounter.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-final class TimeCounter implements Counter {
+-
+-    TimeCounter() {}
+-}

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumWorldBorderAction.java
++++ b/net/minecraft/server/EnumWorldBorderAction.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumWorldBorderAction {
+-
+-    SET_SIZE, LERP_SIZE, SET_CENTER, INITIALIZE, SET_WARNING_TIME, SET_WARNING_BLOCKS;
+-
+-    private EnumWorldBorderAction() {}
+-}

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalSwell.java
++++ b/net/minecraft/server/PathfinderGoalSwell.java
+@@ -13,7 +13,7 @@
+     public boolean a() {
+         EntityLiving entityliving = this.a.getGoalTarget();
+ 
+-        return this.a.ck() > 0 || entityliving != null && this.a.h(entityliving) < 9.0D;
++        return this.a.cm() > 0 || entityliving != null && this.a.h(entityliving) < 9.0D;
+     }
+ 
+     public void c() {

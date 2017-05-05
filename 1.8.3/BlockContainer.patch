@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/BlockContainer.java
++++ b/net/minecraft/server/BlockContainer.java
+@@ -3,10 +3,22 @@
+ public abstract class BlockContainer extends Block implements IContainer {
+ 
+     protected BlockContainer(Material material) {
+-        super(material);
++        this(material, material.r());
++    }
++
++    protected BlockContainer(Material material, MaterialMapColor materialmapcolor) {
++        super(material, materialmapcolor);
+         this.isTileEntity = true;
+     }
+ 
++    protected boolean a(World world, BlockPosition blockposition, EnumDirection enumdirection) {
++        return world.getType(blockposition.shift(enumdirection)).getBlock().getMaterial() == Material.CACTUS;
++    }
++
++    protected boolean e(World world, BlockPosition blockposition) {
++        return this.a(world, blockposition, EnumDirection.NORTH) || this.a(world, blockposition, EnumDirection.SOUTH) || this.a(world, blockposition, EnumDirection.WEST) || this.a(world, blockposition, EnumDirection.EAST);
++    }
++
+     public int b() {
+         return -1;
+     }

@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/ICommandHandler.java
++++ b/net/minecraft/server/ICommandHandler.java
+@@ -7,9 +7,9 @@
+ 
+     int a(ICommandListener icommandlistener, String s);
+ 
+-    List a(ICommandListener icommandlistener, String s, BlockPosition blockposition);
++    List<String> a(ICommandListener icommandlistener, String s, BlockPosition blockposition);
+ 
+-    List a(ICommandListener icommandlistener);
++    List<ICommand> a(ICommandListener icommandlistener);
+ 
+-    Map getCommands();
++    Map<String, ICommand> getCommands();
+ }

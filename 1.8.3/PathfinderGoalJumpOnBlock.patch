@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalJumpOnBlock.java
++++ b/net/minecraft/server/PathfinderGoalJumpOnBlock.java
+@@ -56,7 +56,7 @@
+                     return true;
+                 }
+ 
+-                if (block == Blocks.BED && iblockdata.get(BlockBed.PART) != EnumBedPart.HEAD) {
++                if (block == Blocks.BED && iblockdata.get(BlockBed.PART) != BlockBed.EnumBedPart.HEAD) {
+                     return true;
+                 }
+             }

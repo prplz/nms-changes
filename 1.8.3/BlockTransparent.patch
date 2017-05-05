@@ -1,0 +1,16 @@
+--- a/net/minecraft/server/BlockTransparent.java
++++ b/net/minecraft/server/BlockTransparent.java
+@@ -2,11 +2,11 @@
+ 
+ public class BlockTransparent extends Block {
+ 
+-    protected boolean Q;
++    protected boolean R;
+ 
+     protected BlockTransparent(Material material, boolean flag) {
+         super(material);
+-        this.Q = flag;
++        this.R = flag;
+     }
+ 
+     public boolean c() {

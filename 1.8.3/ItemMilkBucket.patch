@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemMilkBucket.java
++++ b/net/minecraft/server/ItemMilkBucket.java
+@@ -12,7 +12,7 @@
+             --itemstack.count;
+         }
+ 
+-        if (!world.isStatic) {
++        if (!world.isClientSide) {
+             entityhuman.removeAllEffects();
+         }
+ 

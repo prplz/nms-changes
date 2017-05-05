@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemBow.java
++++ b/net/minecraft/server/ItemBow.java
+@@ -57,7 +57,7 @@
+             }
+ 
+             entityhuman.b(StatisticList.USE_ITEM_COUNT[Item.getId(this)]);
+-            if (!world.isStatic) {
++            if (!world.isClientSide) {
+                 world.addEntity(entityarrow);
+             }
+         }

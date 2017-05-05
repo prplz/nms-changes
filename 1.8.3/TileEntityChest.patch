@@ -1,0 +1,57 @@
+--- a/net/minecraft/server/TileEntityChest.java
++++ b/net/minecraft/server/TileEntityChest.java
+@@ -141,7 +141,7 @@
+         if (tileentitychest.x()) {
+             this.a = false;
+         } else if (this.a) {
+-            switch (SwitchHelperTileEntityChest.a[enumdirection.ordinal()]) {
++            switch (TileEntityChest.SyntheticClass_1.a[enumdirection.ordinal()]) {
+             case 1:
+                 if (this.f != tileentitychest) {
+                     this.a = false;
+@@ -215,7 +215,7 @@
+         ++this.n;
+         float f;
+ 
+-        if (!this.world.isStatic && this.l != 0 && (this.n + i + j + k) % 200 == 0) {
++        if (!this.world.isClientSide && this.l != 0 && (this.n + i + j + k) % 200 == 0) {
+             this.l = 0;
+             f = 5.0F;
+             List list = this.world.a(EntityHuman.class, new AxisAlignedBB((double) ((float) i - f), (double) ((float) j - f), (double) ((float) k - f), (double) ((float) (i + 1) + f), (double) ((float) (j + 1) + f), (double) ((float) (k + 1) + f)));
+@@ -369,4 +369,36 @@
+         }
+ 
+     }
++
++    static class SyntheticClass_1 {
++
++        static final int[] a = new int[EnumDirection.values().length];
++
++        static {
++            try {
++                TileEntityChest.SyntheticClass_1.a[EnumDirection.NORTH.ordinal()] = 1;
++            } catch (NoSuchFieldError nosuchfielderror) {
++                ;
++            }
++
++            try {
++                TileEntityChest.SyntheticClass_1.a[EnumDirection.SOUTH.ordinal()] = 2;
++            } catch (NoSuchFieldError nosuchfielderror1) {
++                ;
++            }
++
++            try {
++                TileEntityChest.SyntheticClass_1.a[EnumDirection.EAST.ordinal()] = 3;
++            } catch (NoSuchFieldError nosuchfielderror2) {
++                ;
++            }
++
++            try {
++                TileEntityChest.SyntheticClass_1.a[EnumDirection.WEST.ordinal()] = 4;
++            } catch (NoSuchFieldError nosuchfielderror3) {
++                ;
++            }
++
++        }
++    }
+ }

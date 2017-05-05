@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/MojangsonTypeParser.java
++++ b/net/minecraft/server/MojangsonTypeParser.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-abstract class MojangsonTypeParser {
+-
+-    protected String a;
+-
+-    MojangsonTypeParser() {}
+-
+-    public abstract NBTBase a();
+-}

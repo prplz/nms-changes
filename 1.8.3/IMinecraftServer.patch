@@ -1,0 +1,36 @@
+--- a/net/minecraft/server/IMinecraftServer.java
++++ b/net/minecraft/server/IMinecraftServer.java
+@@ -12,18 +12,18 @@
+ 
+     String b();
+ 
+-    String C();
++    String D();
+ 
+-    int D();
++    int E();
+ 
+-    String E();
++    String F();
+ 
+     String getVersion();
+ 
+-    int G();
+-
+     int H();
+ 
++    int I();
++
+     String[] getPlayers();
+ 
+     String T();
+@@ -38,7 +38,7 @@
+ 
+     void warning(String s);
+ 
+-    void h(String s);
++    void g(String s);
+ 
+-    void i(String s);
++    void h(String s);
+ }

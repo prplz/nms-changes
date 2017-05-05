@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/PacketHandleTask.java
++++ b/net/minecraft/server/PacketHandleTask.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-final class PacketHandleTask implements Runnable {
+-
+-    final Packet a;
+-    final PacketListener b;
+-
+-    PacketHandleTask(Packet packet, PacketListener packetlistener) {
+-        this.a = packet;
+-        this.b = packetlistener;
+-    }
+-
+-    public void run() {
+-        this.a.a(this.b);
+-    }
+-}

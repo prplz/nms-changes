@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IAsyncTaskHandler.java
++++ b/net/minecraft/server/IAsyncTaskHandler.java
+@@ -4,7 +4,7 @@
+ 
+ public interface IAsyncTaskHandler {
+ 
+-    ListenableFuture postToMainThread(Runnable runnable);
++    ListenableFuture<Object> postToMainThread(Runnable runnable);
+ 
+     boolean isMainThread();
+ }

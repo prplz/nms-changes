@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldGenStrongholdDoorType.java
++++ b/net/minecraft/server/WorldGenStrongholdDoorType.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum WorldGenStrongholdDoorType {
+-
+-    OPENING, WOOD_DOOR, GRATES, IRON_DOOR;
+-
+-    private WorldGenStrongholdDoorType() {}
+-}

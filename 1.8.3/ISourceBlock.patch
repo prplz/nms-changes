@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/ISourceBlock.java
++++ b/net/minecraft/server/ISourceBlock.java
+@@ -14,5 +14,5 @@
+ 
+     int f();
+ 
+-    TileEntity getTileEntity();
++    <T extends TileEntity> T getTileEntity();
+ }

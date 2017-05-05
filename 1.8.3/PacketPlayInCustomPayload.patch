@@ -1,0 +1,28 @@
+--- a/net/minecraft/server/PacketPlayInCustomPayload.java
++++ b/net/minecraft/server/PacketPlayInCustomPayload.java
+@@ -3,14 +3,14 @@
+ import io.netty.buffer.ByteBuf;
+ import java.io.IOException;
+ 
+-public class PacketPlayInCustomPayload implements Packet {
++public class PacketPlayInCustomPayload implements Packet<PacketListenerPlayIn> {
+ 
+     private String a;
+     private PacketDataSerializer b;
+ 
+     public PacketPlayInCustomPayload() {}
+ 
+-    public void a(PacketDataSerializer packetdataserializer) {
++    public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = packetdataserializer.c(20);
+         int i = packetdataserializer.readableBytes();
+ 
+@@ -21,7 +21,7 @@
+         }
+     }
+ 
+-    public void b(PacketDataSerializer packetdataserializer) {
++    public void b(PacketDataSerializer packetdataserializer) throws IOException {
+         packetdataserializer.a(this.a);
+         packetdataserializer.writeBytes((ByteBuf) this.b);
+     }

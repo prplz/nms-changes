@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IMerchantRecipeOption.java
++++ b/net/minecraft/server/IMerchantRecipeOption.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.Random;
+-
+-interface IMerchantRecipeOption {
+-
+-    void a(MerchantRecipeList merchantrecipelist, Random random);
+-}

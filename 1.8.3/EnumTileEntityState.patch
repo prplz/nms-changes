@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumTileEntityState.java
++++ b/net/minecraft/server/EnumTileEntityState.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumTileEntityState {
+-
+-    IMMEDIATE, QUEUED, CHECK;
+-
+-    private EnumTileEntityState() {}
+-}

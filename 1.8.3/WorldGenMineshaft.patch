@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldGenMineshaft.java
++++ b/net/minecraft/server/WorldGenMineshaft.java
+@@ -14,7 +14,7 @@
+         return "Mineshaft";
+     }
+ 
+-    public WorldGenMineshaft(Map map) {
++    public WorldGenMineshaft(Map<String, String> map) {
+         Iterator iterator = map.entrySet().iterator();
+ 
+         while (iterator.hasNext()) {

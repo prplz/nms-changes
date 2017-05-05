@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/PendingChunkToSave.java
++++ b/net/minecraft/server/PendingChunkToSave.java
+@@ -1,12 +0,0 @@
+-package net.minecraft.server;
+-
+-class PendingChunkToSave {
+-
+-    public final ChunkCoordIntPair a;
+-    public final NBTTagCompound b;
+-
+-    public PendingChunkToSave(ChunkCoordIntPair chunkcoordintpair, NBTTagCompound nbttagcompound) {
+-        this.a = chunkcoordintpair;
+-        this.b = nbttagcompound;
+-    }
+-}

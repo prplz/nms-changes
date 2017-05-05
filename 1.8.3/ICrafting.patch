@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ICrafting.java
++++ b/net/minecraft/server/ICrafting.java
+@@ -4,7 +4,7 @@
+ 
+ public interface ICrafting {
+ 
+-    void a(Container container, List list);
++    void a(Container container, List<ItemStack> list);
+ 
+     void a(Container container, int i, ItemStack itemstack);
+ 

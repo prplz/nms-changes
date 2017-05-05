@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/DamageCounter.java
++++ b/net/minecraft/server/DamageCounter.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-final class DamageCounter implements Counter {
+-
+-    DamageCounter() {}
+-}

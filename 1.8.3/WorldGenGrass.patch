@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/WorldGenGrass.java
++++ b/net/minecraft/server/WorldGenGrass.java
+@@ -6,8 +6,8 @@
+ 
+     private final IBlockData a;
+ 
+-    public WorldGenGrass(EnumTallGrassType enumtallgrasstype) {
+-        this.a = Blocks.TALLGRASS.getBlockData().set(BlockLongGrass.TYPE, enumtallgrasstype);
++    public WorldGenGrass(BlockLongGrass.EnumTallGrassType blocklonggrass_enumtallgrasstype) {
++        this.a = Blocks.TALLGRASS.getBlockData().set(BlockLongGrass.TYPE, blocklonggrass_enumtallgrasstype);
+     }
+ 
+     public boolean generate(World world, Random random, BlockPosition blockposition) {

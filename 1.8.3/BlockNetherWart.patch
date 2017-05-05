@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/BlockNetherWart.java
++++ b/net/minecraft/server/BlockNetherWart.java
+@@ -7,6 +7,7 @@
+     public static final BlockStateInteger AGE = BlockStateInteger.of("age", 0, 3);
+ 
+     protected BlockNetherWart() {
++        super(Material.PLANT, MaterialMapColor.D);
+         this.j(this.blockStateList.getBlockData().set(BlockNetherWart.AGE, Integer.valueOf(0)));
+         this.a(true);
+         float f = 0.5F;
+@@ -35,7 +36,7 @@
+     }
+ 
+     public void dropNaturally(World world, BlockPosition blockposition, IBlockData iblockdata, float f, int i) {
+-        if (!world.isStatic) {
++        if (!world.isClientSide) {
+             int j = 1;
+ 
+             if (((Integer) iblockdata.get(BlockNetherWart.AGE)).intValue() >= 3) {

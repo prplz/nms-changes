@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/EntityPotion.java
++++ b/net/minecraft/server/EntityPotion.java
+@@ -5,7 +5,7 @@
+ 
+ public class EntityPotion extends EntityProjectile {
+ 
+-    public ItemStack item;
++    private ItemStack item;
+ 
+     public EntityPotion(World world) {
+         super(world);
+@@ -54,7 +54,7 @@
+     }
+ 
+     protected void a(MovingObjectPosition movingobjectposition) {
+-        if (!this.world.isStatic) {
++        if (!this.world.isClientSide) {
+             List list = Items.POTION.h(this.item);
+ 
+             if (list != null && !list.isEmpty()) {

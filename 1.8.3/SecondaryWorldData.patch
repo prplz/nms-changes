@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/SecondaryWorldData.java
++++ b/net/minecraft/server/SecondaryWorldData.java
+@@ -68,7 +68,7 @@
+         return this.b.getWeatherDuration();
+     }
+ 
+-    public EnumGamemode getGameType() {
++    public WorldSettings.EnumGamemode getGameType() {
+         return this.b.getGameType();
+     }
+ 

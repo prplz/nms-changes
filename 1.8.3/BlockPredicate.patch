@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockPredicate.java
++++ b/net/minecraft/server/BlockPredicate.java
+@@ -2,7 +2,7 @@
+ 
+ import com.google.common.base.Predicate;
+ 
+-public class BlockPredicate implements Predicate {
++public class BlockPredicate implements Predicate<IBlockData> {
+ 
+     private final Block a;
+ 

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/WorldGenVillageRoadPiece.java
++++ b/net/minecraft/server/WorldGenVillageRoadPiece.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-public abstract class WorldGenVillageRoadPiece extends WorldGenVillagePiece {
+-
+-    public WorldGenVillageRoadPiece() {}
+-
+-    protected WorldGenVillageRoadPiece(WorldGenVillageStartPiece worldgenvillagestartpiece, int i) {
+-        super(worldgenvillagestartpiece, i);
+-    }
+-}

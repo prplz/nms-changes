@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/NBTReadLimiterUnlimited.java
++++ b/net/minecraft/server/NBTReadLimiterUnlimited.java
+@@ -1,10 +0,0 @@
+-package net.minecraft.server;
+-
+-final class NBTReadLimiterUnlimited extends NBTReadLimiter {
+-
+-    NBTReadLimiterUnlimited(long i) {
+-        super(i);
+-    }
+-
+-    public void a(long i) {}
+-}

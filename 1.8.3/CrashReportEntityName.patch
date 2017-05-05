@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/CrashReportEntityName.java
++++ b/net/minecraft/server/CrashReportEntityName.java
+@@ -1,20 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.concurrent.Callable;
+-
+-class CrashReportEntityName implements Callable {
+-
+-    final Entity a;
+-
+-    CrashReportEntityName(Entity entity) {
+-        this.a = entity;
+-    }
+-
+-    public String a() {
+-        return this.a.getName();
+-    }
+-
+-    public Object call() {
+-        return this.a();
+-    }
+-}

@@ -1,0 +1,16 @@
+--- a/net/minecraft/server/BlockCarrots.java
++++ b/net/minecraft/server/BlockCarrots.java
+@@ -4,11 +4,11 @@
+ 
+     public BlockCarrots() {}
+ 
+-    protected Item j() {
++    protected Item l() {
+         return Items.CARROT;
+     }
+ 
+-    protected Item l() {
++    protected Item n() {
+         return Items.CARROT;
+     }
+ }

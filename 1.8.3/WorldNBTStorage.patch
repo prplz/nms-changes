@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/WorldNBTStorage.java
++++ b/net/minecraft/server/WorldNBTStorage.java
+@@ -17,7 +17,7 @@
+     private final File baseDir;
+     private final File playerDir;
+     private final File dataDir;
+-    private final long sessionId = MinecraftServer.ax();
++    private final long sessionId = MinecraftServer.ay();
+     private final String f;
+ 
+     public WorldNBTStorage(File file, String s, boolean flag) {
+@@ -55,7 +55,7 @@
+         return this.baseDir;
+     }
+ 
+-    public void checkSession() {
++    public void checkSession() throws ExceptionWorldConflict {
+         try {
+             File file = new File(this.baseDir, "session.lock");
+             DataInputStream datainputstream = new DataInputStream(new FileInputStream(file));

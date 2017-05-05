@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/RemoteControlCommandListener.java
++++ b/net/minecraft/server/RemoteControlCommandListener.java
+@@ -55,5 +55,5 @@
+         return true;
+     }
+ 
+-    public void a(EnumCommandResult enumcommandresult, int i) {}
++    public void a(CommandObjectiveExecutor.EnumCommandResult commandobjectiveexecutor_enumcommandresult, int i) {}
+ }

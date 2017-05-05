@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/BlockRepeater.java
++++ b/net/minecraft/server/BlockRepeater.java
+@@ -12,6 +12,10 @@
+         this.j(this.blockStateList.getBlockData().set(BlockRepeater.FACING, EnumDirection.NORTH).set(BlockRepeater.DELAY, Integer.valueOf(1)).set(BlockRepeater.LOCKED, Boolean.valueOf(false)));
+     }
+ 
++    public String getName() {
++        return LocaleI18n.get("item.diode.name");
++    }
++
+     public IBlockData updateState(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
+         return iblockdata.set(BlockRepeater.LOCKED, Boolean.valueOf(this.b(iblockaccess, blockposition, iblockdata)));
+     }

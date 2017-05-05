@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/BlockCommand.java
++++ b/net/minecraft/server/BlockCommand.java
+@@ -7,7 +7,7 @@
+     public static final BlockStateBoolean TRIGGERED = BlockStateBoolean.of("triggered");
+ 
+     public BlockCommand() {
+-        super(Material.ORE);
++        super(Material.ORE, MaterialMapColor.q);
+         this.j(this.blockStateList.getBlockData().set(BlockCommand.TRIGGERED, Boolean.valueOf(false)));
+     }
+ 
+@@ -16,7 +16,7 @@
+     }
+ 
+     public void doPhysics(World world, BlockPosition blockposition, IBlockData iblockdata, Block block) {
+-        if (!world.isStatic) {
++        if (!world.isClientSide) {
+             boolean flag = world.isBlockIndirectlyPowered(blockposition);
+             boolean flag1 = ((Boolean) iblockdata.get(BlockCommand.TRIGGERED)).booleanValue();
+ 
+@@ -70,7 +70,7 @@
+                 commandblocklistenerabstract.setName(itemstack.getName());
+             }
+ 
+-            if (!world.isStatic) {
++            if (!world.isClientSide) {
+                 commandblocklistenerabstract.a(world.getGameRules().getBoolean("sendCommandFeedback"));
+             }
+ 

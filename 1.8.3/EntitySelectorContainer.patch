@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/EntitySelectorContainer.java
++++ b/net/minecraft/server/EntitySelectorContainer.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-import com.google.common.base.Predicate;
+-
+-final class EntitySelectorContainer implements Predicate {
+-
+-    EntitySelectorContainer() {}
+-
+-    public boolean a(Entity entity) {
+-        return entity instanceof IInventory && entity.isAlive();
+-    }
+-
+-    public boolean apply(Object object) {
+-        return this.a((Entity) object);
+-    }
+-}

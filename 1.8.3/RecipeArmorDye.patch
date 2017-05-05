@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/RecipeArmorDye.java
++++ b/net/minecraft/server/RecipeArmorDye.java
+@@ -18,7 +18,7 @@
+                 if (itemstack1.getItem() instanceof ItemArmor) {
+                     ItemArmor itemarmor = (ItemArmor) itemstack1.getItem();
+ 
+-                    if (itemarmor.w_() != EnumArmorMaterial.LEATHER || itemstack != null) {
++                    if (itemarmor.x_() != ItemArmor.EnumArmorMaterial.LEATHER || itemstack != null) {
+                         return false;
+                     }
+ 
+@@ -55,7 +55,7 @@
+             if (itemstack1 != null) {
+                 if (itemstack1.getItem() instanceof ItemArmor) {
+                     itemarmor = (ItemArmor) itemstack1.getItem();
+-                    if (itemarmor.w_() != EnumArmorMaterial.LEATHER || itemstack != null) {
++                    if (itemarmor.x_() != ItemArmor.EnumArmorMaterial.LEATHER || itemstack != null) {
+                         return null;
+                     }
+ 

@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/ItemBlock.java
++++ b/net/minecraft/server/ItemBlock.java
+@@ -17,9 +17,7 @@
+         IBlockData iblockdata = world.getType(blockposition);
+         Block block = iblockdata.getBlock();
+ 
+-        if (block == Blocks.SNOW_LAYER && ((Integer) iblockdata.get(BlockSnow.LAYERS)).intValue() < 1) {
+-            enumdirection = EnumDirection.UP;
+-        } else if (!block.f(world, blockposition)) {
++        if (!block.a(world, blockposition)) {
+             blockposition = blockposition.shift(enumdirection);
+         }
+ 
+@@ -27,8 +25,6 @@
+             return false;
+         } else if (!entityhuman.a(blockposition, enumdirection, itemstack)) {
+             return false;
+-        } else if (blockposition.getY() == 255 && this.a.getMaterial().isBuildable()) {
+-            return false;
+         } else if (world.a(this.a, blockposition, false, enumdirection, (Entity) null, itemstack)) {
+             int i = this.filterData(itemstack.getData());
+             IBlockData iblockdata1 = this.a.getPlacedState(world, blockposition, enumdirection, f, f1, f2, i, entityhuman);

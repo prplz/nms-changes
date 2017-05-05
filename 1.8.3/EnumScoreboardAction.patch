@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumScoreboardAction.java
++++ b/net/minecraft/server/EnumScoreboardAction.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumScoreboardAction {
+-
+-    CHANGE, REMOVE;
+-
+-    private EnumScoreboardAction() {}
+-}

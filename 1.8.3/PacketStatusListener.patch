@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketStatusListener.java
++++ b/net/minecraft/server/PacketStatusListener.java
+@@ -13,7 +13,7 @@
+     public void a(IChatBaseComponent ichatbasecomponent) {}
+ 
+     public void a(PacketStatusInStart packetstatusinstart) {
+-        this.networkManager.handle(new PacketStatusOutServerInfo(this.minecraftServer.aE()));
++        this.networkManager.handle(new PacketStatusOutServerInfo(this.minecraftServer.aF()));
+     }
+ 
+     public void a(PacketStatusInPing packetstatusinping) {

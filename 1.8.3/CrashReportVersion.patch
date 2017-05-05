@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/CrashReportVersion.java
++++ b/net/minecraft/server/CrashReportVersion.java
+@@ -1,20 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.concurrent.Callable;
+-
+-class CrashReportVersion implements Callable {
+-
+-    final CrashReport a;
+-
+-    CrashReportVersion(CrashReport crashreport) {
+-        this.a = crashreport;
+-    }
+-
+-    public String a() {
+-        return "1.8";
+-    }
+-
+-    public Object call() {
+-        return this.a();
+-    }
+-}

@@ -1,0 +1,25 @@
+--- a/net/minecraft/server/CrashReportCorruptNBTTag2.java
++++ b/net/minecraft/server/CrashReportCorruptNBTTag2.java
+@@ -1,22 +0,0 @@
+-package net.minecraft.server;
+-
+-import java.util.concurrent.Callable;
+-
+-class CrashReportCorruptNBTTag2 implements Callable {
+-
+-    final int a;
+-    final NBTTagCompound b;
+-
+-    CrashReportCorruptNBTTag2(NBTTagCompound nbttagcompound, int i) {
+-        this.b = nbttagcompound;
+-        this.a = i;
+-    }
+-
+-    public String a() {
+-        return NBTBase.a[this.a];
+-    }
+-
+-    public Object call() {
+-        return this.a();
+-    }
+-}

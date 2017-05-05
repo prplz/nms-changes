@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityDamageSource.java
++++ b/net/minecraft/server/EntityDamageSource.java
+@@ -24,7 +24,7 @@
+     }
+ 
+     public IChatBaseComponent getLocalizedDeathMessage(EntityLiving entityliving) {
+-        ItemStack itemstack = this.q instanceof EntityLiving ? ((EntityLiving) this.q).bz() : null;
++        ItemStack itemstack = this.q instanceof EntityLiving ? ((EntityLiving) this.q).bA() : null;
+         String s = "death.attack." + this.translationIndex;
+         String s1 = s + ".item";
+ 

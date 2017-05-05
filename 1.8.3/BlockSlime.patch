@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockSlime.java
++++ b/net/minecraft/server/BlockSlime.java
+@@ -3,7 +3,7 @@
+ public class BlockSlime extends BlockHalfTransparent {
+ 
+     public BlockSlime() {
+-        super(Material.CLAY, false);
++        super(Material.CLAY, false, MaterialMapColor.c);
+         this.a(CreativeModeTab.c);
+         this.frictionFactor = 0.8F;
+     }

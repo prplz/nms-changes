@@ -1,0 +1,26 @@
+--- a/net/minecraft/server/PacketPlayInKeepAlive.java
++++ b/net/minecraft/server/PacketPlayInKeepAlive.java
+@@ -1,6 +1,8 @@
+ package net.minecraft.server;
+ 
+-public class PacketPlayInKeepAlive implements Packet {
++import java.io.IOException;
++
++public class PacketPlayInKeepAlive implements Packet<PacketListenerPlayIn> {
+ 
+     private int a;
+ 
+@@ -10,11 +12,11 @@
+         packetlistenerplayin.a(this);
+     }
+ 
+-    public void a(PacketDataSerializer packetdataserializer) {
++    public void a(PacketDataSerializer packetdataserializer) throws IOException {
+         this.a = packetdataserializer.e();
+     }
+ 
+-    public void b(PacketDataSerializer packetdataserializer) {
++    public void b(PacketDataSerializer packetdataserializer) throws IOException {
+         packetdataserializer.b(this.a);
+     }
+ 

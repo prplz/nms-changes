@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/TileEntityContainer.java
++++ b/net/minecraft/server/TileEntityContainer.java
+@@ -21,7 +21,7 @@
+ 
+     }
+ 
+-    public boolean q_() {
++    public boolean r_() {
+         return this.a != null && !this.a.a();
+     }
+ 

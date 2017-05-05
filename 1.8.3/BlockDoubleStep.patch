@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockDoubleStep.java
++++ b/net/minecraft/server/BlockDoubleStep.java
+@@ -4,7 +4,7 @@
+ 
+     public BlockDoubleStep() {}
+ 
+-    public boolean j() {
++    public boolean l() {
+         return true;
+     }
+ }

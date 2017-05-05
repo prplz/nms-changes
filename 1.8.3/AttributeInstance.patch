@@ -1,0 +1,14 @@
+--- a/net/minecraft/server/AttributeInstance.java
++++ b/net/minecraft/server/AttributeInstance.java
+@@ -11,9 +11,9 @@
+ 
+     void setValue(double d0);
+ 
+-    Collection a(int i);
++    Collection<AttributeModifier> a(int i);
+ 
+-    Collection c();
++    Collection<AttributeModifier> c();
+ 
+     boolean a(AttributeModifier attributemodifier);
+ 

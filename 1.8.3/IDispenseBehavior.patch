@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/IDispenseBehavior.java
++++ b/net/minecraft/server/IDispenseBehavior.java
+@@ -2,7 +2,11 @@
+ 
+ public interface IDispenseBehavior {
+ 
+-    IDispenseBehavior a = new DispenseBehaviorNoop();
++    IDispenseBehavior a = new IDispenseBehavior() {
++        public ItemStack a(ISourceBlock isourceblock, ItemStack itemstack) {
++            return itemstack;
++        }
++    };
+ 
+     ItemStack a(ISourceBlock isourceblock, ItemStack itemstack);
+ }

@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/ItemLeaves.java
++++ b/net/minecraft/server/ItemLeaves.java
+@@ -16,6 +16,6 @@
+     }
+ 
+     public String e_(ItemStack itemstack) {
+-        return super.getName() + "." + this.b.b(itemstack.getData()).c();
++        return super.getName() + "." + this.b.b(itemstack.getData()).d();
+     }
+ }

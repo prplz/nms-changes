@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumEntityUseAction.java
++++ b/net/minecraft/server/EnumEntityUseAction.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumEntityUseAction {
+-
+-    INTERACT, ATTACK, INTERACT_AT;
+-
+-    private EnumEntityUseAction() {}
+-}

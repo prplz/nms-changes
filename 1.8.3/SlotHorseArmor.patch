@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/SlotHorseArmor.java
++++ b/net/minecraft/server/SlotHorseArmor.java
+@@ -1,17 +0,0 @@
+-package net.minecraft.server;
+-
+-class SlotHorseArmor extends Slot {
+-
+-    final EntityHorse a;
+-    final ContainerHorse b;
+-
+-    SlotHorseArmor(ContainerHorse containerhorse, IInventory iinventory, int i, int j, int k, EntityHorse entityhorse) {
+-        super(iinventory, i, j, k);
+-        this.b = containerhorse;
+-        this.a = entityhorse;
+-    }
+-
+-    public boolean isAllowed(ItemStack itemstack) {
+-        return super.isAllowed(itemstack) && this.a.cM() && EntityHorse.a(itemstack.getItem());
+-    }
+-}

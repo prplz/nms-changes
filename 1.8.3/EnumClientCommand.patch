@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumClientCommand.java
++++ b/net/minecraft/server/EnumClientCommand.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumClientCommand {
+-
+-    PERFORM_RESPAWN, REQUEST_STATS, OPEN_INVENTORY_ACHIEVEMENT;
+-
+-    private EnumClientCommand() {}
+-}

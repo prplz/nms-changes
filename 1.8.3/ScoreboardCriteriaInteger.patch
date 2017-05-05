@@ -1,0 +1,21 @@
+--- a/net/minecraft/server/ScoreboardCriteriaInteger.java
++++ b/net/minecraft/server/ScoreboardCriteriaInteger.java
+@@ -15,7 +15,7 @@
+         return this.j;
+     }
+ 
+-    public int getScoreModifier(List list) {
++    public int getScoreModifier(List<EntityHuman> list) {
+         return 0;
+     }
+ 
+@@ -23,7 +23,7 @@
+         return false;
+     }
+ 
+-    public EnumScoreboardHealthDisplay c() {
+-        return EnumScoreboardHealthDisplay.INTEGER;
++    public IScoreboardCriteria.EnumScoreboardHealthDisplay c() {
++        return IScoreboardCriteria.EnumScoreboardHealthDisplay.INTEGER;
+     }
+ }

@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/UnknownCounter.java
++++ b/net/minecraft/server/UnknownCounter.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-final class UnknownCounter implements Counter {
+-
+-    UnknownCounter() {}
+-}

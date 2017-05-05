@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/EnchantmentModifier.java
++++ b/net/minecraft/server/EnchantmentModifier.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-interface EnchantmentModifier {
+-
+-    void a(Enchantment enchantment, int i);
+-}

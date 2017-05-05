@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockWaterLily.java
++++ b/net/minecraft/server/BlockWaterLily.java
+@@ -12,7 +12,7 @@
+         this.a(CreativeModeTab.c);
+     }
+ 
+-    public void a(World world, BlockPosition blockposition, IBlockData iblockdata, AxisAlignedBB axisalignedbb, List list, Entity entity) {
++    public void a(World world, BlockPosition blockposition, IBlockData iblockdata, AxisAlignedBB axisalignedbb, List<AxisAlignedBB> list, Entity entity) {
+         if (entity == null || !(entity instanceof EntityBoat)) {
+             super.a(world, blockposition, iblockdata, axisalignedbb, list, entity);
+         }

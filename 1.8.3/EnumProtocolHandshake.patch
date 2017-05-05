@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/EnumProtocolHandshake.java
++++ b/net/minecraft/server/EnumProtocolHandshake.java
+@@ -1,7 +0,0 @@
+-package net.minecraft.server;
+-
+-enum EnumProtocolHandshake {;
+-    EnumProtocolHandshake(int i) {
+-        this.a(EnumProtocolDirection.SERVERBOUND, PacketHandshakingInSetProtocol.class);
+-    }
+-}

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumResourcePackStatus.java
++++ b/net/minecraft/server/EnumResourcePackStatus.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumResourcePackStatus {
+-
+-    SUCCESSFULLY_LOADED, DECLINED, FAILED_DOWNLOAD, ACCEPTED;
+-
+-    private EnumResourcePackStatus() {}
+-}

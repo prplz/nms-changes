@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EnumMovingObjectType.java
++++ b/net/minecraft/server/EnumMovingObjectType.java
+@@ -1,8 +0,0 @@
+-package net.minecraft.server;
+-
+-public enum EnumMovingObjectType {
+-
+-    MISS, BLOCK, ENTITY;
+-
+-    private EnumMovingObjectType() {}
+-}

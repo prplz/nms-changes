@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/DistancesCounter.java
++++ b/net/minecraft/server/DistancesCounter.java
+@@ -1,6 +0,0 @@
+-package net.minecraft.server;
+-
+-final class DistancesCounter implements Counter {
+-
+-    DistancesCounter() {}
+-}

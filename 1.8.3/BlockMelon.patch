@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/BlockMelon.java
++++ b/net/minecraft/server/BlockMelon.java
+@@ -5,7 +5,7 @@
+ public class BlockMelon extends Block {
+ 
+     protected BlockMelon() {
+-        super(Material.PUMPKIN);
++        super(Material.PUMPKIN, MaterialMapColor.u);
+         this.a(CreativeModeTab.b);
+     }
+ 

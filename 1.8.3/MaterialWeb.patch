@@ -1,0 +1,15 @@
+--- a/net/minecraft/server/MaterialWeb.java
++++ b/net/minecraft/server/MaterialWeb.java
+@@ -1,12 +0,0 @@
+-package net.minecraft.server;
+-
+-final class MaterialWeb extends Material {
+-
+-    MaterialWeb(MaterialMapColor materialmapcolor) {
+-        super(materialmapcolor);
+-    }
+-
+-    public boolean isSolid() {
+-        return false;
+-    }
+-}

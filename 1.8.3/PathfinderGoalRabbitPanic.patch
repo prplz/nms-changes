@@ -1,0 +1,19 @@
+--- a/net/minecraft/server/PathfinderGoalRabbitPanic.java
++++ b/net/minecraft/server/PathfinderGoalRabbitPanic.java
+@@ -1,16 +0,0 @@
+-package net.minecraft.server;
+-
+-class PathfinderGoalRabbitPanic extends PathfinderGoalPanic {
+-
+-    private EntityRabbit b;
+-
+-    public PathfinderGoalRabbitPanic(EntityRabbit entityrabbit, double d0) {
+-        super(entityrabbit, d0);
+-        this.b = entityrabbit;
+-    }
+-
+-    public void e() {
+-        super.e();
+-        this.b.b(this.a);
+-    }
+-}

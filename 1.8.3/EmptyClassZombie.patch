@@ -1,0 +1,6 @@
+--- a/net/minecraft/server/EmptyClassZombie.java
++++ b/net/minecraft/server/EmptyClassZombie.java
+@@ -1,3 +0,0 @@
+-package net.minecraft.server;
+-
+-class EmptyClassZombie {}

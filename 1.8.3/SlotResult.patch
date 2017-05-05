@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/SlotResult.java
++++ b/net/minecraft/server/SlotResult.java
+@@ -59,7 +59,7 @@
+             this.b.b((Statistic) AchievementList.n);
+         }
+ 
+-        if (itemstack.getItem() instanceof ItemPickaxe && ((ItemPickaxe) itemstack.getItem()).g() != EnumToolMaterial.WOOD) {
++        if (itemstack.getItem() instanceof ItemPickaxe && ((ItemPickaxe) itemstack.getItem()).g() != Item.EnumToolMaterial.WOOD) {
+             this.b.b((Statistic) AchievementList.o);
+         }
+ 

@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/EntitySenses.java
++++ b/net/minecraft/server/EntitySenses.java
+@@ -6,8 +6,8 @@
+ public class EntitySenses {
+ 
+     EntityInsentient a;
+-    List b = Lists.newArrayList();
+-    List c = Lists.newArrayList();
++    List<Entity> b = Lists.newArrayList();
++    List<Entity> c = Lists.newArrayList();
+ 
+     public EntitySenses(EntityInsentient entityinsentient) {
+         this.a = entityinsentient;

@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/BlockPlant.java
++++ b/net/minecraft/server/BlockPlant.java
+@@ -4,8 +4,16 @@
+ 
+ public class BlockPlant extends Block {
+ 
++    protected BlockPlant() {
++        this(Material.PLANT);
++    }
++
+     protected BlockPlant(Material material) {
+-        super(material);
++        this(material, material.r());
++    }
++
++    protected BlockPlant(Material material, MaterialMapColor materialmapcolor) {
++        super(material, materialmapcolor);
+         this.a(true);
+         float f = 0.2F;
+ 
+@@ -13,10 +21,6 @@
+         this.a(CreativeModeTab.c);
+     }
+ 
+-    protected BlockPlant() {
+-        this(Material.PLANT);
+-    }
+-
+     public boolean canPlace(World world, BlockPosition blockposition) {
+         return super.canPlace(world, blockposition) && this.c(world.getType(blockposition.down()).getBlock());
+     }
