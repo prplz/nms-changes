@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/CommandBlockListenerAbstract.java
++++ b/net/minecraft/server/CommandBlockListenerAbstract.java
+@@ -74,7 +74,7 @@
+ 
+         MinecraftServer minecraftserver = MinecraftServer.getServer();
+ 
+-        if (minecraftserver != null && minecraftserver.N() && minecraftserver.getEnableCommandBlock()) {
++        if (minecraftserver != null && minecraftserver.O() && minecraftserver.getEnableCommandBlock()) {
+             ICommandHandler icommandhandler = minecraftserver.getCommandHandler();
+ 
+             try {
+@@ -133,7 +133,7 @@
+     public boolean getSendCommandFeedback() {
+         MinecraftServer minecraftserver = MinecraftServer.getServer();
+ 
+-        return minecraftserver == null || !minecraftserver.N() || minecraftserver.worldServer[0].getGameRules().getBoolean("commandBlockOutput");
++        return minecraftserver == null || !minecraftserver.O() || minecraftserver.worldServer[0].getGameRules().getBoolean("commandBlockOutput");
+     }
+ 
+     public void a(CommandObjectiveExecutor.EnumCommandResult commandobjectiveexecutor_enumcommandresult, int i) {

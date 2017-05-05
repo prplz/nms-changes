@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutSpawnPosition.java
++++ b/net/minecraft/server/PacketPlayOutSpawnPosition.java
+@@ -4,7 +4,7 @@
+ 
+ public class PacketPlayOutSpawnPosition implements Packet<PacketListenerPlayOut> {
+ 
+-    private BlockPosition position;
++    public BlockPosition position;
+ 
+     public PacketPlayOutSpawnPosition() {}
+ 

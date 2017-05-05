@@ -1,0 +1,40 @@
+--- a/net/minecraft/server/EntityInsentient.java
++++ b/net/minecraft/server/EntityInsentient.java
+@@ -13,14 +13,14 @@
+     protected ControllerJump g;
+     private EntityAIBodyControl b;
+     protected NavigationAbstract navigation;
+-    protected final PathfinderGoalSelector goalSelector;
+-    protected final PathfinderGoalSelector targetSelector;
++    public PathfinderGoalSelector goalSelector;
++    public PathfinderGoalSelector targetSelector;
+     private EntityLiving goalTarget;
+     private EntitySenses bk;
+     private ItemStack[] equipment = new ItemStack[5];
+-    protected float[] dropChances = new float[5];
+-    private boolean canPickUpLoot;
+-    private boolean persistent;
++    public float[] dropChances = new float[5];
++    public boolean canPickUpLoot;
++    public boolean persistent;
+     private boolean bo;
+     private Entity bp;
+     private NBTTagCompound bq;
+@@ -44,7 +44,7 @@
+ 
+     protected void initAttributes() {
+         super.initAttributes();
+-        this.getAttributeMap().b(GenericAttributes.b).setValue(16.0D);
++        this.getAttributeMap().b(GenericAttributes.FOLLOW_RANGE).setValue(16.0D);
+     }
+ 
+     protected NavigationAbstract b(World world) {
+@@ -677,7 +677,7 @@
+     }
+ 
+     public GroupDataEntity prepare(DifficultyDamageScaler difficultydamagescaler, GroupDataEntity groupdataentity) {
+-        this.getAttributeInstance(GenericAttributes.b).b(new AttributeModifier("Random spawn bonus", this.random.nextGaussian() * 0.05D, 1));
++        this.getAttributeInstance(GenericAttributes.FOLLOW_RANGE).b(new AttributeModifier("Random spawn bonus", this.random.nextGaussian() * 0.05D, 1));
+         return groupdataentity;
+     }
+ 

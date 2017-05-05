@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/EntityWitch.java
++++ b/net/minecraft/server/EntityWitch.java
+@@ -51,7 +51,7 @@
+     protected void initAttributes() {
+         super.initAttributes();
+         this.getAttributeInstance(GenericAttributes.maxHealth).setValue(26.0D);
+-        this.getAttributeInstance(GenericAttributes.d).setValue(0.25D);
++        this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED).setValue(0.25D);
+     }
+ 
+     public void m() {
+@@ -76,7 +76,7 @@
+                         }
+                     }
+ 
+-                    this.getAttributeInstance(GenericAttributes.d).c(EntityWitch.b);
++                    this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED).c(EntityWitch.b);
+                 }
+             } else {
+                 short short0 = -1;
+@@ -97,7 +97,7 @@
+                     this.setEquipment(0, new ItemStack(Items.POTION, 1, short0));
+                     this.bm = this.bA().l();
+                     this.a(true);
+-                    AttributeInstance attributeinstance = this.getAttributeInstance(GenericAttributes.d);
++                    AttributeInstance attributeinstance = this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED);
+ 
+                     attributeinstance.c(EntityWitch.b);
+                     attributeinstance.b(EntityWitch.b);

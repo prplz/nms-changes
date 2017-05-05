@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/TileEntity.java
++++ b/net/minecraft/server/TileEntity.java
+@@ -194,6 +194,10 @@
+         this.position = blockposition;
+     }
+ 
++    public boolean F() {
++        return false;
++    }
++
+     static {
+         a(TileEntityFurnace.class, "Furnace");
+         a(TileEntityChest.class, "Chest");

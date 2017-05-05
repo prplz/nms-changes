@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PropertyManager.java
++++ b/net/minecraft/server/PropertyManager.java
+@@ -11,7 +11,7 @@
+ public class PropertyManager {
+ 
+     private static final Logger a = LogManager.getLogger();
+-    private final Properties properties = new Properties();
++    public final Properties properties = new Properties();
+     private final File file;
+ 
+     public PropertyManager(File file) {

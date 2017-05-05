@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemSign.java
++++ b/net/minecraft/server/ItemSign.java
+@@ -32,7 +32,7 @@
+                 --itemstack.count;
+                 TileEntity tileentity = world.getTileEntity(blockposition);
+ 
+-                if (tileentity instanceof TileEntitySign && !ItemBlock.a(world, blockposition, itemstack)) {
++                if (tileentity instanceof TileEntitySign && !ItemBlock.a(world, entityhuman, blockposition, itemstack)) {
+                     entityhuman.openSign((TileEntitySign) tileentity);
+                 }
+ 

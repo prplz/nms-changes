@@ -1,0 +1,25 @@
+--- a/net/minecraft/server/OpList.java
++++ b/net/minecraft/server/OpList.java
+@@ -28,7 +28,13 @@
+         return astring;
+     }
+ 
+-    protected String b(GameProfile gameprofile) {
++    public boolean b(GameProfile gameprofile) {
++        OpListEntry oplistentry = (OpListEntry) this.get(gameprofile);
++
++        return oplistentry != null ? oplistentry.b() : false;
++    }
++
++    protected String c(GameProfile gameprofile) {
+         return gameprofile.getId().toString();
+     }
+ 
+@@ -49,6 +55,6 @@
+     }
+ 
+     protected String a(Object object) {
+-        return this.b((GameProfile) object);
++        return this.c((GameProfile) object);
+     }
+ }

@@ -1,0 +1,22 @@
+--- a/net/minecraft/server/SourceBlock.java
++++ b/net/minecraft/server/SourceBlock.java
+@@ -10,7 +10,7 @@
+         this.b = blockposition;
+     }
+ 
+-    public World i() {
++    public World getWorld() {
+         return this.a;
+     }
+ 
+@@ -30,10 +30,6 @@
+         return this.b;
+     }
+ 
+-    public Block e() {
+-        return this.a.getType(this.b).getBlock();
+-    }
+-
+     public int f() {
+         IBlockData iblockdata = this.a.getType(this.b);
+ 

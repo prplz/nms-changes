@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ShapedRecipes.java
++++ b/net/minecraft/server/ShapedRecipes.java
+@@ -85,7 +85,7 @@
+         return true;
+     }
+ 
+-    public ItemStack a(InventoryCrafting inventorycrafting) {
++    public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         ItemStack itemstack = this.b().cloneItemStack();
+ 
+         if (this.e) {

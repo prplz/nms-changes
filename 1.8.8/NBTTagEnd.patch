@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/NBTTagEnd.java
++++ b/net/minecraft/server/NBTTagEnd.java
+@@ -8,7 +8,9 @@
+ 
+     NBTTagEnd() {}
+ 
+-    void load(DataInput datainput, int i, NBTReadLimiter nbtreadlimiter) throws IOException {}
++    void load(DataInput datainput, int i, NBTReadLimiter nbtreadlimiter) throws IOException {
++        nbtreadlimiter.a(64L);
++    }
+ 
+     void write(DataOutput dataoutput) throws IOException {}
+ 

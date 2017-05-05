@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/TileEntityCommand.java
++++ b/net/minecraft/server/TileEntityCommand.java
+@@ -48,6 +48,10 @@
+         return new PacketPlayOutTileEntityData(this.position, 2, nbttagcompound);
+     }
+ 
++    public boolean F() {
++        return true;
++    }
++
+     public CommandBlockListenerAbstract getCommandBlock() {
+         return this.a;
+     }

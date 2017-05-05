@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RegionFile.java
++++ b/net/minecraft/server/RegionFile.java
+@@ -208,7 +208,7 @@
+                 }
+             }
+ 
+-            this.b(i, j, (int) (MinecraftServer.ay() / 1000L));
++            this.b(i, j, (int) (MinecraftServer.az() / 1000L));
+         } catch (IOException ioexception) {
+             ioexception.printStackTrace();
+         }

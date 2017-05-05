@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ShapelessRecipes.java
++++ b/net/minecraft/server/ShapelessRecipes.java
+@@ -64,7 +64,7 @@
+         return arraylist.isEmpty();
+     }
+ 
+-    public ItemStack a(InventoryCrafting inventorycrafting) {
++    public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         return this.result.cloneItemStack();
+     }
+ 

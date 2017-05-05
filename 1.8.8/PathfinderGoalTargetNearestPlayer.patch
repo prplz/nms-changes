@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalTargetNearestPlayer.java
++++ b/net/minecraft/server/PathfinderGoalTargetNearestPlayer.java
+@@ -101,7 +101,7 @@
+     }
+ 
+     protected double f() {
+-        AttributeInstance attributeinstance = this.b.getAttributeInstance(GenericAttributes.b);
++        AttributeInstance attributeinstance = this.b.getAttributeInstance(GenericAttributes.FOLLOW_RANGE);
+ 
+         return attributeinstance == null ? 16.0D : attributeinstance.getValue();
+     }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/InventoryMerchant.java
++++ b/net/minecraft/server/InventoryMerchant.java
+@@ -38,7 +38,7 @@
+ 
+                 return itemstack;
+             } else {
+-                itemstack = this.itemsInSlots[i].a(j);
++                itemstack = this.itemsInSlots[i].cloneAndSubtract(j);
+                 if (this.itemsInSlots[i].count == 0) {
+                     this.itemsInSlots[i] = null;
+                 }

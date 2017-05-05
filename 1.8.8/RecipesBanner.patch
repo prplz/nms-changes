@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/RecipesBanner.java
++++ b/net/minecraft/server/RecipesBanner.java
+@@ -50,7 +50,7 @@
+             }
+         }
+ 
+-        public ItemStack a(InventoryCrafting inventorycrafting) {
++        public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+             ItemStack itemstack = null;
+ 
+             for (int i = 0; i < inventorycrafting.getSize(); ++i) {
+@@ -264,7 +264,7 @@
+             return itemstack != null && itemstack1 != null;
+         }
+ 
+-        public ItemStack a(InventoryCrafting inventorycrafting) {
++        public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+             for (int i = 0; i < inventorycrafting.getSize(); ++i) {
+                 ItemStack itemstack = inventorycrafting.getItem(i);
+ 

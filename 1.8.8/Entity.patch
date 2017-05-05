@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/Entity.java
++++ b/net/minecraft/server/Entity.java
+@@ -55,7 +55,7 @@
+     protected Random random;
+     public int ticksLived;
+     public int maxFireTicks;
+-    private int fireTicks;
++    public int fireTicks;
+     protected boolean inWater;
+     public int noDamageTicks;
+     protected boolean justCreated;
+@@ -137,7 +137,7 @@
+         this.dead = true;
+     }
+ 
+-    protected void setSize(float f, float f1) {
++    public void setSize(float f, float f1) {
+         if (f != this.width || f1 != this.length) {
+             float f2 = this.width;
+ 
+@@ -658,7 +658,7 @@
+         if (flag) {
+             if (this.fallDistance > 0.0F) {
+                 if (block != null) {
+-                    block.a(this.world, blockposition, this, this.fallDistance);
++                    block.fallOn(this.world, blockposition, this, this.fallDistance);
+                 } else {
+                     this.e(this.fallDistance, 1.0F);
+                 }

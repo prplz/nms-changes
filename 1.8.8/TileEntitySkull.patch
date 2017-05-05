@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/TileEntitySkull.java
++++ b/net/minecraft/server/TileEntitySkull.java
+@@ -87,7 +87,7 @@
+                     Property property = (Property) Iterables.getFirst(gameprofile1.getProperties().get("textures"), (Object) null);
+ 
+                     if (property == null) {
+-                        gameprofile1 = MinecraftServer.getServer().aC().fillProfileProperties(gameprofile1, true);
++                        gameprofile1 = MinecraftServer.getServer().aD().fillProfileProperties(gameprofile1, true);
+                     }
+ 
+                     return gameprofile1;

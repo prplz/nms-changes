@@ -1,0 +1,31 @@
+--- a/net/minecraft/server/TileEntitySign.java
++++ b/net/minecraft/server/TileEntitySign.java
+@@ -6,7 +6,7 @@
+ 
+     public final IChatBaseComponent[] lines = new IChatBaseComponent[] { new ChatComponentText(""), new ChatComponentText(""), new ChatComponentText(""), new ChatComponentText("")};
+     public int f = -1;
+-    private boolean isEditable = true;
++    public boolean isEditable = true;
+     private EntityHuman h;
+     private final CommandObjectiveExecutor i = new CommandObjectiveExecutor();
+ 
+@@ -91,6 +91,10 @@
+         return new PacketPlayOutUpdateSign(this.world, this.position, aichatbasecomponent);
+     }
+ 
++    public boolean F() {
++        return true;
++    }
++
+     public boolean b() {
+         return this.isEditable;
+     }
+@@ -116,7 +120,7 @@
+             public void sendMessage(IChatBaseComponent ichatbasecomponent) {}
+ 
+             public boolean a(int i, String s) {
+-                return true;
++                return i <= 2;
+             }
+ 
+             public BlockPosition getChunkCoordinates() {

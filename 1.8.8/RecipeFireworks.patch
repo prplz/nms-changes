@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RecipeFireworks.java
++++ b/net/minecraft/server/RecipeFireworks.java
+@@ -159,7 +159,7 @@
+         }
+     }
+ 
+-    public ItemStack a(InventoryCrafting inventorycrafting) {
++    public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         return this.a.cloneItemStack();
+     }
+ 

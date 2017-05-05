@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ShapeDetectorBlock.java
++++ b/net/minecraft/server/ShapeDetectorBlock.java
+@@ -34,7 +34,7 @@
+         return this.e;
+     }
+ 
+-    public BlockPosition d() {
++    public BlockPosition getPosition() {
+         return this.b;
+     }
+ 

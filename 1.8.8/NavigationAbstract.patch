@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NavigationAbstract.java
++++ b/net/minecraft/server/NavigationAbstract.java
+@@ -19,7 +19,7 @@
+     public NavigationAbstract(EntityInsentient entityinsentient, World world) {
+         this.b = entityinsentient;
+         this.c = world;
+-        this.a = entityinsentient.getAttributeInstance(GenericAttributes.b);
++        this.a = entityinsentient.getAttributeInstance(GenericAttributes.FOLLOW_RANGE);
+         this.j = this.a();
+     }
+ 

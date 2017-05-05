@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalTarget.java
++++ b/net/minecraft/server/PathfinderGoalTarget.java
+@@ -55,7 +55,7 @@
+     }
+ 
+     protected double f() {
+-        AttributeInstance attributeinstance = this.e.getAttributeInstance(GenericAttributes.b);
++        AttributeInstance attributeinstance = this.e.getAttributeInstance(GenericAttributes.FOLLOW_RANGE);
+ 
+         return attributeinstance == null ? 16.0D : attributeinstance.getValue();
+     }

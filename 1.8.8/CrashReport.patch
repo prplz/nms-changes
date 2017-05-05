@@ -1,0 +1,27 @@
+--- a/net/minecraft/server/CrashReport.java
++++ b/net/minecraft/server/CrashReport.java
+@@ -37,7 +37,7 @@
+     private void h() {
+         this.d.a("Minecraft Version", new Callable() {
+             public String a() {
+-                return "1.8.3";
++                return "1.8.8";
+             }
+ 
+             public Object call() throws Exception {
+@@ -50,15 +50,6 @@
+             }
+ 
+             public Object call() throws Exception {
+-                return this.a();
+-            }
+-        });
+-        this.d.a("CPU", new Callable() {
+-            public String a() {
+-                return SystemUtils.a();
+-            }
+-
+-            public Object call() throws Exception {
+                 return this.a();
+             }
+         });

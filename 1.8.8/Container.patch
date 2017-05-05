@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/Container.java
++++ b/net/minecraft/server/Container.java
+@@ -173,7 +173,7 @@
+                         }
+ 
+                         if (j == 1) {
+-                            entityhuman.drop(playerinventory.getCarried().a(1), true);
++                            entityhuman.drop(playerinventory.getCarried().cloneAndSubtract(1), true);
+                             if (playerinventory.getCarried().count == 0) {
+                                 playerinventory.setCarried((ItemStack) null);
+                             }
+@@ -218,7 +218,7 @@
+                                 }
+ 
+                                 if (itemstack4.count >= k1) {
+-                                    slot2.set(itemstack4.a(k1));
++                                    slot2.set(itemstack4.cloneAndSubtract(k1));
+                                 }
+ 
+                                 if (itemstack4.count == 0) {
+@@ -246,7 +246,7 @@
+                                         k1 = itemstack4.getMaxStackSize() - itemstack1.count;
+                                     }
+ 
+-                                    itemstack4.a(k1);
++                                    itemstack4.cloneAndSubtract(k1);
+                                     if (itemstack4.count == 0) {
+                                         playerinventory.setCarried((ItemStack) null);
+                                     }

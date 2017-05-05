@@ -1,0 +1,48 @@
+--- a/net/minecraft/server/WorldServer.java
++++ b/net/minecraft/server/WorldServer.java
+@@ -20,7 +20,7 @@
+ 
+     private static final Logger a = LogManager.getLogger();
+     private final MinecraftServer server;
+-    private final EntityTracker tracker;
++    public EntityTracker tracker;
+     private final PlayerChunkMap manager;
+     private final Set<NextTickListEntry> L = Sets.newHashSet();
+     private final TreeSet<NextTickListEntry> M = new TreeSet();
+@@ -47,7 +47,7 @@
+         this.Q = new PortalTravelAgent(this);
+         this.B();
+         this.C();
+-        this.getWorldBorder().a(minecraftserver.aH());
++        this.getWorldBorder().a(minecraftserver.aI());
+     }
+ 
+     public World b() {
+@@ -159,7 +159,7 @@
+             while (iterator.hasNext()) {
+                 EntityHuman entityhuman = (EntityHuman) iterator.next();
+ 
+-                if (entityhuman.v()) {
++                if (entityhuman.isSpectator()) {
+                     ++i;
+                 } else if (entityhuman.isSleeping()) {
+                     ++j;
+@@ -205,7 +205,7 @@
+                 }
+ 
+                 entityhuman = (EntityHuman) iterator.next();
+-            } while (!entityhuman.v() && entityhuman.isDeeplySleeping());
++            } while (!entityhuman.isSpectator() && entityhuman.isDeeplySleeping());
+ 
+             return false;
+         } else {
+@@ -481,9 +481,6 @@
+                 iterator = this.M.iterator();
+             } else {
+                 iterator = this.V.iterator();
+-                if (!this.V.isEmpty()) {
+-                    WorldServer.a.debug("toBeTicked = " + this.V.size());
+-                }
+             }
+ 
+             while (iterator.hasNext()) {

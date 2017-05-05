@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/WorldNBTStorage.java
++++ b/net/minecraft/server/WorldNBTStorage.java
+@@ -17,7 +17,7 @@
+     private final File baseDir;
+     private final File playerDir;
+     private final File dataDir;
+-    private final long sessionId = MinecraftServer.ay();
++    private final long sessionId = MinecraftServer.az();
+     private final String f;
+ 
+     public WorldNBTStorage(File file, String s, boolean flag) {

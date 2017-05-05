@@ -1,0 +1,137 @@
+--- a/net/minecraft/server/EntityPlayer.java
++++ b/net/minecraft/server/EntityPlayer.java
+@@ -23,14 +23,14 @@
+     public double d;
+     public double e;
+     public final List<ChunkCoordIntPair> chunkCoordIntPairQueue = Lists.newLinkedList();
+-    private final List<Integer> removeQueue = Lists.newLinkedList();
++    public final List<Integer> removeQueue = Lists.newLinkedList();
+     private final ServerStatisticManager bK;
+     private float bL = Float.MIN_VALUE;
+     private float bM = -1.0E8F;
+     private int bN = -99999999;
+     private boolean bO = true;
+-    private int lastSentExp = -99999999;
+-    private int invulnerableTicks = 60;
++    public int lastSentExp = -99999999;
++    public int invulnerableTicks = 60;
+     private EntityHuman.EnumChatVisibility bR;
+     private boolean bS = true;
+     private long bT = System.currentTimeMillis();
+@@ -94,8 +94,8 @@
+         this.lastSentExp = -1;
+     }
+ 
+-    public void b(int i) {
+-        super.b(i);
++    public void enchantDone(int i) {
++        super.enchantDone(i);
+         this.lastSentExp = -1;
+     }
+ 
+@@ -192,12 +192,12 @@
+ 
+         if (entity != this) {
+             if (!entity.isAlive()) {
+-                this.e((Entity) this);
++                this.setSpectatorTarget(this);
+             } else {
+                 this.setLocation(entity.locX, entity.locY, entity.locZ, entity.yaw, entity.pitch);
+                 this.server.getPlayerList().d(this);
+                 if (this.isSneaking()) {
+-                    this.e((Entity) this);
++                    this.setSpectatorTarget(this);
+                 }
+             }
+         }
+@@ -345,7 +345,7 @@
+         if (this.isInvulnerable(damagesource)) {
+             return false;
+         } else {
+-            boolean flag = this.server.ad() && this.cr() && "fall".equals(damagesource.translationIndex);
++            boolean flag = this.server.ae() && this.cr() && "fall".equals(damagesource.translationIndex);
+ 
+             if (!flag && this.invulnerableTicks > 0 && damagesource != DamageSource.OUT_OF_WORLD) {
+                 return false;
+@@ -408,7 +408,7 @@
+     }
+ 
+     public boolean a(EntityPlayer entityplayer) {
+-        return entityplayer.v() ? this.C() == this : (this.v() ? false : super.a(entityplayer));
++        return entityplayer.isSpectator() ? this.C() == this : (this.isSpectator() ? false : super.a(entityplayer));
+     }
+ 
+     private void a(TileEntity tileentity) {
+@@ -510,7 +510,7 @@
+         if (iinventory instanceof ITileInventory) {
+             ITileInventory itileinventory = (ITileInventory) iinventory;
+ 
+-            if (itileinventory.r_() && !this.a(itileinventory.i()) && !this.v()) {
++            if (itileinventory.r_() && !this.a(itileinventory.i()) && !this.isSpectator()) {
+                 this.playerConnection.sendPacket(new PacketPlayOutChat(new ChatMessage("container.isLocked", new Object[] { iinventory.getScoreboardDisplayName()}), (byte) 2));
+                 this.playerConnection.sendPacket(new PacketPlayOutNamedSoundEffect("random.door_close", this.locX, this.locY, this.locZ, 1.0F, 1.0F));
+                 return;
+@@ -752,14 +752,14 @@
+         if (worldsettings_enumgamemode == WorldSettings.EnumGamemode.SPECTATOR) {
+             this.mount((Entity) null);
+         } else {
+-            this.e((Entity) this);
++            this.setSpectatorTarget(this);
+         }
+ 
+         this.updateAbilities();
+         this.bP();
+     }
+ 
+-    public boolean v() {
++    public boolean isSpectator() {
+         return this.playerInteractManager.getGameMode() == WorldSettings.EnumGamemode.SPECTATOR;
+     }
+ 
+@@ -768,7 +768,7 @@
+     }
+ 
+     public boolean a(int i, String s) {
+-        if ("seed".equals(s) && !this.server.ad()) {
++        if ("seed".equals(s) && !this.server.ae()) {
+             return true;
+         } else if (!"tell".equals(s) && !"help".equals(s) && !"me".equals(s) && !"trigger".equals(s)) {
+             if (this.server.getPlayerList().isOp(this.getProfile())) {
+@@ -810,8 +810,8 @@
+         return new BlockPosition(this.locX, this.locY + 0.5D, this.locZ);
+     }
+ 
+-    public void z() {
+-        this.bT = MinecraftServer.ay();
++    public void resetIdleTimer() {
++        this.bT = MinecraftServer.az();
+     }
+ 
+     public ServerStatisticManager getStatisticManager() {
+@@ -828,7 +828,7 @@
+     }
+ 
+     protected void B() {
+-        if (this.v()) {
++        if (this.isSpectator()) {
+             this.bj();
+             this.setInvisible(true);
+         } else {
+@@ -842,7 +842,7 @@
+         return (Entity) (this.bU == null ? this : this.bU);
+     }
+ 
+-    public void e(Entity entity) {
++    public void setSpectatorTarget(Entity entity) {
+         Entity entity1 = this.C();
+ 
+         this.bU = (Entity) (entity == null ? this : entity);
+@@ -855,7 +855,7 @@
+ 
+     public void attack(Entity entity) {
+         if (this.playerInteractManager.getGameMode() == WorldSettings.EnumGamemode.SPECTATOR) {
+-            this.e(entity);
++            this.setSpectatorTarget(entity);
+         } else {
+             super.attack(entity);
+         }

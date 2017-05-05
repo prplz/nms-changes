@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/ItemStack.java
++++ b/net/minecraft/server/ItemStack.java
+@@ -67,7 +67,7 @@
+         this.k = false;
+     }
+ 
+-    public ItemStack a(int i) {
++    public ItemStack cloneAndSubtract(int i) {
+         ItemStack itemstack = new ItemStack(this.item, i, this.damage);
+ 
+         if (this.tag != null) {

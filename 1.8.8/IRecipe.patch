@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/IRecipe.java
++++ b/net/minecraft/server/IRecipe.java
+@@ -4,7 +4,7 @@
+ 
+     boolean a(InventoryCrafting inventorycrafting, World world);
+ 
+-    ItemStack a(InventoryCrafting inventorycrafting);
++    ItemStack craftItem(InventoryCrafting inventorycrafting);
+ 
+     int a();
+ 

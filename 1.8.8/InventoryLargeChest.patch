@@ -1,0 +1,13 @@
+--- a/net/minecraft/server/InventoryLargeChest.java
++++ b/net/minecraft/server/InventoryLargeChest.java
+@@ -3,8 +3,8 @@
+ public class InventoryLargeChest implements ITileInventory {
+ 
+     private String a;
+-    private ITileInventory left;
+-    private ITileInventory right;
++    public ITileInventory left;
++    public ITileInventory right;
+ 
+     public InventoryLargeChest(String s, ITileInventory itileinventory, ITileInventory itileinventory1) {
+         this.a = s;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityCreeper.java
++++ b/net/minecraft/server/EntityCreeper.java
+@@ -23,7 +23,7 @@
+ 
+     protected void initAttributes() {
+         super.initAttributes();
+-        this.getAttributeInstance(GenericAttributes.d).setValue(0.25D);
++        this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED).setValue(0.25D);
+     }
+ 
+     public int aE() {

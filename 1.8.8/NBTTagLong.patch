@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagLong.java
++++ b/net/minecraft/server/NBTTagLong.java
+@@ -19,7 +19,7 @@
+     }
+ 
+     void load(DataInput datainput, int i, NBTReadLimiter nbtreadlimiter) throws IOException {
+-        nbtreadlimiter.a(64L);
++        nbtreadlimiter.a(128L);
+         this.data = datainput.readLong();
+     }
+ 

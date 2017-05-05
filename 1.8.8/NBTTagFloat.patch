@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/NBTTagFloat.java
++++ b/net/minecraft/server/NBTTagFloat.java
+@@ -19,7 +19,7 @@
+     }
+ 
+     void load(DataInput datainput, int i, NBTReadLimiter nbtreadlimiter) throws IOException {
+-        nbtreadlimiter.a(32L);
++        nbtreadlimiter.a(96L);
+         this.data = datainput.readFloat();
+     }
+ 

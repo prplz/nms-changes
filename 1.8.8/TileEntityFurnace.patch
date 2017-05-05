@@ -1,0 +1,23 @@
+--- a/net/minecraft/server/TileEntityFurnace.java
++++ b/net/minecraft/server/TileEntityFurnace.java
+@@ -6,9 +6,9 @@
+     private static final int[] f = new int[] { 2, 1};
+     private static final int[] g = new int[] { 1};
+     private ItemStack[] items = new ItemStack[3];
+-    private int burnTime;
++    public int burnTime;
+     private int ticksForCurrentFuel;
+-    private int cookTime;
++    public int cookTime;
+     private int cookTimeTotal;
+     private String m;
+ 
+@@ -31,7 +31,7 @@
+                 this.items[i] = null;
+                 return itemstack;
+             } else {
+-                itemstack = this.items[i].a(j);
++                itemstack = this.items[i].cloneAndSubtract(j);
+                 if (this.items[i].count == 0) {
+                     this.items[i] = null;
+                 }

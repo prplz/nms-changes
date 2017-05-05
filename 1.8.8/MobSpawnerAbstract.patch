@@ -1,0 +1,83 @@
+--- a/net/minecraft/server/MobSpawnerAbstract.java
++++ b/net/minecraft/server/MobSpawnerAbstract.java
+@@ -6,7 +6,7 @@
+ 
+ public abstract class MobSpawnerAbstract {
+ 
+-    private int spawnDelay = 20;
++    public int spawnDelay = 20;
+     private String mobName = "Pig";
+     private final List<MobSpawnerAbstract.a> mobs = Lists.newArrayList();
+     private MobSpawnerAbstract.a spawnData;
+@@ -22,7 +22,7 @@
+ 
+     public MobSpawnerAbstract() {}
+ 
+-    private String getMobName() {
++    public String getMobName() {
+         if (this.i() == null) {
+             if (this.mobName != null && this.mobName.equals("Minecart")) {
+                 this.mobName = "MinecartRideable";
+@@ -229,36 +229,40 @@
+     }
+ 
+     public void b(NBTTagCompound nbttagcompound) {
+-        nbttagcompound.setString("EntityId", this.getMobName());
+-        nbttagcompound.setShort("Delay", (short) this.spawnDelay);
+-        nbttagcompound.setShort("MinSpawnDelay", (short) this.minSpawnDelay);
+-        nbttagcompound.setShort("MaxSpawnDelay", (short) this.maxSpawnDelay);
+-        nbttagcompound.setShort("SpawnCount", (short) this.spawnCount);
+-        nbttagcompound.setShort("MaxNearbyEntities", (short) this.maxNearbyEntities);
+-        nbttagcompound.setShort("RequiredPlayerRange", (short) this.requiredPlayerRange);
+-        nbttagcompound.setShort("SpawnRange", (short) this.spawnRange);
+-        if (this.i() != null) {
+-            nbttagcompound.set("SpawnData", this.i().c.clone());
+-        }
++        String s = this.getMobName();
++
++        if (!UtilColor.b(s)) {
++            nbttagcompound.setString("EntityId", s);
++            nbttagcompound.setShort("Delay", (short) this.spawnDelay);
++            nbttagcompound.setShort("MinSpawnDelay", (short) this.minSpawnDelay);
++            nbttagcompound.setShort("MaxSpawnDelay", (short) this.maxSpawnDelay);
++            nbttagcompound.setShort("SpawnCount", (short) this.spawnCount);
++            nbttagcompound.setShort("MaxNearbyEntities", (short) this.maxNearbyEntities);
++            nbttagcompound.setShort("RequiredPlayerRange", (short) this.requiredPlayerRange);
++            nbttagcompound.setShort("SpawnRange", (short) this.spawnRange);
++            if (this.i() != null) {
++                nbttagcompound.set("SpawnData", this.i().c.clone());
++            }
+ 
+-        if (this.i() != null || this.mobs.size() > 0) {
+-            NBTTagList nbttaglist = new NBTTagList();
++            if (this.i() != null || this.mobs.size() > 0) {
++                NBTTagList nbttaglist = new NBTTagList();
+ 
+-            if (this.mobs.size() > 0) {
+-                Iterator iterator = this.mobs.iterator();
++                if (this.mobs.size() > 0) {
++                    Iterator iterator = this.mobs.iterator();
+ 
+-                while (iterator.hasNext()) {
+-                    MobSpawnerAbstract.a mobspawnerabstract_a = (MobSpawnerAbstract.a) iterator.next();
++                    while (iterator.hasNext()) {
++                        MobSpawnerAbstract.a mobspawnerabstract_a = (MobSpawnerAbstract.a) iterator.next();
+ 
+-                    nbttaglist.add(mobspawnerabstract_a.a());
++                        nbttaglist.add(mobspawnerabstract_a.a());
++                    }
++                } else {
++                    nbttaglist.add(this.i().a());
+                 }
+-            } else {
+-                nbttaglist.add(this.i().a());
++
++                nbttagcompound.set("SpawnPotentials", nbttaglist);
+             }
+ 
+-            nbttagcompound.set("SpawnPotentials", nbttaglist);
+         }
+-
+     }
+ 
+     public boolean b(int i) {

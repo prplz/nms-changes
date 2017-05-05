@@ -1,0 +1,9 @@
+--- a/net/minecraft/server/ISource.java
++++ b/net/minecraft/server/ISource.java
+@@ -2,5 +2,5 @@
+ 
+ public interface ISource extends IPosition {
+ 
+-    World i();
++    World getWorld();
+ }

@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/Explosion.java
++++ b/net/minecraft/server/Explosion.java
+@@ -18,7 +18,7 @@
+     private final double posX;
+     private final double posY;
+     private final double posZ;
+-    private final Entity source;
++    public final Entity source;
+     private final float size;
+     private final List<BlockPosition> blocks = Lists.newArrayList();
+     private final Map<EntityHuman, Vec3D> k = Maps.newHashMap();
+@@ -196,7 +196,7 @@
+         return this.k;
+     }
+ 
+-    public EntityLiving c() {
++    public EntityLiving getSource() {
+         return this.source == null ? null : (this.source instanceof EntityTNTPrimed ? ((EntityTNTPrimed) this.source).getSource() : (this.source instanceof EntityLiving ? (EntityLiving) this.source : null));
+     }
+ 

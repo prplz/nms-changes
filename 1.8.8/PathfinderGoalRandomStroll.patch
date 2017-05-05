@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PathfinderGoalRandomStroll.java
++++ b/net/minecraft/server/PathfinderGoalRandomStroll.java
+@@ -57,7 +57,7 @@
+         this.g = true;
+     }
+ 
+-    public void b(int i) {
++    public void setTimeBetweenMovement(int i) {
+         this.f = i;
+     }
+ }

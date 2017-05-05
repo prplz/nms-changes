@@ -1,0 +1,10 @@
+--- a/net/minecraft/server/NBTTagIntArray.java
++++ b/net/minecraft/server/NBTTagIntArray.java
+@@ -25,6 +25,7 @@
+     }
+ 
+     void load(DataInput datainput, int i, NBTReadLimiter nbtreadlimiter) throws IOException {
++        nbtreadlimiter.a(192L);
+         int j = datainput.readInt();
+ 
+         nbtreadlimiter.a((long) (32 * j));

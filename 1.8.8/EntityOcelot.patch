@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/EntityOcelot.java
++++ b/net/minecraft/server/EntityOcelot.java
+@@ -57,7 +57,7 @@
+     protected void initAttributes() {
+         super.initAttributes();
+         this.getAttributeInstance(GenericAttributes.maxHealth).setValue(10.0D);
+-        this.getAttributeInstance(GenericAttributes.d).setValue(0.30000001192092896D);
++        this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED).setValue(0.30000001192092896D);
+     }
+ 
+     public void e(float f, float f1) {}

@@ -1,0 +1,29 @@
+--- a/net/minecraft/server/TileEntityHopper.java
++++ b/net/minecraft/server/TileEntityHopper.java
+@@ -76,7 +76,7 @@
+                 this.items[i] = null;
+                 return itemstack;
+             } else {
+-                itemstack = this.items[i].a(j);
++                itemstack = this.items[i].cloneAndSubtract(j);
+                 if (this.items[i].count == 0) {
+                     this.items[i] = null;
+                 }
+@@ -203,7 +203,7 @@
+     }
+ 
+     private boolean r() {
+-        IInventory iinventory = this.G();
++        IInventory iinventory = this.H();
+ 
+         if (iinventory == null) {
+             return false;
+@@ -431,7 +431,7 @@
+         return itemstack;
+     }
+ 
+-    private IInventory G() {
++    private IInventory H() {
+         EnumDirection enumdirection = BlockHopper.b(this.u());
+ 
+         return b(this.getWorld(), (double) (this.position.getX() + enumdirection.getAdjacentX()), (double) (this.position.getY() + enumdirection.getAdjacentY()), (double) (this.position.getZ() + enumdirection.getAdjacentZ()));

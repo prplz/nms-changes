@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/PacketPlayOutBlockChange.java
++++ b/net/minecraft/server/PacketPlayOutBlockChange.java
+@@ -5,7 +5,7 @@
+ public class PacketPlayOutBlockChange implements Packet<PacketListenerPlayOut> {
+ 
+     private BlockPosition a;
+-    private IBlockData block;
++    public IBlockData block;
+ 
+     public PacketPlayOutBlockChange() {}
+ 

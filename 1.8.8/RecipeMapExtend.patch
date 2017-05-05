@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/RecipeMapExtend.java
++++ b/net/minecraft/server/RecipeMapExtend.java
+@@ -30,7 +30,7 @@
+         }
+     }
+ 
+-    public ItemStack a(InventoryCrafting inventorycrafting) {
++    public ItemStack craftItem(InventoryCrafting inventorycrafting) {
+         ItemStack itemstack = null;
+ 
+         for (int i = 0; i < inventorycrafting.getSize() && itemstack == null; ++i) {
